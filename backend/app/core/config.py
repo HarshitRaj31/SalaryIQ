@@ -28,12 +28,14 @@ DESCRIPTION: str = (
 )
 API_V1_STR: str = "/api/v1"
 
-# CORS Configuration for Frontend (e.g. Vite React on port 5173)
+# CORS Configuration
 CORS_ORIGINS: List[str] = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "*",
+
+    # Production frontend
+    "https://job-salary-prediction-zeta.vercel.app/",
 ]
 
