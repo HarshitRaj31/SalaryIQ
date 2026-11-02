@@ -321,3 +321,5 @@ The goal is not only to predict a salary, but also to help users understand the 
   <strong>SalaryIQ</strong><br/>
   Turning job data into understandable salary insights.
 </p>
+#   S a l a r y I Q  
+ 

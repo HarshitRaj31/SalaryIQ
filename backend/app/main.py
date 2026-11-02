@@ -31,11 +31,8 @@ app = FastAPI(
 # Configure Cross-Origin Resource Sharing (CORS) for React Frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "https://job-salary-prediction-zeta.vercel.app",
-    ],
+    allow_origins=[origin.rstrip("/") for origin in config.CORS_ORIGINS],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -169,10 +166,12 @@ async def global_health():
 
 if __name__ == "__main__":
     # Allows running directly via `python backend/app/main.py`
+    host = os.environ.get("HOST", "0.0.0.0")
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run(
         "app.main:app",
-        host="127.0.0.1",
-        port=8000,
+        host=host,
+        port=port,
         reload=True,
     )
 

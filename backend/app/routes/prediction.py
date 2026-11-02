@@ -2,8 +2,11 @@
 API router endpoints for Salary Prediction.
 """
 
-from typing import Any, Dict,Optional
+import logging
+from typing import Any, Dict, Optional
 from fastapi import APIRouter, HTTPException, status
+
+logger = logging.getLogger(__name__)
 
 from app.schemas.salary import (
     BatchSalaryPredictionRequest,
