@@ -67,7 +67,7 @@ from app.schemas.salary import (
 def root_predict_alias(request: SalaryPredictionRequest):
     return predict_salary_endpoint(request)
 
-
+#12345677
 @app.get("/feature-importance", response_model=FeatureImportanceResponse, tags=["Salary Prediction"])
 def root_feature_importance_alias(top_n: int = 10):
     """Exposes the actual trained Random Forest model's Top influential features."""
