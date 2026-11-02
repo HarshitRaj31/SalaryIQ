@@ -1,0 +1,730 @@
+/* ShapDashboard.css - Dedicated styles for SalaryIQ Explainability & SHAP Dashboard */
+
+.shap-dash-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.shap-dash-panel {
+  background: #0d1422;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+.shap-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.shap-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 760px;
+}
+
+.shap-model-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.shap-dash-title {
+  font-size: 24px;
+  font-weight: 850;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shap-dash-subtitle {
+  font-size: 13.5px;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.shap-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.shap-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #080d18;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 650;
+  color: #cbd5e1;
+}
+
+.shap-status-pill .status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.shap-status-pill .status-dot.offline {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.6);
+}
+
+.shap-btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #080d18;
+  border: 1px solid #1e293b;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.shap-btn-action:hover {
+  background: #1e293b;
+  border-color: #334155;
+  color: #ffffff;
+}
+
+.shap-btn-action.primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+}
+
+.shap-btn-action.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.45);
+}
+
+/* Profile Selector Bar */
+.shap-profile-toolbar {
+  background: #080d18;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.shap-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.shap-toolbar-label {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.shap-select {
+  background: #0d1422;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.shap-select:focus {
+  border-color: #8b5cf6;
+}
+
+.shap-active-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.shap-tag-chip {
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  color: #7dd3fc;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+/* KPI Ribbon */
+.shap-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.shap-kpi-card {
+  background: #080d18;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.shap-kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: #334155;
+}
+
+.shap-kpi-card.highlight {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.shap-kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shap-kpi-label {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.shap-kpi-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.shap-kpi-icon.purple {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+}
+
+.shap-kpi-icon.blue {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.shap-kpi-icon.green {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.shap-kpi-icon.red {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+}
+
+.shap-kpi-value {
+  font-size: 24px;
+  font-weight: 850;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+
+.shap-kpi-value.positive {
+  color: #34d399;
+}
+
+.shap-kpi-value.negative {
+  color: #f43f5e;
+}
+
+.shap-kpi-value.cyan {
+  color: #38bdf8;
+}
+
+.shap-kpi-sub {
+  font-size: 11.5px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Section Cards */
+.shap-section-card {
+  background: #080d18;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.shap-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.shap-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 750;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+}
+
+.shap-view-toggle {
+  display: inline-flex;
+  background: #0d1422;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.shap-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 650;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.shap-toggle-btn:hover {
+  color: #f8fafc;
+}
+
+.shap-toggle-btn.active {
+  background: #1e293b;
+  color: #38bdf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Charts Container */
+.shap-chart-container {
+  width: 100%;
+  height: 380px;
+  position: relative;
+}
+
+/* Custom Tooltip */
+.shap-chart-tooltip {
+  background: #0d1422;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  min-width: 210px;
+}
+
+.shap-tooltip-title {
+  font-size: 13px;
+  font-weight: 750;
+  color: #f8fafc;
+  margin-bottom: 2px;
+}
+
+.shap-tooltip-cat {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.shap-tooltip-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.shap-tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #cbd5e1;
+}
+
+.shap-tooltip-row.sub {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.shap-tooltip-row strong.positive {
+  color: #34d399;
+}
+
+.shap-tooltip-row strong.negative {
+  color: #f43f5e;
+}
+
+/* Factor Columns (Tug of War) */
+.shap-factors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.shap-factor-col {
+  background: #080d18;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.shap-factor-col.positive-col {
+  border-top: 3px solid #10b981;
+}
+
+.shap-factor-col.negative-col {
+  border-top: 3px solid #f43f5e;
+}
+
+.shap-factor-col-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.shap-factor-title {
+  font-size: 14px;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.positive-col .shap-factor-title {
+  color: #34d399;
+}
+
+.negative-col .shap-factor-title {
+  color: #fb7185;
+}
+
+.shap-factor-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+}
+
+.positive-col .shap-factor-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.negative-col .shap-factor-badge {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+}
+
+.shap-factor-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shap-factor-card {
+  background: #0d1422;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.shap-factor-card:hover {
+  transform: translateX(2px);
+  border-color: #334155;
+}
+
+.shap-factor-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.shap-factor-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.shap-factor-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.shap-factor-pill {
+  background: #1e293b;
+  color: #94a3b8;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.shap-factor-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.shap-factor-impact {
+  font-size: 14.5px;
+  font-weight: 800;
+  font-family: monospace;
+}
+
+.shap-factor-impact.positive {
+  color: #34d399;
+}
+
+.shap-factor-impact.negative {
+  color: #f43f5e;
+}
+
+.shap-factor-pct {
+  font-size: 10.5px;
+  color: #64748b;
+}
+
+/* Empty Factors Notice */
+.shap-empty-factors {
+  padding: 24px 16px;
+  text-align: center;
+  color: #64748b;
+  font-size: 12.5px;
+}
+
+/* Tug of War Balance Track */
+.shap-tug-track {
+  display: flex;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #0d1422;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.shap-tug-pos {
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+  height: 100%;
+}
+
+.shap-tug-neg {
+  background: linear-gradient(90deg, #f43f5e 0%, #fb7185 100%);
+  height: 100%;
+}
+
+/* Narrative Box */
+.shap-narrative-panel {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(56, 189, 248, 0.05) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.shap-narrative-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.shap-narrative-title {
+  font-size: 15px;
+  font-weight: 750;
+  color: #f8fafc;
+}
+
+.shap-narrative-body {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Table View */
+.shap-table-wrap {
+  overflow-x: auto;
+}
+
+.shap-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.shap-data-table th {
+  background: #0d1422;
+  color: #64748b;
+  font-weight: 750;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  padding: 10px 14px;
+  border-bottom: 1px solid #1e293b;
+  text-align: left;
+}
+
+.shap-data-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #1e293b;
+  color: #e2e8f0;
+}
+
+.shap-data-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Global Importance Grid */
+.shap-global-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Error Banner */
+.shap-error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.shap-error-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Loading Skeleton */
+.shap-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  gap: 14px;
+  color: #94a3b8;
+  font-size: 13.5px;
+}
+
+.shap-spinner {
+  animation: shap-spin 1s linear infinite;
+  color: #8b5cf6;
+}
+
+@keyframes shap-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .shap-factors-grid,
+  .shap-global-grid {
+    grid-template-columns: 1fr;
+  }
+  .shap-dash-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

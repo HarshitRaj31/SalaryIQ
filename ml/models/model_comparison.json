@@ -1,0 +1,42 @@
+{
+    "best_model": "Random Forest Regressor",
+    "selection_metric": "5-fold CV RMSE",
+    "metrics": {
+        "Linear Regression": {
+            "CV_RMSE": 53905.86075890671,
+            "CV_RMSE_STD": 2109.817648512714,
+            "MAE": 40002.85977410496,
+            "RMSE": 53230.962925364904,
+            "R2_Score": 0.35219733667607367
+        },
+        "Random Forest Regressor": {
+            "CV_RMSE": 50578.10488952683,
+            "CV_RMSE_STD": 1855.8170085966312,
+            "MAE": 39038.608828803684,
+            "RMSE": 51414.46943746642,
+            "R2_Score": 0.3956551836445217,
+            "Best_Parameters": {
+                "regressor__max_depth": 20,
+                "regressor__max_features": "sqrt",
+                "regressor__min_samples_leaf": 1,
+                "regressor__min_samples_split": 7,
+                "regressor__n_estimators": 200
+            }
+        },
+        "Gradient Boosting Regressor": {
+            "CV_RMSE": 50746.091137057876,
+            "CV_RMSE_STD": 2114.8089037965633,
+            "MAE": 38199.4853019256,
+            "RMSE": 50683.36303234252,
+            "R2_Score": 0.41272037628466973,
+            "Best_Parameters": {
+                "regressor__learning_rate": 0.08741722139252525,
+                "regressor__max_depth": 2,
+                "regressor__min_samples_leaf": 3,
+                "regressor__min_samples_split": 9,
+                "regressor__n_estimators": 288,
+                "regressor__subsample": 0.879055047383946
+            }
+        }
+    }
+}

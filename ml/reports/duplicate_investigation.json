@@ -1,0 +1,189 @@
+{
+    "summary": {
+        "total_raw_rows": 3755,
+        "exact_duplicate_rows": 1171,
+        "exact_duplicate_pct": 31.19,
+        "unique_distinct_rows": 2584,
+        "total_rows_involved_in_clusters": 1715,
+        "profile_duplicates_features_only": 2905
+    },
+    "salary_variance_in_identical_profiles": {
+        "profiles_with_differing_salaries": 307,
+        "profiles_with_exact_same_salaries": 543
+    },
+    "breakdown": {
+        "by_job_title": {
+            "Data Engineer": 638,
+            "Data Scientist": 433,
+            "Data Analyst": 321,
+            "Machine Learning Engineer": 118,
+            "Data Architect": 57,
+            "Applied Scientist": 40,
+            "Research Scientist": 25,
+            "Analytics Engineer": 22,
+            "Data Manager": 11,
+            "Research Engineer": 8
+        },
+        "by_experience_level": {
+            "SE": 1378,
+            "MI": 229,
+            "EN": 78,
+            "EX": 30
+        },
+        "by_work_year": {
+            "2020": 2,
+            "2021": 4,
+            "2022": 781,
+            "2023": 928
+        },
+        "by_company_location": {
+            "US": 1617,
+            "ES": 47,
+            "GB": 31,
+            "CA": 8,
+            "GR": 6
+        }
+    },
+    "top_clusters": [
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Scientist",
+            "salary": 141525,
+            "salary_currency": "USD",
+            "salary_in_usd": 141525,
+            "employee_residence": "US",
+            "remote_ratio": 100,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 21
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Scientist",
+            "salary": 191475,
+            "salary_currency": "USD",
+            "salary_in_usd": 191475,
+            "employee_residence": "US",
+            "remote_ratio": 100,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 21
+        },
+        {
+            "work_year": 2023,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Engineer",
+            "salary": 252000,
+            "salary_currency": "USD",
+            "salary_in_usd": 252000,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 13
+        },
+        {
+            "work_year": 2023,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Engineer",
+            "salary": 129000,
+            "salary_currency": "USD",
+            "salary_in_usd": 129000,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 13
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Engineer",
+            "salary": 130000,
+            "salary_currency": "USD",
+            "salary_in_usd": 130000,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 12
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Scientist",
+            "salary": 129300,
+            "salary_currency": "USD",
+            "salary_in_usd": 129300,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 12
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Scientist",
+            "salary": 185900,
+            "salary_currency": "USD",
+            "salary_in_usd": 185900,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 12
+        },
+        {
+            "work_year": 2023,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Engineer",
+            "salary": 160000,
+            "salary_currency": "USD",
+            "salary_in_usd": 160000,
+            "employee_residence": "US",
+            "remote_ratio": 100,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 11
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Scientist",
+            "salary": 140000,
+            "salary_currency": "USD",
+            "salary_in_usd": 140000,
+            "employee_residence": "US",
+            "remote_ratio": 100,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 10
+        },
+        {
+            "work_year": 2022,
+            "experience_level": "SE",
+            "employment_type": "FT",
+            "job_title": "Data Engineer",
+            "salary": 120000,
+            "salary_currency": "USD",
+            "salary_in_usd": 120000,
+            "employee_residence": "US",
+            "remote_ratio": 0,
+            "company_location": "US",
+            "company_size": "M",
+            "cluster_size": 9
+        }
+    ]
+}

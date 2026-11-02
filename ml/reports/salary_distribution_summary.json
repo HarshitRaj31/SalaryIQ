@@ -1,0 +1,37 @@
+{
+    "count": 2584,
+    "mean": 133409.28018575851,
+    "std": 67136.83732925013,
+    "median": 130000.0,
+    "mode": 100000.0,
+    "min": 5132.0,
+    "max": 450000.0,
+    "range": 444868.0,
+    "iqr": 90025.0,
+    "skewness": 0.6203168790580038,
+    "kurtosis": 0.8269400876861832,
+    "percentiles": {
+        "1%": 10000.0,
+        "5%": 31520.0,
+        "10%": 50602.40000000001,
+        "25% (Q1)": 84975.0,
+        "50% (Median)": 130000.0,
+        "75% (Q3)": 175000.0,
+        "90%": 220000.0,
+        "95%": 249469.99999999997,
+        "99%": 317279.1000000001
+    },
+    "outlier_analysis": {
+        "lower_fence_iqr": 0.0,
+        "upper_fence_iqr": 310037.5,
+        "extreme_upper_fence": 445075.0,
+        "iqr_outliers_count": 29,
+        "iqr_outliers_pct": 1.1222910216718265,
+        "extreme_outliers_count": 1,
+        "zscore_outliers_count": 21
+    },
+    "log_transformed": {
+        "skewness": -1.4663706769178537,
+        "kurtosis": 3.238713737473694
+    }
+}

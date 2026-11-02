@@ -1,0 +1,11 @@
+work_year,experience_level,employment_type,job_title,salary,salary_currency,salary_in_usd,employee_residence,remote_ratio,company_location,company_size,cluster_size
+2022,SE,FT,Data Scientist,141525,USD,141525,US,100,US,M,21
+2022,SE,FT,Data Scientist,191475,USD,191475,US,100,US,M,21
+2023,SE,FT,Data Engineer,252000,USD,252000,US,0,US,M,13
+2023,SE,FT,Data Engineer,129000,USD,129000,US,0,US,M,13
+2022,SE,FT,Data Engineer,130000,USD,130000,US,0,US,M,12
+2022,SE,FT,Data Scientist,129300,USD,129300,US,0,US,M,12
+2022,SE,FT,Data Scientist,185900,USD,185900,US,0,US,M,12
+2023,SE,FT,Data Engineer,160000,USD,160000,US,100,US,M,11
+2022,SE,FT,Data Scientist,140000,USD,140000,US,100,US,M,10
+2022,SE,FT,Data Engineer,120000,USD,120000,US,0,US,M,9
