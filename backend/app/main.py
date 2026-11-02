@@ -31,7 +31,11 @@ app = FastAPI(
 # Configure Cross-Origin Resource Sharing (CORS) for React Frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=config.CORS_ORIGINS,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://job-salary-prediction-zeta.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
