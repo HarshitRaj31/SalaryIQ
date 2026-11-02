@@ -35,7 +35,7 @@ const API_URL = (
   "http://127.0.0.1:8000"
 ).replace(/\/+$/, "");
 
-// Predefined benchmark profiles for instant explainability exploration
+
 const BENCHMARK_PROFILES = [
   {
     id: "ds_se_us",
