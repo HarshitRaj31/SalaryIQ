@@ -103,6 +103,82 @@ const FALLBACK_RF_FEATURES = [
 const DEFAULT_EXPLANATION =
   "According to the trained Random Forest regressor, Employee Residence: United States (US) is the single most decisive factor, accounting for 15.67% of the model's split decisions, closely followed by Company Location: United States (US) (11.76%). Combined, geographic location and seniority tier (Senior SE & Entry EN) drive over 40% of tech compensation variance, demonstrating that where an employer is based and career level outweigh specific domain titles.";
 
+const FALLBACK_INDIA_FEATURES = [
+  {
+    feature: "Experience in Years (experience_avg_yrs)",
+    raw_feature: "num__experience_avg_yrs",
+    importance: 0.6687,
+    percentage: 66.87,
+    category: "Experience",
+  },
+  {
+    feature: "Workplace Setting (remote_ratio)",
+    raw_feature: "num__remote_ratio",
+    importance: 0.0876,
+    percentage: 8.76,
+    category: "Workplace",
+  },
+  {
+    feature: "Skill Repertoire Count",
+    raw_feature: "num__skills_count",
+    importance: 0.0524,
+    percentage: 5.24,
+    category: "Experience",
+  },
+  {
+    feature: "Employer Glassdoor Rating",
+    raw_feature: "num__company_rating",
+    importance: 0.0514,
+    percentage: 5.14,
+    category: "Company",
+  },
+  {
+    feature: "Hiring Year Trend",
+    raw_feature: "num__work_year",
+    importance: 0.0445,
+    percentage: 4.45,
+    category: "Temporal",
+  },
+  {
+    feature: "Job Role Specialization",
+    raw_feature: "cat__role_standard",
+    importance: 0.0381,
+    percentage: 3.81,
+    category: "Role",
+  },
+  {
+    feature: "Metro Tech Hub (primary_city_clean)",
+    raw_feature: "cat__primary_city_clean",
+    importance: 0.0245,
+    percentage: 2.45,
+    category: "Geography",
+  },
+  {
+    feature: "Seniority Tier (experience_level)",
+    raw_feature: "cat__experience_level",
+    importance: 0.0182,
+    percentage: 1.82,
+    category: "Experience",
+  },
+  {
+    feature: "Company Size Scale",
+    raw_feature: "cat__company_size",
+    importance: 0.0098,
+    percentage: 0.98,
+    category: "Company",
+  },
+  {
+    feature: "Contract Employment Type",
+    raw_feature: "cat__employment_type",
+    importance: 0.0048,
+    percentage: 0.48,
+    category: "Role",
+  },
+];
+
+const DEFAULT_INDIA_EXPLANATION =
+  "In the India tech compensation market, Years of Experience (experience_avg_yrs) is overwhelmingly the most decisive factor, driving ~66.87% of the Gradient Boosting model's variance. Workplace setting (remote_ratio at 8.76%) and quantified skill depth (skills_count at 5.24%) form the secondary tier, while primary tech hubs (Bengaluru, Hyderabad, Pune) command premium local multipliers.";
+
 const getCategoryColor = (category) => {
   switch (category) {
     case "Geography":
@@ -165,6 +241,7 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 export default function FeatureImportance({ standalone = false }) {
+  const [selectedCountry, setSelectedCountry] = useState("US"); // "US" | "IN"
   const [features, setFeatures] = useState(FALLBACK_RF_FEATURES);
   const [modelName, setModelName] = useState("Random Forest Regressor");
   const [explanation, setExplanation] = useState(DEFAULT_EXPLANATION);
@@ -184,13 +261,14 @@ export default function FeatureImportance({ standalone = false }) {
 
     const loadData = async () => {
       try {
-        let response = await fetch(`${API_URL}/feature-importance?top_n=${topCount}`, {
-          signal: controller.signal,
-        });
+        let response = await fetch(
+          `${API_URL}/feature-importance?country=${selectedCountry}&top_n=${topCount}`,
+          { signal: controller.signal }
+        );
 
         if (!response.ok) {
           response = await fetch(
-            `${API_URL}/api/v1/prediction/feature-importance?top_n=${topCount}`,
+            `${API_URL}/api/v1/prediction/feature-importance?country=${selectedCountry}&top_n=${topCount}`,
             { signal: controller.signal }
           );
         }
@@ -221,7 +299,17 @@ export default function FeatureImportance({ standalone = false }) {
         setErrorNotice(
           "Backend offline or unreachable. Displaying verified model pipeline snapshot."
         );
-        setFeatures(FALLBACK_RF_FEATURES.slice(0, topCount));
+        if (selectedCountry === "IN") {
+          setFeatures(FALLBACK_INDIA_FEATURES.slice(0, topCount));
+          setModelName("Gradient Boosting Regressor (India Model)");
+          setExplanation(DEFAULT_INDIA_EXPLANATION);
+          setTotalEvaluated(10);
+        } else {
+          setFeatures(FALLBACK_RF_FEATURES.slice(0, topCount));
+          setModelName("Random Forest Regressor (US Model)");
+          setExplanation(DEFAULT_EXPLANATION);
+          setTotalEvaluated(242);
+        }
       } finally {
         if (isMounted) {
           setLoading(false);
@@ -235,7 +323,7 @@ export default function FeatureImportance({ standalone = false }) {
       isMounted = false;
       controller.abort();
     };
-  }, [topCount, refreshCounter]);
+  }, [selectedCountry, topCount, refreshCounter]);
 
   const handleRefresh = useCallback(() => {
     setLoading(true);
@@ -290,12 +378,13 @@ export default function FeatureImportance({ standalone = false }) {
               <span>{modelName}</span>
             </div>
             <h2 className="feature-panel-title">
-              Model Feature Importance (Top {topCount} Attributes)
+              Model Feature Importance (Top {topCount} Attributes · {selectedCountry === "IN" ? "India 🇮🇳" : "United States 🇺🇸"})
             </h2>
             <p className="feature-panel-subtitle">
-              Mathematical feature contribution derived directly from our trained Random
-              Forest regressor pipeline — revealing which job attributes exert the strongest
-              influence over salary predictions.
+              Mathematical feature contribution derived directly from our trained{" "}
+              {selectedCountry === "IN" ? "India Gradient Boosting" : "United States Random Forest"}{" "}
+              regressor pipeline — revealing which job attributes exert the strongest
+              influence over {selectedCountry === "IN" ? "INR (LPA)" : "USD/year"} salary predictions.
             </p>
           </div>
 
@@ -315,6 +404,34 @@ export default function FeatureImportance({ standalone = false }) {
             >
               <RefreshCw size={13} className={loading ? "spin-icon" : ""} />
               <span>{loading ? "Fetching..." : "Refresh"}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Country Selector Toggle */}
+        <div className="country-selector-wrap" style={{ marginBottom: 16 }}>
+          <div className="country-selector-tabs">
+            <button
+              type="button"
+              className={`country-toggle-btn ${selectedCountry === "US" ? "active" : ""}`}
+              onClick={() => {
+                setLoading(true);
+                setSelectedCountry("US");
+              }}
+            >
+              <span className="country-flag-icon">🇺🇸</span>
+              <span>United States (Random Forest · USD)</span>
+            </button>
+            <button
+              type="button"
+              className={`country-toggle-btn ${selectedCountry === "IN" ? "active" : ""}`}
+              onClick={() => {
+                setLoading(true);
+                setSelectedCountry("IN");
+              }}
+            >
+              <span className="country-flag-icon">🇮🇳</span>
+              <span>India (Gradient Boosting · INR LPA)</span>
             </button>
           </div>
         </div>
@@ -504,32 +621,58 @@ export default function FeatureImportance({ standalone = false }) {
             <strong>What do these results mean?</strong>
           </div>
           <p className="explanation-body">{explanation}</p>
-          <div className="explanation-highlights-grid">
-            <div className="highlight-item">
-              <span className="highlight-pill blue">1. Geographic Boundary Dominance</span>
-              <p>
-                US employee residency and company location account for{" "}
-                <strong>~27.4%</strong> combined weight. Cross-border wage differentials
-                remain the primary driver of baseline compensation.
-              </p>
+          {selectedCountry === "IN" ? (
+            <div className="explanation-highlights-grid">
+              <div className="highlight-item">
+                <span className="highlight-pill purple">1. Experience Dominance (~66.9%)</span>
+                <p>
+                  Years of experience is the single overwhelming driver of tech salaries in India,
+                  dictating career progression and baseline LPA brackets.
+                </p>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-pill blue">2. Remote & Skill Premium</span>
+                <p>
+                  Workplace mode (8.8%) and quantified skill depth (5.2%) provide the strongest
+                  leverage for upward compensation jumps.
+                </p>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-pill emerald">3. Metro Hub Multipliers</span>
+                <p>
+                  Tier-1 tech hubs (Bengaluru, Hyderabad, Gurgaon, Pune) command premium local
+                  multipliers over non-metro locations.
+                </p>
+              </div>
             </div>
-            <div className="highlight-item">
-              <span className="highlight-pill purple">2. Seniority Supersedes Title</span>
-              <p>
-                Moving from Entry (6.0%) to Senior (6.7%) triggers an inflection point in tree
-                splitting, proving career level matters more than subtle variations in domain
-                titles.
-              </p>
+          ) : (
+            <div className="explanation-highlights-grid">
+              <div className="highlight-item">
+                <span className="highlight-pill blue">1. Geographic Boundary Dominance</span>
+                <p>
+                  US employee residency and company location account for{" "}
+                  <strong>~27.4%</strong> combined weight. Cross-border wage differentials
+                  remain the primary driver of baseline compensation.
+                </p>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-pill purple">2. Seniority Supersedes Title</span>
+                <p>
+                  Moving from Entry (6.0%) to Senior (6.7%) triggers an inflection point in tree
+                  splitting, proving career level matters more than subtle variations in domain
+                  titles.
+                </p>
+              </div>
+              <div className="highlight-item">
+                <span className="highlight-pill amber">3. Role & Historical Trend</span>
+                <p>
+                  The <em>Data Analyst</em> role (5.4%) acts as an anchor for baseline analytics
+                  pay, while <em>Work Year</em> (4.0%) captures macro compensation inflation from
+                  2020 through 2023.
+                </p>
+              </div>
             </div>
-            <div className="highlight-item">
-              <span className="highlight-pill amber">3. Role & Historical Trend</span>
-              <p>
-                The <em>Data Analyst</em> role (5.4%) acts as an anchor for baseline analytics
-                pay, while <em>Work Year</em> (4.0%) captures macro compensation inflation from
-                2020 through 2023.
-              </p>
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Footer Metadata Strip */}

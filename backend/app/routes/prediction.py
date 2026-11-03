@@ -1,10 +1,10 @@
 """
-API router endpoints for Salary Prediction.
+API router endpoints for Dual-Country Salary Prediction (India & United States).
 """
 
 import logging
 from typing import Any, Dict, Optional
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, Query, status
 
 logger = logging.getLogger(__name__)
 
@@ -23,24 +23,65 @@ from app.services.shap_service import shap_service
 router = APIRouter(prefix="/prediction", tags=["Salary Prediction"])
 
 
+# ==============================================================================
+# 1. CORE PREDICTION ENDPOINTS
+# ==============================================================================
 
 @router.post(
     "/predict",
     response_model=SalaryPredictionResponse,
     status_code=status.HTTP_200_OK,
-    summary="Predict Job Salary",
-    description="Calculates estimated salary and expected confidence range.",
+    summary="Predict Job Salary (India or US)",
+    description="Predicts estimated salary and confidence range based on selected country (US or IN).",
 )
 def predict_salary_endpoint(request: SalaryPredictionRequest):
     try:
         data_dict = request.model_dump(exclude_unset=True)
+
+        # Validate country code if explicitly supplied
+        if request.country:
+            c = request.country.strip().upper()
+            if c not in ["US", "USA", "UNITED STATES", "IN", "IND", "INDIA"]:
+                raise HTTPException(
+                    status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                    detail=f"Unsupported country code '{request.country}'. Supported countries are 'US' (United States) and 'IN' (India).",
+                )
+
+        # Validate numerical ranges
+        if request.work_year is not None and (request.work_year < 2000 or request.work_year > 2030):
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Invalid work_year '{request.work_year}'. Must be between 2000 and 2030.",
+            )
+
+        if request.remote_ratio is not None and request.remote_ratio not in [0, 50, 100]:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Invalid remote_ratio '{request.remote_ratio}'. Must be 0, 50, or 100.",
+            )
+
+        if request.experience_avg_yrs is not None and (request.experience_avg_yrs < 0 or request.experience_avg_yrs > 40):
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Invalid experience_avg_yrs '{request.experience_avg_yrs}'. Must be between 0.0 and 40.0.",
+            )
+
+        if request.company_rating is not None and (request.company_rating < 1.0 or request.company_rating > 5.0):
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail=f"Invalid company_rating '{request.company_rating}'. Must be between 1.0 and 5.0.",
+            )
+
+        # Perform country-routed prediction
         result = prediction_service.predict(data_dict)
 
         # Attach real-time TreeSHAP explanation
         try:
-            result["shap_explanation"] = shap_service.explain_prediction(data_dict)
+            result["shap_explanation"] = shap_service.explain_prediction(
+                data_dict, country=result.get("country")
+            )
         except Exception as ex:
-            print(f"[PredictionRouter] SHAP explanation warning: {ex}")
+            logger.warning(f"[PredictionRouter] SHAP explanation warning: {ex}")
             result["shap_explanation"] = None
 
         # Automatically save successful predictions
@@ -51,12 +92,20 @@ def predict_salary_endpoint(request: SalaryPredictionRequest):
 
         return result
 
+    except HTTPException:
+        raise
+    except ValueError as ve:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(ve),
+        )
     except FileNotFoundError as fnf:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail=str(fnf),
         )
     except Exception as e:
+        logger.error(f"[PredictionRouter] Prediction error: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Prediction error: {str(e)}",
@@ -68,17 +117,20 @@ def predict_salary_endpoint(request: SalaryPredictionRequest):
     response_model=BatchSalaryPredictionResponse,
     status_code=status.HTTP_200_OK,
     summary="Batch Predict Job Salaries",
-    description="Vectorized prediction for multiple job profiles simultaneously.",
+    description="Vectorized prediction for multiple job profiles simultaneously across countries.",
 )
 def predict_batch_endpoint(batch_request: BatchSalaryPredictionRequest):
     try:
         profiles_data = [p.model_dump(exclude_unset=True) for p in batch_request.profiles]
-        predictions = prediction_service.predict_batch(profiles_data)
+        predictions = prediction_service.predict_batch(
+            profiles_data, country=batch_request.country
+        )
         return {
             "total_count": len(predictions),
             "predictions": predictions,
         }
     except Exception as e:
+        logger.error(f"[PredictionRouter] Batch prediction error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Batch prediction error: {str(e)}",
@@ -89,8 +141,8 @@ def predict_batch_endpoint(batch_request: BatchSalaryPredictionRequest):
     "/metadata",
     response_model=DropdownOptionsResponse,
     status_code=status.HTTP_200_OK,
-    summary="Get UI Form Dropdown Options",
-    description="Returns valid categories for job titles, experience levels, company sizes, and countries.",
+    summary="Get UI Form Dropdown Options (India & US)",
+    description="Returns valid categories for roles, experience levels, company sizes, and cities for both India and US.",
 )
 def get_metadata_endpoint():
     try:
@@ -105,7 +157,7 @@ def get_metadata_endpoint():
 @router.get(
     "/health",
     status_code=status.HTTP_200_OK,
-    summary="Service Health Check",
+    summary="Service Health Check (Both Models)",
 )
 def health_check_endpoint():
     return prediction_service.health_check()
@@ -115,47 +167,57 @@ def health_check_endpoint():
     "/feature-importance",
     response_model=FeatureImportanceResponse,
     status_code=status.HTTP_200_OK,
-    summary="Get Model Feature Importance",
-    description="Returns the Top influential features calculated directly from the trained Random Forest model with percentage contributions.",
+    summary="Get Model Feature Importance (Country-Aware)",
+    description="Returns influential features calculated directly from the active trained model (India GB or US RF).",
 )
-def get_feature_importance_endpoint(top_n: int = 10):
+def get_feature_importance_endpoint(
+    top_n: int = Query(default=10, ge=1, le=50),
+    country: str = Query(default="US", description="Country code: 'US' or 'IN'"),
+):
     try:
-        return prediction_service.get_feature_importance(top_n=top_n)
+        return prediction_service.get_feature_importance(top_n=top_n, country=country)
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to calculate feature importance: {str(e)}",
         )
 
-# GET all prediction history
+
+# ==============================================================================
+# 2. PREDICTION HISTORY ENDPOINTS
+# ==============================================================================
+
 @router.get("/history", summary="Get Prediction History")
 def get_prediction_history(
     limit: int = 50,
     offset: int = 0,
     search: Optional[str] = None,
     experience_level: Optional[str] = None,
+    country: Optional[str] = Query(default=None, description="Filter history by country: 'US' or 'IN'"),
 ):
     return {
         "total": history_service.get_total_count(
             search=search,
             experience_level=experience_level,
+            country=country,
         ),
         "history": history_service.get_history(
             limit=limit,
             offset=offset,
             search=search,
             experience_level=experience_level,
+            country=country,
         ),
     }
 
 
-# GET prediction statistics
 @router.get("/history/summary", summary="Get History Statistics")
-def get_history_summary():
-    return history_service.get_summary_stats()
+def get_history_summary(
+    country: Optional[str] = Query(default=None, description="Optional filter by country: 'US' or 'IN'"),
+):
+    return history_service.get_summary_stats(country=country)
 
 
-# GET one prediction by ID
 @router.get("/history/{prediction_id}", summary="Get Prediction Details")
 def get_prediction_details(prediction_id: int):
     prediction = history_service.get_prediction_by_id(prediction_id)
@@ -166,18 +228,19 @@ def get_prediction_details(prediction_id: int):
             detail="Prediction record not found",
         )
 
-    # Attach SHAP explanation if not already present
+    # Attach SHAP explanation using record's country if not present
     if not prediction.get("shap_explanation"):
         try:
             features = prediction.get("input_features") or prediction
-            prediction["shap_explanation"] = shap_service.explain_prediction(features)
+            prediction["shap_explanation"] = shap_service.explain_prediction(
+                features, country=prediction.get("country", "US")
+            )
         except Exception as e:
             logger.warning(f"Could not compute SHAP for historical record {prediction_id}: {e}")
 
     return prediction
 
 
-# DELETE one prediction
 @router.delete("/history/{prediction_id}", summary="Delete Prediction")
 def delete_prediction_history(prediction_id: int):
     deleted = history_service.delete_prediction(prediction_id)
@@ -191,7 +254,6 @@ def delete_prediction_history(prediction_id: int):
     return {"message": "Prediction deleted successfully"}
 
 
-# DELETE all history
 @router.delete("/history", summary="Clear Prediction History")
 def clear_prediction_history():
     deleted_count = history_service.clear_history()
@@ -203,21 +265,21 @@ def clear_prediction_history():
 
 
 # ==============================================================================
-# Explainable AI (SHAP) Endpoints
+# 3. EXPLAINABLE AI (SHAP) ENDPOINTS
 # ==============================================================================
-
 
 @router.post(
     "/explain",
     status_code=status.HTTP_200_OK,
-    summary="Explain Prediction with SHAP",
-    description="Computes exact local TreeSHAP attribution and waterfall breakdown for an individual prediction.",
+    summary="Explain Prediction with SHAP (Country-Aware)",
+    description="Computes local TreeSHAP attribution and waterfall breakdown for an individual prediction.",
 )
 def explain_prediction_endpoint(request: SalaryPredictionRequest):
     try:
         data_dict = request.model_dump(exclude_unset=True)
-        return shap_service.explain_prediction(data_dict)
+        return shap_service.explain_prediction(data_dict, country=request.country)
     except Exception as e:
+        logger.error(f"[SHAP] Explanation error: {e}", exc_info=True)
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"SHAP explanation error: {str(e)}",
@@ -236,7 +298,7 @@ def explain_historical_prediction_endpoint(prediction_id: int):
         if not record:
             raise HTTPException(status_code=404, detail="Prediction record not found")
         features = record.get("input_features") or record
-        return shap_service.explain_prediction(features)
+        return shap_service.explain_prediction(features, country=record.get("country", "US"))
     except HTTPException:
         raise
     except Exception as e:
@@ -249,12 +311,15 @@ def explain_historical_prediction_endpoint(prediction_id: int):
 @router.get(
     "/explain/global",
     status_code=status.HTTP_200_OK,
-    summary="Get Global SHAP Feature Importance",
-    description="Returns global TreeSHAP and feature importance overview.",
+    summary="Get Global SHAP Feature Importance (Country-Aware)",
+    description="Returns global TreeSHAP and feature importance overview for specified country (US or IN).",
 )
-def explain_global_endpoint(top_n: int = 10):
+def explain_global_endpoint(
+    top_n: int = Query(default=10, ge=1, le=50),
+    country: str = Query(default="US", description="Country code: 'US' or 'IN'"),
+):
     try:
-        return shap_service.get_global_shap_importance(top_n=top_n)
+        return shap_service.get_global_shap_importance(top_n=top_n, country=country)
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

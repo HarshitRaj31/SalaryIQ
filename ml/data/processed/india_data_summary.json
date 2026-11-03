@@ -1,0 +1,75 @@
+{
+  "dataset_name": "Indian Tech Jobs Salary Dataset (2026)",
+  "source_file": "indian_tech_jobs_2026.csv",
+  "initial_raw_records": 23201,
+  "cleaned_records": 2269,
+  "target_currency_primary": "INR (Lakhs Per Annum - LPA)",
+  "target_currency_secondary": "USD",
+  "usd_inr_exchange_rate": 84.0,
+  "salary_statistics_lpa": {
+    "mean": 16.15,
+    "std": 10.63,
+    "min": 1.5,
+    "p25": 7.75,
+    "median": 15.0,
+    "p75": 22.5,
+    "max": 87.5
+  },
+  "salary_statistics_usd": {
+    "mean": 19227,
+    "median": 17857,
+    "min": 1786,
+    "max": 104167
+  },
+  "role_distribution": {
+    "Data Scientist": 642,
+    "Data Analyst": 487,
+    "Business Analyst": 384,
+    "Machine Learning Engineer": 366,
+    "Data Engineer": 199,
+    "Python Developer": 191
+  },
+  "experience_tier_distribution": {
+    "SE": 904,
+    "MI": 594,
+    "EX": 491,
+    "EN": 280
+  },
+  "primary_city_distribution": {
+    "Delhi / NCR": 538,
+    "Chennai": 336,
+    "Mumbai": 328,
+    "Pune": 314,
+    "Bangalore": 226,
+    "Hyderabad": 142,
+    "Kolkata": 142,
+    "Ahmedabad": 137,
+    "Remote": 92,
+    "Bhubaneswar": 2,
+    "Mohali": 2,
+    "Indore": 2,
+    "Kochi": 2,
+    "Bhopal": 1,
+    "Hosur": 1,
+    "Nagamangala": 1,
+    "Ahemdabad": 1,
+    "North Goa": 1,
+    "Udaipur": 1
+  },
+  "work_mode_distribution": {
+    "On-site": 1533,
+    "Hybrid": 712,
+    "Remote": 103
+  },
+  "company_size_distribution": {
+    "S": 1861,
+    "L": 401,
+    "M": 7
+  },
+  "deduplication_audit": {
+    "records_before_deduplication": 2269,
+    "duplicates_removed": 0,
+    "unique_records": 2269,
+    "is_deduplicated": true
+  }
+}

@@ -22,8 +22,11 @@ import {
 } from "lucide-react";
 import "./ShapExplanationView.css";
 
-const formatUSD = (val) => {
-  if (val === undefined || val === null || isNaN(val)) return "$0";
+const formatCurrency = (val, currency = "USD") => {
+  if (val === undefined || val === null || isNaN(val)) return currency === "INR" ? "₹0 LPA" : "$0";
+  if (currency === "INR") {
+    return `₹${Number(val).toFixed(2)} LPA`;
+  }
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -32,7 +35,7 @@ const formatUSD = (val) => {
 };
 
 // Custom Tooltip for SHAP Waterfall and Contribution Charts
-function ShapChartTooltip({ active, payload, label }) {
+function ShapChartTooltip({ active, payload, label, currency = "USD" }) {
   if (!active || !payload || !payload.length) return null;
   const item = payload[0]?.payload;
 
@@ -46,13 +49,13 @@ function ShapChartTooltip({ active, payload, label }) {
         {item?.type === "base" && (
           <div className="shap-tooltip-row">
             <span>Market Baseline:</span>
-            <strong>{formatUSD(item.value)}</strong>
+            <strong>{item?.formatted_value || formatCurrency(item.value, currency)}</strong>
           </div>
         )}
         {item?.type === "total" && (
           <div className="shap-tooltip-row">
             <span>Final Prediction:</span>
-            <strong>{formatUSD(item.value)}</strong>
+            <strong>{item?.formatted_value || formatCurrency(item.value, currency)}</strong>
           </div>
         )}
         {(item?.type === "positive" || item?.type === "negative") && (
@@ -60,14 +63,15 @@ function ShapChartTooltip({ active, payload, label }) {
             <div className="shap-tooltip-row">
               <span>SHAP Contribution:</span>
               <strong className={item.delta >= 0 ? "positive" : "negative"}>
-                {item.delta >= 0 ? "+" : ""}
-                {formatUSD(item.delta)}
+                {item?.formatted || (
+                  (item.delta >= 0 ? "+" : "") + formatCurrency(item.delta, currency)
+                )}
               </strong>
             </div>
-            {item?.running_total && (
+            {item?.running_total !== undefined && (
               <div className="shap-tooltip-row sub">
                 <span>Running Prediction:</span>
-                <span>{formatUSD(item.running_total)}</span>
+                <span>{item?.formatted_value || formatCurrency(item.running_total, currency)}</span>
               </div>
             )}
           </>
@@ -87,7 +91,36 @@ export default function ShapExplanationView({
   // Fallback demo/baseline data if backend is offline or loading
   const effectiveData = useMemo(() => {
     if (shapData && shapData.feature_contributions) {
-      return shapData;
+      const isIndia = shapData.country === "IN" || shapData.currency === "INR";
+      const baseVal = Number(shapData.base_salary ?? shapData.base_value ?? 0);
+      const predVal = Number(shapData.predicted_salary ?? 0);
+      const totalDelta = Number(shapData.total_shap_impact ?? shapData.total_shap_delta ?? (predVal - baseVal));
+
+      const rawWaterfall = shapData.waterfall || shapData.waterfall_chart_data || [];
+      const waterfall_chart_data = rawWaterfall.map((step) => {
+        const val = Number(step.value);
+        const delta = Number(step.delta);
+        return {
+          ...step,
+          step_bottom: step.type === "base" || step.type === "total" ? 0 : Math.min(val - delta, val),
+          step_height: step.type === "base" || step.type === "total" ? val : Math.abs(delta),
+          formatted: step.formatted || step.formatted_delta || (isIndia ? `₹${delta.toFixed(2)} LPA` : formatCurrency(delta, "USD")),
+        };
+      });
+
+      return {
+        ...shapData,
+        currency: isIndia ? "INR" : "USD",
+        base_value: baseVal,
+        formatted_base_value: shapData.formatted_base || shapData.formatted_base_value || (isIndia ? `₹${baseVal.toFixed(2)} LPA` : formatCurrency(baseVal, "USD")),
+        formatted_predicted_salary: shapData.formatted_predicted || shapData.formatted_predicted_salary || (isIndia ? `₹${predVal.toFixed(2)} LPA` : formatCurrency(predVal, "USD")),
+        total_shap_delta: totalDelta,
+        formatted_total_delta: shapData.formatted_total_impact || shapData.formatted_total_delta || ((totalDelta >= 0 ? "+" : "") + (isIndia ? `₹${totalDelta.toFixed(2)} LPA` : formatCurrency(totalDelta, "USD"))),
+        top_positive_factors: shapData.top_positive || shapData.top_positive_factors || [],
+        top_negative_factors: shapData.top_negative || shapData.top_negative_factors || [],
+        waterfall_chart_data,
+        narrative_explanation: shapData.summary || shapData.narrative_explanation,
+      };
     }
     // Verified TreeSHAP baseline for default Data Scientist profile
     return {
@@ -510,12 +543,16 @@ export default function ShapExplanationView({
                     interval={0}
                   />
                   <YAxis
-                    tickFormatter={(v) => `$${Math.round(v / 1000)}k`}
+                    tickFormatter={(v) =>
+                      effectiveData.currency === "INR"
+                        ? `₹${Number(v).toFixed(1)}L`
+                        : `$${Math.round(v / 1000)}k`
+                    }
                     stroke="#64748b"
                     tick={{ fill: "#94a3b8", fontSize: 11 }}
                     domain={[0, "auto"]}
                   />
-                  <Tooltip content={<ShapChartTooltip />} />
+                  <Tooltip content={<ShapChartTooltip currency={effectiveData.currency} />} />
                   <ReferenceLine
                     y={effectiveData.base_value}
                     stroke="#64748b"
@@ -582,7 +619,11 @@ export default function ShapExplanationView({
                   />
                   <XAxis
                     type="number"
-                    tickFormatter={(v) => `$${Math.round(v / 1000)}k`}
+                    tickFormatter={(v) =>
+                      effectiveData.currency === "INR"
+                        ? `₹${Number(v).toFixed(1)}L`
+                        : `$${Math.round(v / 1000)}k`
+                    }
                     stroke="#64748b"
                     tick={{ fill: "#94a3b8", fontSize: 11 }}
                   />
@@ -593,7 +634,7 @@ export default function ShapExplanationView({
                     tick={{ fill: "#cbd5e1", fontSize: 11 }}
                     width={130}
                   />
-                  <Tooltip content={<ShapChartTooltip />} />
+                  <Tooltip content={<ShapChartTooltip currency={effectiveData.currency} />} />
                   <ReferenceLine x={0} stroke="#475569" />
                   <Bar dataKey="delta" radius={[0, 6, 6, 0]}>
                     {contributionChartData.map((entry, index) => (
@@ -617,7 +658,7 @@ export default function ShapExplanationView({
                   <th>Job Dimension</th>
                   <th>Your Value</th>
                   <th>Category</th>
-                  <th>Dollar Contribution</th>
+                  <th>Impact Contribution ({effectiveData.currency === "INR" ? "LPA" : "USD"})</th>
                   <th>Impact Direction</th>
                 </tr>
               </thead>

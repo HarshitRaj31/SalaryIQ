@@ -1,0 +1,64 @@
+{
+    "best_model": "Gradient Boosting Regressor",
+    "selection_metric": "5-fold CV RMSE",
+    "target": "salary_in_lpa",
+    "target_unit": "LPA",
+    "timestamp": "2026-11-03T19:22:34.156691",
+    "total_records": 2269,
+    "metrics": {
+        "Linear Regression": {
+            "CV_RMSE": 8.466412745264142,
+            "CV_RMSE_STD": 0.432996292232623,
+            "CV_MAE": 6.00833388884333,
+            "CV_MAE_STD": 0.12402406389749727,
+            "CV_R2": 0.3895018064659794,
+            "CV_R2_STD": 0.006593251238270676,
+            "MAE": 5.685752423084995,
+            "RMSE": 7.167443686852775,
+            "R2_Score": 0.4462154998836927,
+            "MAPE": 61.87761258388671,
+            "Hyperparameters": {
+                "fit_intercept": true
+            }
+        },
+        "Random Forest Regressor": {
+            "CV_RMSE": 7.996987306334674,
+            "CV_RMSE_STD": 0.33341492516234245,
+            "CV_MAE": 5.577354289392957,
+            "CV_MAE_STD": 0.1757741291258529,
+            "CV_R2": 0.4543049145736694,
+            "CV_R2_STD": 0.024311021380028462,
+            "MAE": 5.2812595220463,
+            "RMSE": 7.089955361074958,
+            "R2_Score": 0.45812487020702664,
+            "MAPE": 54.245813388604226,
+            "Hyperparameters": {
+                "regressor__n_estimators": 200,
+                "regressor__min_samples_split": 8,
+                "regressor__min_samples_leaf": 4,
+                "regressor__max_features": 1.0,
+                "regressor__max_depth": 12
+            }
+        },
+        "Gradient Boosting Regressor": {
+            "CV_RMSE": 7.802175778442139,
+            "CV_RMSE_STD": 0.24220120497770126,
+            "CV_MAE": 5.45153646513297,
+            "CV_MAE_STD": 0.15397654788456142,
+            "CV_R2": 0.47836950445451193,
+            "CV_R2_STD": 0.049229727534930635,
+            "MAE": 5.272753535409646,
+            "RMSE": 6.887271585087356,
+            "R2_Score": 0.48866368798169035,
+            "MAPE": 55.65493483118325,
+            "Hyperparameters": {
+                "regressor__subsample": 0.95,
+                "regressor__n_estimators": 150,
+                "regressor__min_samples_split": 6,
+                "regressor__min_samples_leaf": 2,
+                "regressor__max_depth": 3,
+                "regressor__learning_rate": 0.08
+            }
+        }
+    }
+}

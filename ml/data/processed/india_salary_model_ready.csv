@@ -1,0 +1,2270 @@
+work_year,experience_level,employment_type,role_standard,primary_city_clean,remote_ratio,company_size,experience_avg_yrs,company_rating,skills_count,salary_in_lpa,salary_in_usd
+2026,EX,FT,Data Scientist,Hyderabad,50,L,10.0,3.6,8,20.0,23810
+2026,SE,FT,Data Scientist,Hyderabad,50,L,7.5,3.6,8,23.75,28274
+2026,MI,FT,Data Scientist,Pune,50,S,4.5,3.6,8,19.75,23512
+2026,SE,FT,Data Scientist,Bangalore,50,L,8.5,3.6,8,23.5,27976
+2026,SE,FT,Data Scientist,Bangalore,0,S,7.5,3.5,8,18.0,21429
+2026,SE,FT,Data Scientist,Hyderabad,50,S,8.0,3.6,7,32.5,38690
+2026,MI,FT,Data Scientist,Bangalore,0,S,4.5,3.6,8,16.5,19643
+2026,SE,FT,Data Scientist,Hyderabad,50,S,7.5,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.5,3.6,8,32.5,38690
+2026,MI,FT,Data Scientist,Bangalore,0,S,4.5,4.0,8,9.0,10714
+2026,SE,FT,Data Scientist,Bangalore,50,S,7.5,3.3,7,21.25,25298
+2026,MI,FT,Data Scientist,Bangalore,50,S,5.5,3.3,8,20.0,23810
+2026,SE,FT,Data Scientist,Hyderabad,50,L,7.5,3.6,8,9.75,11607
+2026,SE,FT,Data Scientist,Hyderabad,50,S,6.5,3.1,6,16.5,19643
+2026,MI,FT,Data Scientist,Bangalore,0,S,5.0,3.6,6,9.5,11310
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.5,3.6,8,27.5,32738
+2026,MI,FT,Data Scientist,Hyderabad,50,S,5.0,3.6,8,4.5,5357
+2026,SE,FT,Data Scientist,Bangalore,0,S,7.0,3.6,8,23.0,27381
+2026,SE,FT,Data Scientist,Pune,50,S,6.5,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.8,7,22.5,26786
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.6,8,23.5,27976
+2026,EN,FT,Data Scientist,Remote,100,S,0.0,3.9,8,17.5,20833
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,10.0,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Bangalore,0,S,6.5,3.6,8,22.0,26190
+2026,SE,FT,Data Scientist,Hyderabad,50,S,7.5,3.3,8,20.0,23810
+2026,SE,FT,Data Scientist,Hyderabad,0,S,7.0,3.3,6,32.5,38690
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.5,3.6,8,30.0,35714
+2026,SE,FT,Data Scientist,Hyderabad,50,S,6.5,3.6,8,22.5,26786
+2026,EX,FT,Data Scientist,Bangalore,0,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Bangalore,0,S,6.5,3.6,8,37.5,44643
+2026,EX,FT,Data Scientist,Remote,100,S,10.0,3.6,8,16.0,19048
+2026,EX,FT,Data Scientist,Hyderabad,0,L,10.5,3.6,8,14.5,17262
+2026,SE,FT,Data Scientist,Hyderabad,0,S,8.5,3.6,8,25.5,30357
+2026,SE,FT,Data Scientist,Hyderabad,0,S,6.0,3.6,8,27.5,32738
+2026,MI,FT,Data Scientist,Bangalore,50,S,4.5,3.3,8,25.0,29762
+2026,SE,FT,Data Scientist,Bangalore,50,S,8.0,3.9,6,9.25,11012
+2026,SE,FT,Data Scientist,Kolkata,50,S,8.5,3.9,8,15.0,17857
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,8,18.0,21429
+2026,SE,FT,Data Scientist,Hyderabad,0,S,7.5,3.6,8,26.25,31250
+2026,EX,FT,Data Scientist,Bangalore,50,S,10.5,3.6,8,37.5,44643
+2026,MI,FT,Data Scientist,Hyderabad,0,S,5.5,3.6,8,25.0,29762
+2026,SE,FT,Data Scientist,Bangalore,50,S,7.0,3.6,8,19.0,22619
+2026,SE,FT,Data Scientist,Mumbai,50,L,7.5,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Hyderabad,0,S,10.5,3.6,8,33.75,40179
+2026,EX,FT,Data Scientist,Pune,50,L,9.5,3.4,8,26.25,31250
+2026,SE,FT,Data Scientist,Hyderabad,50,L,8.5,3.6,8,17.0,20238
+2026,SE,FT,Data Scientist,Bangalore,0,S,7.0,3.5,8,20.0,23810
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.5,3.6,8,33.75,40179
+2026,MI,FT,Data Scientist,Bangalore,0,S,4.0,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Bangalore,50,L,7.0,3.3,7,22.5,26786
+2026,EX,FT,Data Scientist,Bangalore,0,S,10.5,3.6,8,28.75,34226
+2026,EX,FT,Data Scientist,Bangalore,50,L,9.5,3.3,8,32.5,38690
+2026,SE,FT,Data Scientist,Hyderabad,0,S,7.0,3.2,8,22.5,26786
+2026,SE,FT,Data Scientist,Bangalore,0,S,7.0,3.6,8,14.0,16667
+2026,EN,FT,Data Scientist,Bangalore,50,S,0.0,4.0,8,42.5,50595
+2026,EN,FT,Data Scientist,Bangalore,0,S,1.0,3.6,8,3.62,4310
+2026,EX,FT,Data Scientist,Hyderabad,50,S,9.5,3.6,8,18.0,21429
+2026,SE,FT,Data Scientist,Bangalore,50,L,8.5,3.3,8,21.25,25298
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,8.0,3.6,8,35.0,41667
+2026,SE,FT,Data Scientist,Bangalore,0,S,7.5,1.8,8,30.0,35714
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Remote,100,S,10.0,3.2,8,19.5,23214
+2026,SE,FT,Data Scientist,Pune,50,L,6.5,3.6,8,17.0,20238
+2026,MI,FT,Data Scientist,Pune,50,S,5.5,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Pune,50,S,10.0,3.6,8,47.5,56548
+2026,MI,FT,Data Scientist,Bangalore,0,S,4.0,3.6,6,22.5,26786
+2026,EX,FT,Data Scientist,Chennai,0,S,16.5,4.7,8,26.5,31548
+2026,EX,FT,Data Scientist,Bangalore,0,S,10.5,3.6,8,32.5,38690
+2026,SE,FT,Data Scientist,Pune,50,S,8.0,3.6,8,35.0,41667
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,3.6,8,22.75,27083
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.0,3.6,8,47.5,56548
+2026,SE,FT,Data Scientist,Bangalore,0,S,8.5,3.2,8,21.0,25000
+2026,MI,FT,Data Scientist,Pune,50,S,4.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Pune,50,S,5.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Hyderabad,50,S,7.5,3.7,8,22.5,26786
+2026,EN,FT,Data Scientist,Chennai,0,S,1.0,3.5,8,6.5,7738
+2026,MI,FT,Data Scientist,Bangalore,50,L,3.0,3.6,6,8.5,10119
+2026,EN,FT,Data Scientist,Bangalore,0,S,0.0,3.7,8,27.5,32738
+2026,SE,FT,Data Scientist,Bangalore,0,L,7.5,3.7,8,27.5,32738
+2026,SE,FT,Data Scientist,Bangalore,50,S,7.5,3.9,6,17.0,20238
+2026,SE,FT,Data Scientist,Mumbai,0,L,8.0,3.3,6,20.0,23810
+2026,EX,FT,Data Scientist,Chennai,50,L,10.5,3.3,5,27.5,32738
+2026,EX,FT,Data Scientist,Bangalore,0,L,10.5,3.3,8,15.0,17857
+2026,SE,FT,Data Scientist,Hyderabad,0,L,8.0,3.7,5,10.5,12500
+2026,EX,FT,Data Scientist,Pune,50,L,14.5,3.4,8,28.75,34226
+2026,SE,FT,Data Scientist,Bangalore,0,L,6.5,3.7,5,10.0,11905
+2026,EN,FT,Data Scientist,Hyderabad,0,S,1.5,3.6,5,5.5,6548
+2026,SE,FT,Data Scientist,Bangalore,0,S,8.0,3.6,8,18.0,21429
+2026,SE,FT,Data Scientist,Pune,0,L,6.0,3.3,8,32.5,38690
+2026,MI,FT,Data Scientist,Hyderabad,50,S,4.5,3.6,8,30.0,35714
+2026,MI,FT,Data Scientist,Hyderabad,0,S,5.5,2.7,8,22.5,26786
+2026,SE,FT,Data Scientist,Bangalore,50,S,8.5,3.6,8,28.75,34226
+2026,SE,FT,Data Scientist,Mumbai,50,L,6.5,3.6,8,17.0,20238
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.0,3.2,8,22.5,26786
+2026,SE,FT,Data Scientist,Mumbai,0,L,8.0,3.6,8,21.25,25298
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.7,8,30.0,35714
+2026,SE,FT,Data Scientist,Mumbai,0,L,7.5,3.3,8,22.5,26786
+2026,MI,FT,Data Scientist,Mumbai,50,S,5.0,3.9,8,8.0,9524
+2026,EX,FT,Data Scientist,Mumbai,0,S,11.0,3.5,8,17.5,20833
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.8,8,11.0,13095
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.8,8,14.0,16667
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.8,8,21.25,25298
+2026,MI,FT,Data Scientist,Mumbai,0,S,5.5,3.9,8,22.5,26786
+2026,EX,FT,Data Scientist,Mumbai,50,S,14.5,3.6,8,45.0,53571
+2026,SE,FT,Data Scientist,Mumbai,50,S,6.0,3.9,8,8.0,9524
+2026,MI,FT,Data Scientist,Mumbai,0,S,3.0,4.3,8,4.5,5357
+2026,MI,FT,Data Scientist,Mumbai,0,S,3.0,3.6,8,6.5,7738
+2026,SE,FT,Data Scientist,Mumbai,0,L,6.0,3.6,8,12.5,14881
+2026,EX,FT,Data Scientist,Mumbai,0,S,10.0,4.0,8,12.5,14881
+2026,SE,FT,Data Scientist,Mumbai,0,S,8.0,3.6,8,37.5,44643
+2026,SE,FT,Data Scientist,Mumbai,50,S,7.5,3.6,7,22.5,26786
+2026,SE,FT,Data Scientist,Mumbai,50,S,8.5,3.6,8,25.5,30357
+2026,MI,FT,Data Scientist,Mumbai,0,S,5.0,3.8,8,9.5,11310
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.0,3.6,8,24.5,29167
+2026,MI,FT,Data Scientist,Mumbai,0,S,4.5,3.6,8,32.5,38690
+2026,EX,FT,Data Scientist,Mumbai,50,L,19.5,3.6,8,87.5,104167
+2026,EN,FT,Data Scientist,Mumbai,0,S,2.5,3.8,7,6.25,7440
+2026,EX,FT,Data Scientist,Mumbai,0,S,10.0,3.6,8,28.75,34226
+2026,MI,FT,Data Scientist,Mumbai,0,S,5.5,3.9,8,4.25,5060
+2026,EX,FT,Data Scientist,Mumbai,0,L,10.5,3.8,8,31.25,37202
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.6,8,10.25,12202
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.6,8,9.75,11607
+2026,MI,FT,Data Scientist,Mumbai,50,S,4.0,3.4,8,11.0,13095
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.6,8,10.0,11905
+2026,MI,FT,Data Scientist,Mumbai,0,S,3.0,4.0,8,8.5,10119
+2026,MI,FT,Data Scientist,Mumbai,50,S,4.0,3.6,8,4.5,5357
+2026,MI,FT,Data Scientist,Mumbai,0,S,5.0,3.2,8,11.5,13690
+2026,MI,FT,Data Scientist,Mumbai,0,S,3.5,3.6,7,8.5,10119
+2026,MI,FT,Data Scientist,Mumbai,0,S,4.0,4.0,8,12.0,14286
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.8,8,35.0,41667
+2026,EN,FT,Data Scientist,Mumbai,0,S,0.0,3.6,8,36.25,43155
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.3,8,10.0,11905
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.0,3.6,8,11.0,13095
+2026,SE,FT,Data Scientist,Mumbai,0,S,8.0,3.6,8,15.5,18452
+2026,EX,FT,Data Scientist,Mumbai,0,S,9.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Mumbai,0,S,4.5,3.8,8,15.0,17857
+2026,SE,FT,Data Scientist,Mumbai,0,S,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.0,3.4,8,23.5,27976
+2026,EN,FT,Data Scientist,Mumbai,0,S,0.0,3.6,8,17.5,20833
+2026,EX,FT,Data Scientist,Mumbai,0,S,9.5,3.6,8,30.0,35714
+2026,EX,FT,Data Scientist,Mumbai,50,S,9.5,3.6,7,10.0,11905
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,3.7,8,18.75,22321
+2026,MI,FT,Data Scientist,Mumbai,0,S,5.0,3.6,7,8.25,9821
+2026,MI,FT,Data Scientist,Mumbai,0,S,4.0,3.6,5,7.5,8929
+2026,EX,FT,Data Scientist,Mumbai,0,S,10.5,3.6,8,24.0,28571
+2026,SE,FT,Data Scientist,Mumbai,50,L,6.5,3.6,8,17.75,21131
+2026,SE,FT,Data Scientist,Mumbai,0,S,8.5,3.6,7,33.75,40179
+2026,SE,FT,Data Scientist,Mumbai,50,S,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Mumbai,50,S,6.5,3.6,8,15.5,18452
+2026,SE,FT,Data Scientist,Mumbai,50,S,6.5,3.6,8,20.0,23810
+2026,SE,FT,Data Scientist,Mumbai,50,S,7.0,3.6,8,20.5,24405
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.0,3.6,8,10.0,11905
+2026,EX,FT,Data Scientist,Mumbai,0,S,10.5,3.6,8,38.75,46131
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.0,3.7,8,17.0,20238
+2026,EX,FT,Data Scientist,Mumbai,0,S,9.0,3.6,8,32.5,38690
+2026,EX,FT,Data Scientist,Mumbai,50,S,9.5,3.6,8,23.75,28274
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.0,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Mumbai,0,S,14.0,3.6,8,2.25,2679
+2026,EX,FT,Data Scientist,Mumbai,50,S,10.0,3.6,8,37.5,44643
+2026,EN,FT,Data Scientist,Mumbai,0,S,1.0,3.1,8,27.5,32738
+2026,EX,FT,Data Scientist,Mumbai,0,S,10.5,3.6,8,33.75,40179
+2026,SE,FT,Data Scientist,Mumbai,0,S,6.5,3.6,8,5.5,6548
+2026,EX,FT,Data Scientist,Mumbai,0,L,9.5,3.6,6,17.5,20833
+2026,SE,FT,Data Scientist,Mumbai,50,S,7.5,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Hyderabad,0,L,7.5,3.4,6,12.0,14286
+2026,SE,FT,Data Scientist,Pune,50,L,7.5,3.6,8,23.75,28274
+2026,SE,FT,Data Scientist,Pune,50,S,8.0,3.6,7,32.5,38690
+2026,MI,FT,Data Scientist,Pune,50,S,5.0,3.6,8,4.5,5357
+2026,MI,FT,Data Scientist,Pune,50,S,5.5,3.0,8,14.5,17262
+2026,SE,FT,Data Scientist,Pune,50,S,6.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Pune,50,S,4.5,3.0,8,21.25,25298
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.6,8,25.5,30357
+2026,MI,FT,Data Scientist,Remote,100,S,4.0,3.3,8,17.5,20833
+2026,EN,FT,Data Scientist,Pune,0,S,2.5,4.7,8,6.75,8036
+2026,SE,FT,Data Scientist,Pune,0,S,8.5,3.6,8,25.5,30357
+2026,SE,FT,Data Scientist,Pune,0,S,7.5,3.6,8,26.25,31250
+2026,SE,FT,Data Scientist,Pune,50,L,7.5,3.6,8,18.0,21429
+2026,MI,FT,Data Scientist,Pune,0,S,4.5,3.8,8,31.5,37500
+2026,SE,FT,Data Scientist,Pune,50,L,8.5,3.6,8,17.0,20238
+2026,EX,FT,Data Scientist,Pune,0,S,10.0,3.7,8,40.0,47619
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.3,8,22.5,26786
+2026,MI,FT,Data Scientist,Remote,100,S,4.0,3.3,8,14.5,17262
+2026,SE,FT,Data Scientist,Pune,50,S,7.0,2.9,8,35.0,41667
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.6,8,37.5,44643
+2026,MI,FT,Data Scientist,Pune,50,S,5.5,3.8,8,20.0,23810
+2026,EN,FT,Data Scientist,Pune,0,S,1.0,3.6,8,3.5,4167
+2026,MI,FT,Data Scientist,Pune,0,S,5.5,3.6,8,4.75,5655
+2026,EX,FT,Data Scientist,Pune,50,S,11.5,4.0,8,15.0,17857
+2026,EX,FT,Data Scientist,Pune,0,L,10.0,3.3,8,20.5,24405
+2026,SE,FT,Data Scientist,Pune,0,L,8.0,3.3,8,22.5,26786
+2026,EN,FT,Data Scientist,Pune,0,S,1.0,3.5,8,6.5,7738
+2026,EX,FT,Data Scientist,Pune,50,S,9.0,3.6,8,28.75,34226
+2026,EX,FT,Data Scientist,Pune,0,S,9.5,3.6,8,42.5,50595
+2026,SE,FT,Data Scientist,Pune,0,S,7.5,3.5,7,22.5,26786
+2026,SE,FT,Data Scientist,Pune,0,L,6.0,3.3,8,13.5,16071
+2026,SE,FT,Data Scientist,Pune,0,L,7.5,3.3,6,10.0,11905
+2026,EX,FT,Data Scientist,Pune,0,L,9.5,3.3,5,22.5,26786
+2026,SE,FT,Data Scientist,Pune,0,L,8.0,3.3,7,15.0,17857
+2026,SE,FT,Data Scientist,Pune,50,S,8.5,3.6,8,25.75,30655
+2026,MI,FT,Data Scientist,Pune,0,S,5.0,3.7,8,12.5,14881
+2026,SE,FT,Data Scientist,Pune,0,L,8.0,3.3,8,16.0,19048
+2026,SE,FT,Data Scientist,Pune,50,S,8.5,3.6,8,37.5,44643
+2026,EX,FT,Data Scientist,Pune,0,S,9.0,3.6,6,20.0,23810
+2026,EX,FT,Data Scientist,Pune,0,S,10.5,3.6,8,13.98,16643
+2026,SE,FT,Data Scientist,Pune,100,S,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Pune,50,S,6.0,3.3,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,50,S,6.0,3.6,8,30.0,35714
+2026,EX,FT,Data Scientist,Pune,50,L,11.5,3.6,8,26.5,31548
+2026,EN,FT,Data Scientist,Pune,0,S,2.0,3.7,7,12.5,14881
+2026,SE,FT,Data Scientist,Pune,0,S,6.5,2.0,8,13.0,15476
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.6,8,32.5,38690
+2026,SE,FT,Data Scientist,Pune,0,S,7.0,3.6,8,42.5,50595
+2026,SE,FT,Data Scientist,Pune,50,L,7.5,3.6,8,19.0,22619
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.6,8,32.5,38690
+2026,EX,FT,Data Scientist,Pune,0,S,10.0,3.6,8,19.0,22619
+2026,EX,FT,Data Scientist,Remote,100,S,9.5,2.8,8,30.0,35714
+2026,MI,FT,Data Scientist,Pune,50,S,5.5,4.0,8,22.5,26786
+2026,MI,FT,Data Scientist,Pune,0,L,5.0,3.8,6,9.0,10714
+2026,SE,FT,Data Scientist,Pune,0,L,8.0,3.6,7,12.0,14286
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,2.7,7,22.5,26786
+2026,SE,FT,Data Scientist,Pune,0,S,7.0,3.7,8,20.0,23810
+2026,EN,FT,Data Scientist,Pune,0,S,2.5,3.6,8,6.5,7738
+2026,EX,FT,Data Scientist,Pune,50,L,15.0,3.5,8,12.0,14286
+2026,EX,FT,Data Scientist,Pune,50,S,11.5,3.6,5,21.5,25595
+2026,EN,FT,Data Scientist,Pune,0,S,0.0,3.6,8,28.75,34226
+2026,EX,FT,Data Scientist,Pune,0,S,15.0,3.6,8,14.0,16667
+2026,EX,FT,Data Scientist,Pune,50,S,14.5,3.6,8,45.0,53571
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,0,S,7.0,3.0,8,20.0,23810
+2026,SE,FT,Data Scientist,Pune,0,S,7.5,3.6,8,11.0,13095
+2026,MI,FT,Data Scientist,Pune,0,S,5.5,3.3,6,6.0,7143
+2026,MI,FT,Data Scientist,Pune,0,S,5.5,3.6,8,5.25,6250
+2026,SE,FT,Data Scientist,Pune,50,S,8.0,3.6,8,17.5,20833
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.7,8,30.0,35714
+2026,EX,FT,Data Scientist,Pune,0,S,9.5,3.6,8,20.0,23810
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.6,8,15.0,17857
+2026,EX,FT,Data Scientist,Pune,50,S,10.0,3.6,8,27.5,32738
+2026,MI,FT,Data Scientist,Remote,100,S,4.0,3.6,8,19.0,22619
+2026,EX,FT,Data Scientist,Pune,50,L,9.5,3.6,7,16.0,19048
+2026,EX,FT,Data Scientist,Pune,50,S,10.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,50,S,7.0,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Pune,50,S,8.5,3.6,8,25.5,30357
+2026,SE,FT,Data Scientist,Pune,0,S,6.0,3.7,7,11.0,13095
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.6,8,18.0,21429
+2026,EX,FT,Data Scientist,Pune,0,S,10.5,3.7,8,22.75,27083
+2026,EN,FT,Data Scientist,Pune,50,S,1.5,3.9,8,3.75,4464
+2026,SE,FT,Data Scientist,Pune,50,S,8.5,3.6,5,25.5,30357
+2026,EX,FT,Data Scientist,Pune,50,S,9.5,3.6,8,35.0,41667
+2026,SE,FT,Data Scientist,Pune,0,S,8.0,3.6,8,11.5,13690
+2026,SE,FT,Data Scientist,Pune,50,S,7.5,3.7,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,50,S,6.5,3.6,8,20.0,23810
+2026,SE,FT,Data Scientist,Pune,50,L,7.5,3.6,8,21.25,25298
+2026,EX,FT,Data Scientist,Pune,50,S,11.5,3.6,7,32.5,38690
+2026,MI,FT,Data Scientist,Pune,50,S,4.5,3.7,8,14.5,17262
+2026,EX,FT,Data Scientist,Pune,0,S,10.0,3.6,8,28.75,34226
+2026,EN,FT,Data Scientist,Pune,50,S,1.0,3.6,8,4.5,5357
+2026,SE,FT,Data Scientist,Pune,50,S,8.5,2.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.0,3.2,8,20.75,24702
+2026,MI,FT,Data Scientist,Delhi / NCR,0,L,4.0,3.6,8,12.5,14881
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,17.0,20238
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.5,4.5,8,8.5,10119
+2026,EX,FT,Data Scientist,Remote,100,S,11.5,2.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,23.5,27976
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.5,3.4,8,15.0,17857
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.0,3.6,6,27.5,32738
+2026,EX,FT,Data Scientist,Remote,100,S,9.0,3.7,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.3,8,20.0,23810
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,4.4,8,25.0,29762
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,3.6,8,12.5,14881
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,15.5,3.6,8,31.25,37202
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,14.0,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Remote,100,S,7.0,3.6,8,20.25,24107
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.1,8,13.5,16071
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,3.6,8,45.0,53571
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.6,8,17.5,20833
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.5,3.6,8,32.5,38690
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,37.5,44643
+2026,EX,FT,Data Scientist,Remote,100,S,13.0,3.6,8,16.0,19048
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.0,3.7,8,13.0,15476
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.0,4.1,8,15.0,17857
+2026,MI,FT,Data Scientist,Remote,100,S,5.5,3.7,8,23.5,27976
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,2.7,8,22.5,26786
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,11.5,4.0,8,40.0,47619
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,1.0,3.5,8,6.5,7738
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,4.6,8,3.5,4167
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,2.2,8,4.12,4905
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,1.0,3.6,8,3.12,3714
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.0,4.0,8,20.5,24405
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.5,3.6,8,42.5,50595
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.3,8,12.5,14881
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.9,8,17.0,20238
+2026,MI,FT,Data Scientist,Delhi / NCR,0,L,3.0,3.5,8,3.0,3571
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.6,8,6.0,7143
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,8.5,3.6,8,25.75,30655
+2026,MI,FT,Data Scientist,Delhi / NCR,50,L,3.5,3.4,8,11.0,13095
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.9,8,18.75,22321
+2026,SE,FT,Data Scientist,Delhi / NCR,100,S,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.7,7,21.25,25298
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,8,19.0,22619
+2026,MI,FT,Data Scientist,Delhi / NCR,50,L,4.5,3.3,8,12.5,14881
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.3,8,21.25,25298
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,2.7,7,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.0,3.4,8,15.0,17857
+2026,MI,FT,Data Scientist,Delhi / NCR,50,L,5.5,3.6,8,15.0,17857
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,10.5,3.7,8,4.12,4905
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,32.5,38690
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,3.8,8,12.0,14286
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.5,3.6,8,5.12,6095
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.3,8,21.25,25298
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.0,3.8,8,14.0,16667
+2026,SE,FT,Data Scientist,Delhi / NCR,0,L,7.5,3.3,8,7.5,8929
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Hyderabad,50,S,7.5,3.3,8,25.0,29762
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.0,3.7,8,22.5,26786
+2026,EX,FT,Data Scientist,Delhi / NCR,50,L,9.5,3.6,7,16.0,19048
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.0,3.6,8,23.0,27381
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,3.8,8,13.0,15476
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,7,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,L,6.5,3.3,6,16.0,19048
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,4.5,3.3,8,13.0,15476
+2026,EX,FT,Data Scientist,Remote,100,S,11.5,2.8,8,20.0,23810
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,4.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Bhopal,0,S,7.0,3.6,8,24.5,29167
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.0,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,8,21.25,25298
+2026,EX,FT,Data Scientist,Delhi / NCR,50,L,19.5,3.6,8,87.5,104167
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,11.5,3.6,7,32.5,38690
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,8.0,3.6,8,13.5,16071
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,3.6,7,3.5,4167
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,1.5,3.6,8,4.5,5357
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.0,3.6,8,23.0,27381
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.5,3.2,6,14.0,16667
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,3.1,8,26.25,31250
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.5,3.6,8,45.0,53571
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,1.8,8,4.12,4905
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,2.9,8,13.0,15476
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,3.7,8,23.75,28274
+2026,SE,FT,Data Scientist,Chennai,0,S,6.5,3.6,8,30.0,35714
+2026,SE,FT,Data Scientist,Chennai,50,L,8.0,3.6,4,8.0,9524
+2026,SE,FT,Data Scientist,Chennai,50,L,7.5,3.6,8,9.75,11607
+2026,SE,FT,Data Scientist,Chennai,50,S,6.5,3.1,6,16.5,19643
+2026,EX,FT,Data Scientist,Chennai,0,S,10.0,3.6,8,27.5,32738
+2026,EX,FT,Data Scientist,Chennai,50,S,10.0,3.6,8,27.5,32738
+2026,SE,FT,Data Scientist,Chennai,0,S,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Scientist,Chennai,0,S,7.5,3.9,8,11.5,13690
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,3.6,8,17.5,20833
+2026,SE,FT,Data Scientist,Chennai,0,S,7.5,4.1,8,25.0,29762
+2026,MI,FT,Data Scientist,Chennai,0,S,5.5,3.6,8,25.0,29762
+2026,EX,FT,Data Scientist,Chennai,50,L,9.5,3.4,8,26.25,31250
+2026,EX,FT,Data Scientist,Chennai,0,S,10.5,3.6,8,33.75,40179
+2026,EX,FT,Data Scientist,Chennai,50,L,9.5,3.6,8,17.0,20238
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.3,8,22.5,26786
+2026,EX,FT,Data Scientist,Chennai,50,S,9.5,3.6,8,18.0,21429
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.7,8,27.5,32738
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,26.25,31250
+2026,SE,FT,Data Scientist,Chennai,50,S,8.5,3.6,8,37.5,44643
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,3.6,8,37.5,44643
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.7,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,0,L,8.0,3.7,5,10.5,12500
+2026,EX,FT,Data Scientist,Chennai,50,L,14.5,3.4,8,28.75,34226
+2026,EX,FT,Data Scientist,Chennai,50,L,9.5,3.4,5,17.0,20238
+2026,SE,FT,Data Scientist,Chennai,50,L,8.0,3.7,8,27.5,32738
+2026,SE,FT,Data Scientist,Chennai,0,S,7.5,3.5,7,22.5,26786
+2026,MI,FT,Data Scientist,Chennai,0,L,4.0,3.3,8,5.25,6250
+2026,SE,FT,Data Scientist,Chennai,0,L,7.5,3.3,6,10.0,11905
+2026,EX,FT,Data Scientist,Chennai,0,L,9.5,3.3,5,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,0,L,7.5,3.3,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,0,L,8.0,3.6,7,10.0,11905
+2026,SE,FT,Data Scientist,Chennai,50,S,6.0,3.3,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,50,S,6.0,4.0,8,16.0,19048
+2026,SE,FT,Data Scientist,Chennai,50,L,6.5,3.4,7,14.5,17262
+2026,EX,FT,Data Scientist,Chennai,0,L,10.5,3.3,8,8.0,9524
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,32.5,38690
+2026,SE,FT,Data Scientist,Chennai,0,S,6.0,3.4,6,20.0,23810
+2026,EX,FT,Data Scientist,Chennai,0,L,10.5,3.3,8,6.5,7738
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,4.0,7,15.0,17857
+2026,MI,FT,Data Scientist,Chennai,50,L,5.0,3.4,7,7.5,8929
+2026,SE,FT,Data Scientist,Chennai,0,L,7.5,3.3,6,27.5,32738
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.6,8,19.0,22619
+2026,EX,FT,Data Scientist,Chennai,50,S,11.5,4.3,8,21.75,25893
+2026,EX,FT,Data Scientist,Chennai,0,S,10.0,3.6,8,23.75,28274
+2026,EX,FT,Data Scientist,Chennai,0,L,10.0,3.6,8,20.0,23810
+2026,SE,FT,Data Scientist,Chennai,50,S,7.0,3.7,6,13.0,15476
+2026,EX,FT,Data Scientist,Chennai,0,L,16.0,3.3,8,32.5,38690
+2026,EX,FT,Data Scientist,Chennai,0,L,9.0,3.4,8,17.0,20238
+2026,EX,FT,Data Scientist,Chennai,0,L,10.5,3.4,7,21.25,25298
+2026,EX,FT,Data Scientist,Chennai,50,L,15.0,3.5,8,12.0,14286
+2026,SE,FT,Data Scientist,Chennai,0,L,7.0,3.4,6,15.0,17857
+2026,EN,FT,Data Scientist,Chennai,0,S,0.0,3.6,8,30.0,35714
+2026,EX,FT,Data Scientist,Chennai,50,S,11.5,3.6,5,21.5,25595
+2026,EN,FT,Data Scientist,Chennai,0,S,0.0,3.6,8,28.75,34226
+2026,EX,FT,Data Scientist,Chennai,0,S,15.0,3.6,8,14.0,16667
+2026,SE,FT,Data Scientist,Remote,100,S,6.5,3.6,8,17.5,20833
+2026,SE,FT,Data Scientist,Chennai,0,S,6.0,3.6,8,19.0,22619
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.9,6,22.5,26786
+2026,EX,FT,Data Scientist,Chennai,50,S,9.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Chennai,50,S,4.0,3.4,8,13.0,15476
+2026,EX,FT,Data Scientist,Chennai,0,S,10.5,3.6,5,35.0,41667
+2026,SE,FT,Data Scientist,Chennai,0,S,6.5,3.6,8,35.0,41667
+2026,SE,FT,Data Scientist,Chennai,0,S,7.5,3.6,8,11.0,13095
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,40.0,47619
+2026,EX,FT,Data Scientist,Chennai,0,S,17.5,3.6,8,37.5,44643
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,4.0,8,32.5,38690
+2026,MI,FT,Data Scientist,Chennai,0,S,5.0,4.0,0,17.0,20238
+2026,MI,FT,Data Scientist,Chennai,50,S,4.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,3.6,8,8.0,9524
+2026,EX,FT,Data Scientist,Chennai,50,S,10.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,50,S,7.0,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Chennai,0,L,6.0,3.3,8,5.5,6548
+2026,SE,FT,Data Scientist,Chennai,0,L,8.5,3.6,8,17.5,20833
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.6,8,13.0,15476
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,4.0,8,27.5,32738
+2026,MI,FT,Data Scientist,Chennai,50,S,4.5,3.3,8,13.0,15476
+2026,EX,FT,Data Scientist,Chennai,0,S,9.0,3.3,7,25.0,29762
+2026,EX,FT,Data Scientist,Chennai,0,S,10.0,3.8,8,18.0,21429
+2026,EX,FT,Data Scientist,Chennai,50,S,10.0,3.6,7,18.75,22321
+2026,SE,FT,Data Scientist,Chennai,0,S,7.0,3.6,8,24.5,29167
+2026,SE,FT,Data Scientist,Chennai,50,L,8.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,4.7,8,24.5,29167
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,4.2,8,21.5,25595
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.8,8,17.5,20833
+2026,EX,FT,Data Scientist,Chennai,50,L,9.5,3.6,8,13.0,15476
+2026,EX,FT,Data Scientist,Chennai,0,S,10.5,3.6,6,28.75,34226
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.7,5,20.5,24405
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.7,4,23.5,27976
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,22.5,26786
+2026,EX,FT,Data Scientist,Chennai,50,S,9.5,3.3,8,14.0,16667
+2026,EX,FT,Data Scientist,Chennai,0,S,10.5,3.1,8,12.0,14286
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,10.0,11905
+2026,EX,FT,Data Scientist,Chennai,0,L,15.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,0,L,6.5,3.6,6,12.5,14881
+2026,SE,FT,Data Scientist,Chennai,50,L,6.5,3.7,7,15.0,17857
+2026,SE,FT,Data Scientist,Chennai,0,L,6.5,3.6,7,9.0,10714
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,3.6,8,15.5,18452
+2026,EX,FT,Data Scientist,Chennai,50,S,10.5,3.3,8,17.0,20238
+2026,EX,FT,Data Scientist,Chennai,0,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Chennai,50,L,8.5,3.6,8,14.0,16667
+2026,MI,FT,Data Scientist,Chennai,0,S,5.5,3.1,6,11.5,13690
+2026,SE,FT,Data Scientist,Chennai,50,S,7.5,3.7,8,15.0,17857
+2026,SE,FT,Data Scientist,Chennai,0,S,7.0,3.3,5,14.5,17262
+2026,EX,FT,Data Scientist,Chennai,50,S,10.0,3.9,8,20.25,24107
+2026,SE,FT,Data Scientist,Chennai,0,S,8.0,3.6,7,17.5,20833
+2026,EX,FT,Data Scientist,Chennai,50,L,9.5,3.6,5,22.5,26786
+2026,EX,FT,Data Scientist,Chennai,0,L,9.5,3.6,8,25.0,29762
+2026,EX,FT,Data Scientist,Chennai,0,L,18.5,3.4,8,31.25,37202
+2026,SE,FT,Data Scientist,Chennai,50,S,7.0,3.6,8,12.5,14881
+2026,EX,FT,Data Scientist,Chennai,0,S,10.5,3.9,6,32.5,38690
+2026,EX,FT,Data Scientist,Chennai,0,S,9.0,3.6,8,23.0,27381
+2026,SE,FT,Data Scientist,Chennai,0,S,8.5,3.6,8,18.75,22321
+2026,MI,FT,Data Scientist,Chennai,0,S,5.0,3.6,8,14.0,16667
+2026,EX,FT,Data Scientist,Chennai,0,S,10.0,3.6,6,8.5,10119
+2026,EX,FT,Data Scientist,Chennai,50,S,9.5,3.6,8,15.5,18452
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.6,8,15.6,18571
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,3.6,5,21.25,25298
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.0,5.0,8,6.5,7738
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,3.9,8,5.0,5952
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.5,3.3,8,17.0,20238
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.5,3.6,0,22.5,26786
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,3.9,8,5.0,5952
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.6,7,11.0,13095
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.0,3.6,8,21.25,25298
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.0,3.6,8,18.75,22321
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,3.0,3.0,8,9.0,10714
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.5,3.6,8,14.0,16667
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.0,3.8,8,16.5,19643
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.5,3.6,8,10.5,12500
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,2.6,8,40.0,47619
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,2.5,8,14.5,17262
+2026,EX,FT,Data Scientist,Delhi / NCR,0,L,10.5,3.7,8,22.5,26786
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,4.2,8,3.25,3869
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,15.0,4.0,8,52.5,62500
+2026,SE,FT,Data Scientist,Delhi / NCR,0,L,7.5,3.4,7,13.5,16071
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.5,3.6,8,37.5,44643
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,2.0,8,20.5,24405
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,1.5,3.5,6,5.0,5952
+2026,EX,FT,Data Scientist,Delhi / NCR,50,L,15.0,3.8,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,L,7.5,3.3,5,6.5,7738
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,3.6,8,9.5,11310
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,3.5,3.7,8,5.0,5952
+2026,EX,FT,Data Scientist,Delhi / NCR,0,L,10.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.0,3.6,8,22.5,26786
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,7,19.0,22619
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,2.3,8,32.5,38690
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.5,3.7,8,8.5,10119
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.2,8,6.5,7738
+2026,SE,FT,Data Scientist,Delhi / NCR,0,L,7.5,3.6,8,32.5,38690
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.0,3.6,8,10.0,11905
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,3.6,8,8.0,9524
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.0,3.6,8,6.5,7738
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.5,3.6,8,9.5,11310
+2026,MI,FT,Data Scientist,Delhi / NCR,50,L,5.5,3.3,6,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,6.5,3.6,8,11.75,13988
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.0,3.4,8,20.0,23810
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.5,1.0,8,25.0,29762
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,16.5,3.4,8,24.0,28571
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.0,3.8,8,37.5,44643
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,6.5,3.6,8,15.0,17857
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,6.5,3.6,7,13.5,16071
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.5,3.6,8,24.0,28571
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,7.5,3.6,8,10.0,11905
+2026,EX,FT,Data Scientist,Delhi / NCR,50,L,10.0,3.6,6,17.0,20238
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,8.0,3.6,6,15.0,17857
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.5,3.6,8,5.0,5952
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,3.7,8,4.75,5655
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.0,3.5,6,3.75,4464
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,10.0,3.6,8,27.5,32738
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.5,3.6,8,7.5,8929
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.0,3.2,6,4.62,5500
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,0.0,3.6,8,27.5,32738
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,4.5,3.6,8,10.5,12500
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,3.9,8,5.5,6548
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.5,3.6,8,13.5,16071
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.6,8,15.0,17857
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.0,3.6,8,4.0,4762
+2026,SE,FT,Data Scientist,Hyderabad,0,S,8.5,4.4,8,22.5,26786
+2026,EX,FT,Data Scientist,Delhi / NCR,0,L,10.0,3.3,8,15.0,17857
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,9.5,3.6,5,22.75,27083
+2026,MI,FT,Data Scientist,Delhi / NCR,50,S,5.5,3.6,8,20.0,23810
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,9.5,3.6,8,23.0,27381
+2026,SE,FT,Data Scientist,Delhi / NCR,50,S,8.0,3.6,8,23.25,27679
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.6,5,22.5,26786
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.6,5,23.75,28274
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.5,4.3,6,5.0,5952
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,5.0,3.6,8,7.5,8929
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,0.0,3.6,6,14.5,17262
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,8.0,3.2,6,16.0,19048
+2026,SE,FT,Data Scientist,Bhubaneswar,50,S,6.5,3.6,8,15.5,18452
+2026,EN,FT,Data Scientist,Delhi / NCR,0,L,2.0,2.5,8,4.0,4762
+2026,EX,FT,Data Scientist,Remote,100,S,19.5,3.6,8,37.5,44643
+2026,SE,FT,Data Scientist,Remote,100,S,6.0,3.1,8,17.0,20238
+2026,EX,FT,Data Scientist,Delhi / NCR,0,S,10.5,3.6,8,38.75,46131
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.5,3.4,8,6.12,7286
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.5,3.8,8,14.5,17262
+2026,EX,FT,Data Scientist,Delhi / NCR,0,L,10.5,3.7,7,20.5,24405
+2026,EX,FT,Data Scientist,Hyderabad,50,S,11.5,4.0,8,52.5,62500
+2026,SE,FT,Data Scientist,Pune,0,L,6.5,3.7,7,17.75,21131
+2026,EN,FT,Data Scientist,Delhi / NCR,50,L,2.0,3.8,8,18.25,21726
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,7.0,4.2,8,17.5,20833
+2026,EN,FT,Data Scientist,Delhi / NCR,50,S,0.0,3.0,8,65.0,77381
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,3.5,3.0,8,9.5,11310
+2026,MI,FT,Data Scientist,Delhi / NCR,0,S,4.5,3.6,7,11.5,13690
+2026,EX,FT,Data Scientist,Delhi / NCR,0,L,9.5,3.6,6,17.5,20833
+2026,EX,FT,Data Scientist,Delhi / NCR,50,S,14.0,4.0,8,60.0,71429
+2026,EX,FT,Data Scientist,Remote,100,S,15.0,3.1,8,32.5,38690
+2026,MI,FT,Data Scientist,Hyderabad,0,S,5.0,3.3,8,17.5,20833
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.5,3.7,7,32.5,38690
+2026,SE,FT,Data Scientist,Delhi / NCR,0,S,6.5,4.2,8,11.0,13095
+2026,SE,FT,Data Scientist,Pune,0,S,8.5,3.6,8,16.0,19048
+2026,EX,FT,Data Scientist,Hyderabad,0,S,10.0,3.6,8,20.0,23810
+2026,SE,FT,Data Scientist,Delhi / NCR,50,L,6.5,4.1,8,15.0,17857
+2026,EX,FT,Data Scientist,Delhi / NCR,50,L,10.5,3.6,8,27.5,32738
+2026,EN,FT,Data Scientist,Delhi / NCR,0,S,2.0,3.7,8,3.5,4167
+2026,EN,FT,Data Scientist,Kolkata,50,L,0.0,3.6,8,25.0,29762
+2026,SE,FT,Data Scientist,Kolkata,0,S,6.5,3.6,8,30.0,35714
+2026,SE,FT,Data Scientist,Kolkata,0,S,6.0,1.7,8,11.5,13690
+2026,SE,FT,Data Scientist,Kolkata,0,L,8.5,3.3,7,22.5,26786
+2026,SE,FT,Data Scientist,Kolkata,0,L,6.0,3.3,8,5.5,6548
+2026,EN,FT,Data Scientist,Kolkata,0,L,2.5,3.6,5,5.0,5952
+2026,MI,FT,Data Scientist,Kolkata,0,S,4.5,3.6,8,11.0,13095
+2026,SE,FT,Data Scientist,Kolkata,0,S,7.5,2.9,8,5.25,6250
+2026,SE,FT,Data Scientist,Kolkata,50,L,8.5,3.6,7,15.0,17857
+2026,SE,FT,Data Scientist,Kolkata,50,S,7.5,3.6,8,20.0,23810
+2026,EX,FT,Data Scientist,Kolkata,0,S,9.5,3.6,8,22.5,26786
+2026,EX,FT,Data Scientist,Kolkata,0,L,10.0,3.6,8,10.0,11905
+2026,EN,FT,Data Scientist,Kolkata,50,S,0.0,2.8,8,33.75,40179
+2026,SE,FT,Data Scientist,Kolkata,50,S,8.0,3.6,6,11.0,13095
+2026,SE,FT,Data Scientist,Kolkata,0,S,7.5,3.3,8,15.0,17857
+2026,SE,FT,Data Scientist,Kolkata,50,S,7.0,3.7,8,13.5,16071
+2026,SE,FT,Data Scientist,Kolkata,0,S,8.5,3.6,7,33.75,40179
+2026,SE,FT,Data Scientist,Kolkata,0,S,8.5,3.6,8,26.25,31250
+2026,MI,FT,Data Scientist,Kolkata,50,S,5.5,3.6,8,16.0,19048
+2026,EX,FT,Data Scientist,Kolkata,0,S,14.5,3.2,8,2.25,2679
+2026,MI,FT,Data Scientist,Kolkata,50,L,4.5,3.3,8,14.5,17262
+2026,MI,FT,Data Scientist,Kolkata,0,L,5.5,3.3,8,8.5,10119
+2026,MI,FT,Data Scientist,Kolkata,50,L,5.5,3.6,8,17.5,20833
+2026,EN,FT,Data Scientist,Kolkata,0,S,0.0,3.6,8,4.5,5357
+2026,EX,FT,Data Scientist,Kolkata,0,S,10.5,3.6,8,33.75,40179
+2026,EX,FT,Data Scientist,Kolkata,50,S,10.0,3.6,8,30.0,35714
+2026,MI,FT,Data Scientist,Remote,100,S,3.5,3.6,8,11.5,13690
+2026,SE,FT,Data Scientist,Kolkata,0,S,8.5,4.3,8,17.5,20833
+2026,MI,FT,Data Scientist,Kolkata,0,S,4.0,3.6,8,9.5,11310
+2026,EX,FT,Data Scientist,Kolkata,50,S,10.5,3.6,5,19.0,22619
+2026,MI,FT,Data Scientist,Kolkata,0,S,4.0,2.8,5,4.0,4762
+2026,SE,FT,Data Scientist,Kolkata,0,S,6.0,4.2,6,8.5,10119
+2026,SE,FT,Data Scientist,Kolkata,0,S,7.5,3.6,8,7.75,9226
+2026,MI,FT,Data Scientist,Kolkata,0,S,5.0,3.6,8,14.5,17262
+2026,SE,FT,Data Scientist,Kolkata,0,L,8.0,3.3,7,22.5,26786
+2026,EX,FT,Data Scientist,Kolkata,50,S,10.5,3.6,6,41.25,49107
+2026,MI,FT,Data Scientist,Kolkata,0,S,3.0,3.9,8,6.0,7143
+2026,EX,FT,Data Scientist,Kolkata,50,S,16.5,3.6,2,22.5,26786
+2026,SE,FT,Data Scientist,Kolkata,0,S,6.0,3.8,8,8.5,10119
+2026,SE,FT,Data Scientist,Kolkata,0,S,6.0,3.6,8,20.25,24107
+2026,SE,FT,Data Scientist,Kolkata,50,S,6.0,3.6,8,17.5,20833
+2026,EN,FT,Data Scientist,Kolkata,0,S,2.0,4.4,8,7.0,8333
+2026,EN,FT,Data Scientist,Kolkata,50,S,1.0,3.6,7,2.12,2524
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,4.5,3.6,8,7.8,9286
+2026,EX,FT,Data Scientist,Ahmedabad,0,S,10.0,3.8,6,22.5,26786
+2026,EN,FT,Data Scientist,Ahmedabad,0,S,2.0,4.0,8,3.75,4464
+2026,MI,FT,Data Scientist,Ahmedabad,50,L,5.5,3.6,8,10.0,11905
+2026,SE,FT,Data Scientist,Ahmedabad,0,S,7.5,3.6,8,9.5,11310
+2026,EX,FT,Data Scientist,Remote,100,S,10.0,4.1,8,35.0,41667
+2026,EX,FT,Data Scientist,Ahmedabad,0,S,9.5,3.6,8,22.5,26786
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,4.5,3.6,8,9.0,10714
+2026,SE,FT,Data Scientist,Ahmedabad,0,S,8.5,3.6,7,33.75,40179
+2026,EN,FT,Data Scientist,Ahmedabad,0,S,1.0,3.4,8,3.38,4024
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,3.0,3.4,8,4.5,5357
+2026,EN,FT,Data Scientist,Ahmedabad,0,S,1.5,3.6,8,2.25,2679
+2026,EN,FT,Data Scientist,Ahmedabad,0,S,1.5,3.6,8,2.38,2833
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,5.0,3.2,8,10.5,12500
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,4.0,3.6,8,9.5,11310
+2026,EN,FT,Data Scientist,Remote,100,L,2.5,4.2,8,4.0,4762
+2026,EX,FT,Data Scientist,Ahmedabad,50,S,10.5,3.6,5,19.0,22619
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,4.0,3.6,8,4.5,5357
+2026,SE,FT,Data Scientist,Ahmedabad,0,S,6.5,3.7,8,8.75,10417
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,5.0,3.6,8,14.5,17262
+2026,SE,FT,Data Scientist,Ahmedabad,0,L,6.0,3.3,8,9.0,10714
+2026,MI,FT,Data Scientist,Ahmedabad,0,S,3.5,3.6,8,9.5,11310
+2026,MI,FT,Data Scientist,Ahmedabad,0,L,4.5,3.3,8,5.5,6548
+2026,SE,FT,Data Scientist,Ahmedabad,0,S,6.0,4.2,8,13.0,15476
+2026,EX,FT,Data Scientist,Ahmedabad,50,S,13.5,3.6,8,42.5,50595
+2026,EX,FT,Data Scientist,Ahmedabad,100,S,15.0,3.9,8,17.0,20238
+2026,SE,FT,Data Scientist,Ahmedabad,0,S,6.0,3.6,8,20.25,24107
+2026,EX,FT,Data Scientist,Ahmedabad,0,S,9.5,3.6,8,13.5,16071
+2026,EN,FT,Data Scientist,Ahmedabad,0,S,2.5,4.4,8,7.0,8333
+2026,EN,FT,Data Scientist,Ahmedabad,50,S,1.0,3.6,7,2.12,2524
+2026,SE,FT,Data Scientist,Remote,100,S,8.5,3.6,8,17.5,20833
+2026,SE,FT,Data Scientist,Remote,100,S,7.5,3.6,8,27.5,32738
+2026,MI,FT,Data Analyst,Bangalore,50,S,5.0,3.9,8,8.0,9524
+2026,EN,FT,Data Analyst,Hyderabad,0,L,0.0,3.6,8,25.5,30357
+2026,SE,FT,Data Analyst,Bangalore,0,S,6.0,2.9,7,7.5,8929
+2026,SE,FT,Data Analyst,Bangalore,50,S,7.0,3.6,8,11.0,13095
+2026,EX,FT,Data Analyst,Hyderabad,0,S,10.5,3.6,8,15.0,17857
+2026,SE,FT,Data Analyst,Hyderabad,0,S,6.5,2.0,8,13.0,15476
+2026,EX,FT,Data Analyst,Bangalore,0,L,18.0,3.6,8,32.5,38690
+2026,SE,FT,Data Analyst,Bangalore,50,S,7.5,3.6,6,10.0,11905
+2026,MI,FT,Data Analyst,Bangalore,0,S,3.5,3.6,8,6.5,7738
+2026,EX,FT,Data Analyst,Hyderabad,50,S,10.5,3.6,7,21.0,25000
+2026,EX,FT,Data Analyst,Hyderabad,50,S,9.0,3.6,7,17.5,20833
+2026,EN,FT,Data Analyst,Hyderabad,0,S,2.5,3.6,8,6.5,7738
+2026,EN,FT,Data Analyst,Hyderabad,0,S,0.0,3.6,8,6.75,8036
+2026,MI,FT,Data Analyst,Bangalore,50,S,5.5,3.4,8,18.75,22321
+2026,EN,FT,Data Analyst,Bangalore,0,S,2.5,3.6,8,2.5,2976
+2026,EX,FT,Data Analyst,Hyderabad,50,S,9.5,3.6,8,15.0,17857
+2026,MI,FT,Data Analyst,Bangalore,0,M,3.0,3.5,8,3.0,3571
+2026,EX,FT,Data Analyst,Delhi / NCR,50,S,9.5,3.6,8,20.25,24107
+2026,SE,FT,Data Analyst,Hyderabad,50,S,6.5,3.6,8,21.25,25298
+2026,EN,FT,Data Analyst,Remote,100,S,0.0,3.6,8,17.0,20238
+2026,SE,FT,Data Analyst,Bangalore,0,S,6.0,4.0,8,10.0,11905
+2026,SE,FT,Data Analyst,Bangalore,50,S,7.0,3.4,8,12.5,14881
+2026,EX,FT,Data Analyst,Hyderabad,50,S,10.5,3.6,8,22.5,26786
+2026,EN,FT,Data Analyst,Hyderabad,50,S,1.0,3.6,8,5.12,6095
+2026,EX,FT,Data Engineer,Hyderabad,0,S,11.5,3.7,8,27.5,32738
+2026,MI,FT,Data Analyst,Pune,50,S,4.0,3.6,8,11.0,13095
+2026,MI,FT,Data Analyst,Delhi / NCR,50,S,4.5,3.6,8,20.0,23810
+2026,MI,FT,Data Analyst,Pune,50,S,5.5,3.6,8,22.5,26786
+2026,SE,FT,Data Analyst,Hyderabad,50,S,7.5,3.6,8,32.5,38690
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,7.5,3.6,8,20.0,23810
+2026,EN,FT,Data Analyst,Hyderabad,50,S,1.0,3.6,8,6.0,7143
+2026,MI,FT,Data Analyst,Bangalore,50,S,3.5,3.9,8,13.5,16071
+2026,EN,FT,Data Analyst,Bangalore,0,S,2.0,3.6,8,2.5,2976
+2026,MI,FT,Data Analyst,Hyderabad,50,S,3.5,3.9,8,13.5,16071
+2026,EN,FT,Data Analyst,Remote,100,S,1.5,3.0,8,4.62,5500
+2026,SE,FT,Data Analyst,Hyderabad,50,L,8.0,3.6,8,13.5,16071
+2026,SE,FT,Data Analyst,Bangalore,0,S,7.5,4.1,6,10.0,11905
+2026,SE,FT,Data Analyst,Remote,100,S,6.5,3.6,8,17.5,20833
+2026,SE,FT,Data Analyst,Remote,100,S,7.5,3.6,8,22.5,26786
+2026,EX,FT,Data Analyst,Delhi / NCR,50,S,10.5,3.6,8,25.5,30357
+2026,MI,FT,Data Analyst,Bangalore,50,L,5.5,3.3,8,8.5,10119
+2026,MI,FT,Data Analyst,Bangalore,0,S,5.5,3.6,8,11.0,13095
+2026,EX,FT,Data Analyst,Bangalore,0,S,15.0,3.6,8,17.5,20833
+2026,SE,FT,Data Analyst,Bangalore,0,S,8.5,3.6,8,17.0,20238
+2026,SE,FT,Data Analyst,Bangalore,0,S,8.0,3.6,8,18.75,22321
+2026,MI,FT,Data Analyst,Bangalore,50,S,3.5,3.6,8,14.0,16667
+2026,EN,FT,Data Analyst,Bangalore,50,S,2.0,3.6,8,12.5,14881
+2026,MI,FT,Data Engineer,Bangalore,50,L,3.0,3.4,8,9.0,10714
+2026,EN,FT,Data Analyst,Hyderabad,0,S,2.5,3.6,8,4.25,5060
+2026,MI,FT,Data Analyst,Bangalore,0,S,4.0,3.6,7,9.5,11310
+2026,MI,FT,Data Engineer,Bangalore,0,S,4.5,3.6,8,13.5,16071
+2026,EX,FT,Data Analyst,Chennai,50,S,9.5,3.4,8,15.0,17857
+2026,SE,FT,Data Analyst,Bangalore,0,S,8.5,3.6,8,19.0,22619
+2026,SE,FT,Data Analyst,Mumbai,50,S,8.0,3.9,8,9.5,11310
+2026,EN,FT,Data Analyst,Bangalore,0,S,0.0,2.6,8,3.5,4167
+2026,EX,FT,Data Analyst,Bangalore,0,S,10.0,3.6,8,32.5,38690
+2026,EN,FT,Data Analyst,Bangalore,0,S,0.0,3.6,8,2.0,2381
+2026,EX,FT,Data Analyst,Bangalore,0,S,15.0,3.6,8,21.5,25595
+2026,SE,FT,Data Analyst,Chennai,0,S,6.5,3.8,8,11.5,13690
+2026,EN,FT,Data Analyst,Bangalore,0,S,1.0,4.2,8,4.25,5060
+2026,EX,FT,Data Analyst,Bangalore,0,S,10.0,4.0,8,18.75,22321
+2026,EX,FT,Data Analyst,Bangalore,0,S,9.0,4.0,8,18.75,22321
+2026,EN,FT,Data Analyst,Bangalore,0,S,2.5,3.6,8,3.38,4024
+2026,EX,FT,Data Analyst,Hosur,0,L,16.5,3.6,8,3.62,4310
+2026,EX,FT,Data Analyst,Nagamangala,0,L,16.5,3.6,8,3.62,4310
+2026,MI,FT,Data Engineer,Bangalore,50,S,4.5,3.6,8,16.0,19048
+2026,EN,FT,Data Analyst,Hyderabad,50,S,2.0,3.9,8,7.0,8333
+2026,SE,FT,Data Analyst,Hyderabad,50,S,7.5,3.3,8,15.0,17857
+2026,SE,FT,Data Analyst,Remote,100,S,8.5,3.6,8,15.0,17857
+2026,EN,FT,Data Analyst,Bangalore,0,L,2.5,3.9,8,4.88,5810
+2026,MI,FT,Data Analyst,Mumbai,0,L,5.0,3.7,8,14.0,16667
+2026,EX,FT,Data Analyst,Chennai,50,S,11.5,3.7,8,13.5,16071
+2026,EN,FT,Data Analyst,Hyderabad,0,S,0.0,2.8,8,3.75,4464
+2026,SE,FT,Data Analyst,Pune,50,S,7.5,3.3,8,25.5,30357
+2026,SE,FT,Data Analyst,Bangalore,0,S,7.5,3.6,8,11.5,13690
+2026,EN,FT,Data Analyst,Bangalore,0,S,0.0,3.6,8,12.0,14286
+2026,MI,FT,Data Analyst,Bangalore,0,L,3.5,3.7,8,4.0,4762
+2026,SE,FT,Data Analyst,Bangalore,50,S,7.5,4.0,8,13.25,15774
+2026,SE,FT,Data Analyst,Mumbai,0,S,7.5,3.5,8,7.5,8929
+2026,SE,FT,Data Analyst,Mumbai,50,S,8.5,3.4,6,22.5,26786
+2026,SE,FT,Data Analyst,Mumbai,0,L,6.0,3.9,8,11.5,13690
+2026,MI,FT,Data Analyst,Remote,100,L,4.5,3.6,8,9.0,10714
+2026,EX,FT,Data Analyst,Mumbai,50,S,9.5,3.6,8,20.25,24107
+2026,MI,FT,Data Analyst,Mumbai,0,S,4.0,3.6,8,7.0,8333
+2026,MI,FT,Data Analyst,Mumbai,0,L,3.5,3.3,8,3.75,4464
+2026,MI,FT,Data Analyst,Mumbai,0,S,4.0,3.6,8,4.5,5357
+2026,SE,FT,Data Analyst,Mumbai,50,S,7.5,3.6,8,8.5,10119
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.0,4.3,8,4.5,5357
+2026,EN,FT,Data Analyst,Mumbai,0,S,2.5,4.3,8,4.5,5357
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.0,3.6,8,5.0,5952
+2026,MI,FT,Data Analyst,Mumbai,0,S,5.5,3.2,8,14.0,16667
+2026,SE,FT,Data Analyst,Mumbai,0,S,6.5,4.0,8,12.5,14881
+2026,EN,FT,Data Analyst,Mumbai,0,S,2.5,3.6,8,4.25,5060
+2026,MI,FT,Data Analyst,Mumbai,0,S,4.0,3.6,8,9.5,11310
+2026,MI,FT,Data Analyst,Mumbai,0,S,4.5,3.7,8,16.5,19643
+2026,MI,FT,Data Analyst,Mumbai,50,L,3.5,4.9,7,16.0,19048
+2026,EN,FT,Data Analyst,Mumbai,0,S,2.0,3.5,8,5.0,5952
+2026,SE,FT,Data Analyst,Mumbai,50,S,7.5,3.6,8,12.0,14286
+2026,SE,FT,Data Analyst,Mumbai,50,S,8.5,3.6,8,23.0,27381
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.0,3.3,7,6.5,7738
+2026,MI,FT,Data Analyst,Mumbai,50,S,5.0,3.5,6,21.0,25000
+2026,EN,FT,Data Analyst,Mumbai,0,L,2.0,3.6,7,3.0,3571
+2026,EX,FT,Data Analyst,Mumbai,0,S,9.0,3.6,8,22.5,26786
+2026,MI,FT,Data Analyst,Mumbai,0,S,4.5,3.8,8,4.75,5655
+2026,MI,FT,Data Analyst,Mumbai,0,S,5.0,3.6,8,14.5,17262
+2026,EX,FT,Data Analyst,Mumbai,0,S,16.0,3.6,8,22.5,26786
+2026,MI,FT,Data Analyst,Mumbai,100,S,3.5,3.6,8,4.62,5500
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.5,3.6,8,9.5,11310
+2026,SE,FT,Data Analyst,Mumbai,0,S,6.0,2.6,8,2.0,2381
+2026,MI,FT,Data Analyst,Mumbai,0,L,3.0,3.3,8,2.5,2976
+2026,SE,FT,Data Analyst,Mumbai,0,S,6.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Mumbai,0,L,5.0,3.6,8,22.5,26786
+2026,SE,FT,Data Analyst,Mumbai,0,L,6.0,3.5,8,15.0,17857
+2026,EN,FT,Data Analyst,Mumbai,0,S,1.5,4.1,8,2.5,2976
+2026,EN,FT,Data Analyst,Mumbai,0,S,1.0,3.6,8,2.25,2679
+2026,MI,FT,Data Analyst,Mumbai,0,S,5.5,3.6,8,6.0,7143
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.0,3.6,8,4.0,4762
+2026,SE,FT,Data Analyst,Mumbai,0,S,7.5,3.6,8,18.0,21429
+2026,MI,FT,Data Analyst,Mumbai,0,S,3.5,3.6,8,7.0,8333
+2026,SE,FT,Data Analyst,Mumbai,0,S,7.5,3.6,8,9.5,11310
+2026,SE,FT,Data Analyst,Hyderabad,0,S,6.5,3.6,6,13.5,16071
+2026,SE,FT,Data Analyst,Hyderabad,0,S,6.5,3.6,8,15.0,17857
+2026,EN,FT,Data Analyst,Hyderabad,0,S,1.0,3.5,8,6.5,7738
+2026,MI,FT,Data Analyst,Pune,0,S,4.5,3.7,8,12.0,14286
+2026,EN,FT,Data Analyst,Pune,0,S,0.0,3.6,8,6.75,8036
+2026,EX,FT,Data Analyst,Pune,50,S,9.5,3.6,8,20.25,24107
+2026,EX,FT,Data Analyst,Pune,50,S,11.5,4.0,8,15.0,17857
+2026,SE,FT,Data Analyst,Pune,50,S,7.5,3.8,8,11.0,13095
+2026,EN,FT,Data Analyst,Remote,100,S,1.0,3.6,8,5.0,5952
+2026,EN,FT,Data Analyst,Pune,50,S,1.0,3.6,8,5.12,6095
+2026,SE,FT,Data Analyst,Pune,0,S,7.5,3.6,8,15.0,17857
+2026,EN,FT,Data Analyst,Pune,50,S,1.0,3.6,8,6.0,7143
+2026,SE,FT,Data Analyst,Pune,50,S,8.0,3.7,8,11.0,13095
+2026,EX,FT,Data Analyst,Remote,100,S,9.5,3.6,8,17.0,20238
+2026,MI,FT,Data Analyst,Pune,0,S,4.0,3.0,8,7.25,8631
+2026,MI,FT,Data Analyst,Pune,0,S,4.0,3.6,8,3.5,4167
+2026,EN,FT,Data Analyst,Pune,0,S,2.0,3.6,8,2.0,2381
+2026,EX,FT,Data Analyst,Pune,0,S,9.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Pune,50,L,5.5,3.3,6,5.5,6548
+2026,EX,FT,Data Analyst,Pune,0,L,10.0,3.3,8,7.5,8929
+2026,SE,FT,Data Analyst,Pune,50,S,8.0,3.6,7,26.25,31250
+2026,EX,FT,Data Analyst,Pune,50,S,10.0,3.6,8,35.0,41667
+2026,MI,FT,Data Analyst,Pune,0,S,5.5,3.6,8,12.5,14881
+2026,EN,FT,Data Analyst,Pune,0,L,2.0,3.6,7,3.0,3571
+2026,SE,FT,Data Analyst,Pune,0,L,7.5,3.7,8,13.5,16071
+2026,SE,FT,Data Analyst,Pune,0,S,6.5,3.9,8,18.5,22024
+2026,EX,FT,Data Analyst,Pune,50,S,10.5,3.6,5,19.0,22619
+2026,SE,FT,Data Analyst,Remote,100,S,8.0,3.6,8,17.0,20238
+2026,SE,FT,Data Analyst,Pune,50,S,6.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,50,L,6.5,3.3,8,20.0,23810
+2026,EN,FT,Data Analyst,Pune,0,S,0.0,3.7,8,3.5,4167
+2026,EX,FT,Data Analyst,Pune,0,L,10.5,3.6,8,12.5,14881
+2026,EN,FT,Data Analyst,Pune,0,S,2.5,3.6,8,2.75,3274
+2026,SE,FT,Data Analyst,Pune,0,S,7.5,3.5,8,22.5,26786
+2026,MI,FT,Data Analyst,Pune,50,S,5.0,3.6,8,22.5,26786
+2026,SE,FT,Data Scientist,Pune,0,L,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Analyst,Pune,0,S,6.0,3.6,8,17.5,20833
+2026,EX,FT,Data Analyst,Pune,50,S,11.5,2.9,8,42.5,50595
+2026,SE,FT,Data Analyst,Remote,100,S,6.5,3.6,8,10.5,12500
+2026,SE,FT,Data Engineer,Pune,50,L,8.5,3.6,8,14.0,16667
+2026,SE,FT,Data Engineer,Pune,50,S,7.5,3.6,8,20.0,23810
+2026,EX,FT,Data Analyst,Pune,50,S,11.5,3.6,8,35.0,41667
+2026,MI,FT,Data Analyst,Pune,0,S,3.0,4.2,8,4.5,5357
+2026,MI,FT,Data Analyst,Pune,0,L,4.5,3.6,8,5.0,5952
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.7,8,6.0,7143
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.6,8,6.75,8036
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,7.5,8929
+2026,MI,FT,Data Analyst,Delhi / NCR,0,M,3.5,3.8,8,5.5,6548
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,3.4,8,3.25,3869
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.6,8,7.25,8631
+2026,MI,FT,Data Analyst,Remote,100,S,4.5,3.6,8,8.0,9524
+2026,EX,FT,Data Analyst,Delhi / NCR,50,S,9.5,3.6,8,37.5,44643
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.9,8,8.5,10119
+2026,SE,FT,Data Analyst,Delhi / NCR,0,L,7.5,3.3,8,12.5,14881
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.6,8,9.0,10714
+2026,MI,FT,Data Analyst,Delhi / NCR,0,L,5.0,1.7,8,6.75,8036
+2026,SE,FT,Data Analyst,Delhi / NCR,50,L,6.0,3.3,8,11.0,13095
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.0,8,12.0,14286
+2026,SE,FT,Data Analyst,Delhi / NCR,50,L,7.5,3.3,8,17.0,20238
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.0,3.6,8,3.25,3869
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.5,4.0,8,21.5,25595
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,9.5,3.2,8,15.5,18452
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,4.5,5357
+2026,MI,FT,Data Analyst,Delhi / NCR,0,L,5.0,3.7,8,14.0,16667
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.6,8,3.25,3869
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.0,3.6,8,5.25,6250
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,8.0,3.6,7,26.25,31250
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.2,8,3.12,3714
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,6.5,3.6,8,20.0,23810
+2026,MI,FT,Data Analyst,Delhi / NCR,50,S,5.5,3.6,8,22.5,26786
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.5,3.6,8,12.5,14881
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.0,8,2.75,3274
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.4,8,4.75,5655
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,7,4.25,5060
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,7,5.0,5952
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,8,4.0,4762
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.5,3.5,8,6.75,8036
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.0,3.6,8,14.5,17262
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.6,8,9.0,10714
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,8,6.5,7738
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,15.0,3.0,8,2.88,3429
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.0,3.6,8,23.5,27976
+2026,MI,FT,Data Analyst,Delhi / NCR,0,M,3.5,3.8,7,4.5,5357
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.0,8,5.25,6250
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,3.6,8,3.0,3571
+2026,EN,FT,Data Analyst,Chennai,0,S,0.0,3.6,8,6.75,8036
+2026,SE,FT,Data Analyst,Chennai,50,S,7.5,3.6,8,32.5,38690
+2026,MI,FT,Data Analyst,Chennai,0,S,3.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Chennai,0,S,4.0,3.6,8,3.0,3571
+2026,MI,FT,Data Analyst,Chennai,0,S,4.5,3.6,8,12.5,14881
+2026,EX,FT,Data Engineer,Chennai,0,S,11.5,3.7,8,27.5,32738
+2026,MI,FT,Data Analyst,Chennai,0,S,3.5,3.6,8,6.0,7143
+2026,EX,FT,Data Analyst,Chennai,50,S,10.5,3.6,8,25.5,30357
+2026,EN,FT,Data Analyst,Chennai,50,S,2.0,3.8,8,8.5,10119
+2026,EN,FT,Data Analyst,Chennai,0,S,2.5,3.6,8,4.25,5060
+2026,EX,FT,Data Analyst,Chennai,0,S,12.5,3.7,8,16.5,19643
+2026,MI,FT,Data Analyst,Chennai,0,S,4.5,3.6,8,5.75,6845
+2026,EX,FT,Data Analyst,Chennai,0,S,10.0,3.0,8,12.0,14286
+2026,SE,FT,Data Analyst,Chennai,0,S,8.0,3.6,8,18.75,22321
+2026,MI,FT,Data Analyst,Chennai,50,L,5.5,3.3,6,5.5,6548
+2026,SE,FT,Data Analyst,Chennai,0,S,6.5,4.0,8,12.5,14881
+2026,SE,FT,Data Analyst,Chennai,0,S,7.5,3.9,8,13.0,15476
+2026,SE,FT,Data Analyst,Chennai,50,S,7.5,3.3,8,15.0,17857
+2026,EN,FT,Data Analyst,Chennai,0,S,0.0,2.9,4,2.25,2679
+2026,SE,FT,Data Analyst,Chennai,0,S,7.5,3.6,8,15.0,17857
+2026,EN,FT,Data Analyst,Chennai,50,S,2.0,3.2,5,9.25,11012
+2026,SE,FT,Data Analyst,Chennai,50,S,7.5,3.3,8,25.5,30357
+2026,SE,FT,Data Analyst,Chennai,0,S,7.0,3.4,8,7.5,8929
+2026,MI,FT,Data Analyst,Chennai,0,S,3.5,3.7,8,4.5,5357
+2026,EN,FT,Data Analyst,Chennai,0,S,1.5,3.8,8,3.75,4464
+2026,MI,FT,Data Analyst,Chennai,0,S,5.5,3.3,8,8.5,10119
+2026,MI,FT,Data Analyst,Chennai,50,S,3.5,3.6,8,6.25,7440
+2026,SE,FT,Data Analyst,Chennai,0,L,6.0,3.6,8,11.0,13095
+2026,SE,FT,Data Analyst,Chennai,0,S,6.5,4.7,8,6.5,7738
+2026,EN,FT,Data Analyst,Remote,100,S,1.0,3.6,8,2.12,2524
+2026,MI,FT,Data Analyst,Chennai,0,S,5.0,3.6,8,14.5,17262
+2026,SE,FT,Data Analyst,Chennai,0,S,8.5,3.6,8,25.0,29762
+2026,SE,FT,Data Analyst,Chennai,50,S,6.5,4.7,8,10.0,11905
+2026,EX,FT,Data Analyst,Chennai,50,S,9.5,3.6,8,17.0,20238
+2026,MI,FT,Data Analyst,Chennai,0,S,3.5,3.4,6,4.0,4762
+2026,MI,FT,Data Analyst,Chennai,50,S,4.5,3.8,8,3.25,3869
+2026,MI,FT,Data Analyst,Chennai,0,S,4.0,3.7,8,3.5,4167
+2026,MI,FT,Data Analyst,Chennai,0,S,5.0,3.6,8,7.25,8631
+2026,MI,FT,Data Analyst,Chennai,0,S,4.0,3.4,6,5.5,6548
+2026,SE,FT,Data Analyst,Chennai,0,S,7.5,3.6,8,9.0,10714
+2026,MI,FT,Data Analyst,Chennai,0,S,4.0,4.0,3,5.0,5952
+2026,EX,FT,Data Analyst,Chennai,0,S,10.5,3.6,8,21.5,25595
+2026,EX,FT,Data Analyst,Chennai,0,S,10.5,3.6,8,27.5,32738
+2026,SE,FT,Data Analyst,Remote,100,S,7.0,3.6,8,31.25,37202
+2026,MI,FT,Data Analyst,Chennai,0,S,5.0,3.6,8,5.5,6548
+2026,EX,FT,Data Analyst,Chennai,50,S,9.5,3.3,8,12.0,14286
+2026,EX,FT,Data Analyst,Chennai,0,S,11.5,3.2,8,32.5,38690
+2026,MI,FT,Data Analyst,Chennai,0,S,3.0,3.9,8,2.5,2976
+2026,SE,FT,Data Analyst,Chennai,0,S,6.5,3.6,8,8.5,10119
+2026,SE,FT,Data Analyst,Chennai,0,S,6.0,3.9,8,6.75,8036
+2026,EN,FT,Data Analyst,Chennai,0,S,0.0,4.1,8,2.75,3274
+2026,EN,FT,Data Analyst,Chennai,0,S,1.0,3.8,8,8.5,10119
+2026,EN,FT,Data Analyst,Chennai,0,S,2.5,3.5,8,6.25,7440
+2026,MI,FT,Data Analyst,Chennai,0,S,3.5,3.8,7,5.75,6845
+2026,EX,FT,Data Scientist,Chennai,0,S,10.0,3.0,6,75.0,89286
+2026,MI,FT,Data Analyst,Chennai,0,S,3.0,2.4,8,3.38,4024
+2026,EN,FT,Data Analyst,Chennai,0,S,2.5,3.6,8,2.75,3274
+2026,EN,FT,Data Analyst,Chennai,0,S,1.5,3.6,8,2.7,3214
+2026,SE,FT,Data Analyst,Chennai,0,S,7.5,3.2,8,4.5,5357
+2026,EN,FT,Data Analyst,Chennai,0,S,0.0,3.6,8,2.25,2679
+2026,EN,FT,Data Analyst,Chennai,50,S,0.0,4.0,8,32.5,38690
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,6.5,4.0,5,15.0,17857
+2026,EN,FT,Data Analyst,Chennai,0,S,1.5,4.2,8,2.12,2524
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.0,3.6,8,7.25,8631
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,4.5,8,4.25,5060
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,3.25,3869
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.6,8,5.5,6548
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,10.5,3.6,8,10.5,12500
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.5,8,2.38,2833
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.4,8,3.88,4619
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,4.7,8,4.5,5357
+2026,EN,FT,Data Analyst,Delhi / NCR,0,L,0.0,3.6,8,2.25,2679
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,4.7,8,2.38,2833
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,5.5,6548
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,4.2,7,2.88,3429
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.9,8,2.5,2976
+2026,EX,FT,Data Analyst,Delhi / NCR,50,S,10.5,3.4,8,37.5,44643
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,2.7,8,5.25,6250
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.8,8,8.5,10119
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.6,8,2.62,3119
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,8.0,3.9,8,26.25,31250
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,3.5,8,8.0,9524
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,10.0,3.6,8,8.5,10119
+2026,EN,FT,Data Analyst,Delhi / NCR,0,L,0.0,3.6,8,3.5,4167
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.0,3.6,8,5.5,6548
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,7.0,3.6,8,17.5,20833
+2026,SE,FT,Data Analyst,Delhi / NCR,0,L,6.0,3.6,7,2.5,2976
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.7,8,13.5,16071
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,8.5,3.9,8,25.0,29762
+2026,MI,FT,Data Analyst,Delhi / NCR,0,L,5.5,3.6,8,4.5,5357
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,3.6,8,5.0,5952
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,3.7,8,2.62,3119
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,4.4,5,3.75,4464
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,2.75,3274
+2026,SE,FT,Data Analyst,Delhi / NCR,50,L,8.5,3.4,8,22.5,26786
+2026,EX,FT,Data Analyst,Delhi / NCR,0,L,10.5,3.3,8,20.0,23810
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,11.5,3.6,8,12.0,14286
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,2.5,8,3.5,4167
+2026,SE,FT,Data Analyst,Delhi / NCR,0,L,6.0,4.0,8,7.0,8333
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.5,3.6,8,15.5,18452
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,3.38,4024
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,3.6,5,2.5,2976
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,2.7,8,3.88,4619
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.2,8,3.5,4167
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.9,8,4.0,4762
+2026,EX,FT,Data Analyst,Delhi / NCR,50,L,15.0,3.6,8,20.0,23810
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.6,8,10.5,12500
+2026,SE,FT,Data Analyst,Delhi / NCR,0,L,8.5,4.3,8,12.0,14286
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.4,8,2.38,2833
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,8.0,2.3,8,9.5,11310
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,4.4,8,6.75,8036
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.9,8,6.5,7738
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.5,3.5,8,4.5,5357
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.9,8,5.0,5952
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.8,8,4.62,5500
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,3.6,8,6.0,7143
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.7,8,18.75,22321
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,8.0,3.4,8,14.0,16667
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,2.4,8,7.0,8333
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.6,5,16.5,19643
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.2,8,12.5,14881
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,4.1,8,11.0,13095
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.5,3.6,7,5.75,6845
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,8,13.0,15476
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,2.9,8,5.5,6548
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.3,8,3.88,4619
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,3.6,8,3.75,4464
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.6,5,3.12,3714
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.0,6,6.5,7738
+2026,MI,FT,Data Analyst,Delhi / NCR,0,L,4.0,4.0,7,5.75,6845
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.5,3.8,8,14.0,16667
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,2.8,8,7.5,8929
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.5,3.6,8,11.5,13690
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.6,8,3.0,3571
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.5,3.7,8,2.88,3429
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.5,8,5.0,5952
+2026,SE,FT,Data Analyst,Delhi / NCR,50,S,7.5,3.6,6,32.5,38690
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,9.5,3.6,8,2.75,3274
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.2,7,6.5,7738
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,4.0,8,9.5,11310
+2026,MI,FT,Data Analyst,Hyderabad,50,S,5.5,3.6,8,22.5,26786
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.0,8,3.38,4024
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.0,8,3.5,4167
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.7,8,4.38,5214
+2026,SE,FT,Data Analyst,Delhi / NCR,50,L,6.5,3.6,8,23.75,28274
+2026,EN,FT,Data Analyst,Delhi / NCR,50,S,1.5,3.6,8,2.38,2833
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.0,8,4.0,4762
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.6,8,5.75,6845
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,7.0,3.6,8,21.25,25298
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,3.0,8,4.0,4762
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,8,4.5,5357
+2026,MI,FT,Data Analyst,Delhi / NCR,50,L,4.0,3.6,8,3.75,4464
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.7,8,14.0,16667
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,3.7,8,13.0,15476
+2026,EX,FT,Data Analyst,Delhi / NCR,0,S,10.5,3.7,8,14.0,16667
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.6,8,2.0,2381
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,4.0,8,8.0,9524
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.0,3.6,8,2.62,3119
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,3.6,8,4.8,5714
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.0,3.6,8,2.5,2976
+2026,EN,FT,Data Analyst,Delhi / NCR,50,S,2.5,2.9,8,10.5,12500
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.0,2.6,8,3.62,4310
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.6,3,2.5,2976
+2026,EX,FT,Data Analyst,Delhi / NCR,50,S,9.5,3.9,8,13.5,16071
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.5,4.0,7,5.0,5952
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.5,4.0,8,4.75,5655
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,0.0,4.3,8,2.75,3274
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,8.0,3.6,8,16.0,19048
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,3.5,4.4,8,3.62,4310
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.5,3.9,8,21.5,25595
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.6,8,6.88,8190
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.9,8,14.0,16667
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,2.5,3.6,8,3.5,4167
+2026,EN,FT,Data Analyst,Delhi / NCR,0,S,1.5,1.7,8,2.38,2833
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,4.0,3.8,8,5.75,6845
+2026,EN,FT,Data Analyst,Kolkata,0,S,0.0,3.6,8,6.75,8036
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,8,6.0,7143
+2026,MI,FT,Data Analyst,Kolkata,0,S,5.0,3.9,8,9.25,11012
+2026,EX,FT,Data Analyst,Kolkata,0,L,10.0,3.3,8,7.5,8929
+2026,SE,FT,Data Analyst,Kolkata,0,S,7.0,3.6,8,5.0,5952
+2026,MI,FT,Data Analyst,Kolkata,0,L,5.5,3.6,7,10.0,11905
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.0,2.7,8,3.25,3869
+2026,EN,FT,Data Analyst,Kolkata,50,S,1.0,4.4,8,2.75,3274
+2026,MI,FT,Data Analyst,Kolkata,0,S,5.5,2.7,8,6.0,7143
+2026,MI,FT,Data Analyst,Kolkata,0,L,4.5,3.6,8,5.0,5952
+2026,MI,FT,Data Analyst,Kolkata,0,S,5.5,3.6,8,9.0,10714
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.8,8,2.75,3274
+2026,SE,FT,Data Analyst,Kolkata,0,S,7.5,3.8,8,6.0,7143
+2026,EN,FT,Data Analyst,Kolkata,0,S,2.5,4.8,7,1.88,2238
+2026,EN,FT,Data Analyst,Kolkata,0,S,0.0,3.6,8,14.0,16667
+2026,SE,FT,Data Analyst,Kolkata,0,S,6.5,3.6,8,4.25,5060
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,8,1.75,2083
+2026,EN,FT,Data Analyst,Kolkata,0,S,1.0,3.6,8,5.5,6548
+2026,SE,FT,Data Analyst,Kolkata,0,L,8.0,3.7,7,26.25,31250
+2026,EN,FT,Data Analyst,Kolkata,0,S,2.0,3.4,8,1.88,2238
+2026,SE,FT,Data Analyst,Kolkata,0,S,8.5,5.0,8,2.75,3274
+2026,SE,FT,Data Analyst,Kolkata,0,S,6.0,4.1,8,7.5,8929
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.5,3.7,8,6.5,7738
+2026,MI,FT,Data Analyst,Kolkata,0,L,5.5,3.6,8,6.5,7738
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.5,2.6,8,12.0,14286
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,8,1.88,2238
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,4,4.0,4762
+2026,EN,FT,Data Analyst,Kolkata,0,S,2.5,1.7,8,1.62,1929
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.5,3.8,6,5.0,5952
+2026,SE,FT,Data Analyst,Kolkata,50,L,7.5,3.6,8,20.0,23810
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.0,3.6,8,2.75,3274
+2026,SE,FT,Data Analyst,Kolkata,0,S,7.5,4.0,8,22.5,26786
+2026,EX,FT,Data Analyst,Kolkata,0,S,10.0,3.6,8,21.5,25595
+2026,EX,FT,Data Analyst,Kolkata,0,S,10.5,3.6,8,28.75,34226
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,2.0,6,9.0,10714
+2026,EX,FT,Data Analyst,Kolkata,0,S,14.5,3.4,8,17.5,20833
+2026,EN,FT,Data Analyst,Kolkata,0,S,0.0,3.4,8,16.5,19643
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.0,3.6,8,4.75,5655
+2026,SE,FT,Data Analyst,Kolkata,0,S,7.5,3.6,8,7.0,8333
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.0,3.7,8,1.62,1929
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.0,3.6,8,2.25,2679
+2026,SE,FT,Data Analyst,Kolkata,0,S,7.5,3.6,8,9.0,10714
+2026,EX,FT,Data Analyst,Kolkata,0,S,19.5,3.6,8,23.75,28274
+2026,EN,FT,Data Analyst,Kolkata,0,S,1.5,3.4,7,3.25,3869
+2026,MI,FT,Data Analyst,Kolkata,0,S,5.5,3.6,8,2.38,2833
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.0,3.0,8,4.25,5060
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.2,8,4.0,4762
+2026,SE,FT,Data Analyst,Kolkata,0,S,6.5,3.6,8,12.5,14881
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.0,4.0,8,8.75,10417
+2026,MI,FT,Data Analyst,Kolkata,0,S,5.0,2.6,8,2.25,2679
+2026,EX,FT,Data Analyst,Kolkata,0,S,10.5,3.6,8,5.12,6095
+2026,MI,FT,Data Analyst,Kolkata,0,S,3.5,3.6,8,2.38,2833
+2026,SE,FT,Data Analyst,Kolkata,0,S,8.5,3.6,8,5.38,6405
+2026,MI,FT,Data Analyst,Kolkata,0,S,4.5,3.6,8,5.38,6405
+2026,MI,FT,Data Analyst,Ahmedabad,0,L,4.0,3.6,8,4.75,5655
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,8.5,4.0,8,9.5,11310
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,6.5,3.0,8,9.0,10714
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,7.0,3.6,8,23.5,27976
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.5,4.0,8,3.75,4464
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,0.0,3.6,8,4.5,5357
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,0.0,4.4,8,17.5,20833
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,1.5,4.0,8,4.0,4762
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.0,4.3,8,3.38,4024
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.0,4.0,4,5.75,6845
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.0,3.7,8,4.5,5357
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,1.5,3.6,8,2.5,2976
+2026,SE,FT,Data Analyst,Ahmedabad,0,M,6.5,3.4,8,6.0,7143
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,6.5,3.6,8,5.5,6548
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,3.4,8,4.0,4762
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,9.5,4.1,8,13.0,15476
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.0,3.6,8,4.5,5357
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,15.5,4.7,8,3.75,4464
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.5,3.6,8,4.25,5060
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,3.9,8,5.5,6548
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.5,3.0,8,5.0,5952
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,10.5,3.6,8,11.0,13095
+2026,MI,FT,Data Analyst,Ahmedabad,0,L,4.0,3.6,8,2.5,2976
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.5,3.6,4,4.0,4762
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,7.5,3.8,8,9.0,10714
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.5,3.6,8,3.5,4167
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.0,3.1,8,3.5,4167
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.0,3.9,8,3.62,4310
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,10.0,3.6,8,21.5,25595
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,10.5,3.6,8,28.75,34226
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,4.2,5,4.62,5500
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.5,3.6,8,3.0,3571
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.0,1.7,8,4.0,4762
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,3.6,8,3.25,3869
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.5,3.6,7,4.62,5500
+2026,MI,FT,Data Analyst,Remote,100,S,3.0,3.6,4,3.75,4464
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.5,3.6,8,2.5,2976
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.5,4.2,8,3.5,4167
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.5,3.6,8,9.75,11607
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,4.0,5,5.5,6548
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,3.0,4.0,8,3.5,4167
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,6.5,4.2,8,6.25,7440
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.0,2.4,5,5.38,6405
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.0,3.1,8,7.25,8631
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,7.0,4.9,8,6.5,7738
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,6.5,3.6,8,12.5,14881
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,9.0,2.4,8,12.5,14881
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,9.0,4.4,8,5.5,6548
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,2.5,3.6,8,16.5,19643
+2026,SE,FT,Data Analyst,Ahmedabad,0,S,8.5,3.6,8,10.0,11905
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.0,3.4,8,5.0,5952
+2026,EN,FT,Data Analyst,Ahmedabad,0,S,0.0,2.9,8,13.0,15476
+2026,EX,FT,Data Analyst,Ahmedabad,0,S,9.5,3.8,8,28.75,34226
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,5.5,3.6,8,10.5,12500
+2026,MI,FT,Data Analyst,Ahmedabad,0,S,4.5,3.7,8,7.5,8929
+2026,SE,FT,Machine Learning Engineer,Bangalore,0,L,8.0,3.6,8,25.0,29762
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,S,3.0,3.6,8,10.0,11905
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,S,3.5,3.6,8,8.5,10119
+2026,SE,FT,Machine Learning Engineer,Bangalore,50,L,8.0,3.6,6,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,L,7.5,3.6,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Bangalore,0,L,7.0,3.6,8,27.0,32143
+2026,EN,FT,Machine Learning Engineer,Bangalore,0,S,1.5,3.4,8,4.5,5357
+2026,EX,FT,Machine Learning Engineer,Chennai,50,S,10.5,3.6,8,31.25,37202
+2026,EX,FT,Machine Learning Engineer,Hyderabad,0,S,10.5,3.6,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Bangalore,50,L,7.5,2.4,8,18.75,22321
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,S,3.5,3.4,4,15.0,17857
+2026,MI,FT,Machine Learning Engineer,Bhubaneswar,50,S,5.5,3.6,8,20.25,24107
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,L,5.0,3.6,8,6.0,7143
+2026,SE,FT,Machine Learning Engineer,Hyderabad,0,L,7.5,3.3,8,5.5,6548
+2026,SE,FT,Machine Learning Engineer,Mumbai,50,S,6.5,4.0,8,12.5,14881
+2026,SE,FT,Data Scientist,Bangalore,50,S,6.5,3.6,8,20.25,24107
+2026,SE,FT,Machine Learning Engineer,Bangalore,0,L,8.5,3.6,8,33.75,40179
+2026,EX,FT,Machine Learning Engineer,Bangalore,50,S,11.5,3.6,8,37.5,44643
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,6.5,2.7,8,31.25,37202
+2026,MI,FT,Machine Learning Engineer,Bangalore,50,S,4.0,3.6,8,15.0,17857
+2026,MI,FT,Machine Learning Engineer,Bangalore,50,S,4.5,3.1,8,18.0,21429
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,S,4.5,3.6,8,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,S,8.5,3.6,8,45.0,53571
+2026,MI,FT,Machine Learning Engineer,Bangalore,50,S,4.5,3.6,8,8.5,10119
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,S,6.0,3.4,8,17.5,20833
+2026,SE,FT,Data Scientist,Hyderabad,0,L,7.5,3.6,8,25.0,29762
+2026,SE,FT,Machine Learning Engineer,Bangalore,50,S,6.5,3.6,8,13.25,15774
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,S,7.5,3.6,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Bangalore,0,S,10.0,3.9,8,14.0,16667
+2026,SE,FT,Machine Learning Engineer,Bangalore,50,S,8.5,4.0,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Hyderabad,0,L,4.0,3.3,8,5.25,6250
+2026,MI,FT,Machine Learning Engineer,Bangalore,0,S,4.0,3.6,6,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Bangalore,50,S,8.5,3.4,5,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,6.0,4.2,6,8.5,10119
+2026,MI,FT,Machine Learning Engineer,Mumbai,50,S,4.0,3.6,8,8.5,10119
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,5.5,3.6,8,12.5,14881
+2026,MI,FT,Machine Learning Engineer,Mumbai,50,S,4.5,3.1,8,18.0,21429
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,L,7.5,3.6,8,13.5,16071
+2026,EN,FT,Machine Learning Engineer,Mumbai,0,S,0.0,3.3,8,3.25,3869
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,7.5,3.6,8,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,S,16.0,3.6,8,52.5,62500
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,L,8.0,3.6,6,21.25,25298
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,L,6.5,4.0,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,8.5,3.6,8,50.0,59524
+2026,SE,FT,Machine Learning Engineer,Mumbai,50,S,8.5,3.6,8,31.25,37202
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,5.5,3.2,8,11.5,13690
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,S,9.0,3.6,8,6.0,7143
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,L,11.5,3.6,8,30.0,35714
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,3.0,3.3,8,5.5,6548
+2026,EN,FT,Machine Learning Engineer,Mumbai,50,S,0.0,3.6,8,23.5,27976
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,6.0,3.6,8,27.5,32738
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,S,11.5,3.8,8,24.0,28571
+2026,EN,FT,Machine Learning Engineer,Mumbai,0,L,0.0,4.0,8,7.0,8333
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,8.5,3.6,8,26.25,31250
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,L,11.5,3.6,8,9.5,11310
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,7.0,3.6,8,16.5,19643
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,L,6.5,3.6,8,12.0,14286
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,L,17.5,4.0,8,50.0,59524
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,4.0,3.6,8,17.0,20238
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,5.0,3.6,8,11.25,13393
+2026,MI,FT,Machine Learning Engineer,Mumbai,100,S,4.0,3.6,8,15.0,17857
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,5.5,3.6,8,21.5,25595
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,7.5,3.7,8,32.5,38690
+2026,EN,FT,Machine Learning Engineer,Mumbai,0,S,0.0,3.6,8,80.0,95238
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,L,6.5,3.3,5,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Mumbai,50,L,6.5,3.3,5,20.0,23810
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,4.5,3.7,8,12.0,14286
+2026,EN,FT,Machine Learning Engineer,Mumbai,0,S,0.0,2.8,8,4.12,4905
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,6.0,4.2,8,15.5,18452
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,4.5,3.6,7,13.0,15476
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,S,9.0,2.9,8,22.5,26786
+2026,EN,FT,Machine Learning Engineer,Mumbai,0,S,0.0,3.6,8,27.5,32738
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,3.0,4.2,8,3.5,4167
+2026,SE,FT,Machine Learning Engineer,Mumbai,50,L,6.5,2.4,8,11.25,13393
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,3.5,3.6,8,10.0,11905
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,S,9.5,3.6,8,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,S,10.5,3.6,8,37.5,44643
+2026,EX,FT,Machine Learning Engineer,Mumbai,50,S,19.5,3.6,8,87.5,104167
+2026,MI,FT,Machine Learning Engineer,Mumbai,50,S,3.5,4.1,8,8.0,9524
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,5.5,3.1,8,10.0,11905
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,L,15.0,3.3,8,31.25,37202
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,4.5,3.6,8,16.0,19048
+2026,MI,FT,Machine Learning Engineer,Mumbai,50,S,5.5,3.6,8,17.0,20238
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,S,10.0,3.6,8,52.5,62500
+2026,MI,FT,Machine Learning Engineer,Mumbai,0,S,4.0,3.6,8,8.5,10119
+2026,SE,FT,Machine Learning Engineer,Mumbai,0,S,7.0,3.6,8,27.5,32738
+2026,EX,FT,Machine Learning Engineer,Mumbai,0,S,18.0,3.6,8,62.5,74405
+2026,MI,FT,Machine Learning Engineer,Hyderabad,0,S,5.0,3.4,8,15.0,17857
+2026,EX,FT,Machine Learning Engineer,Hyderabad,50,S,9.0,2.7,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,7.5,3.6,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Pune,50,L,7.5,3.6,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,6.5,4.0,8,12.5,14881
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,7.5,4.3,8,15.0,17857
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,9.5,3.6,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Pune,0,S,3.0,3.9,8,4.5,5357
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,9.5,3.7,8,35.0,41667
+2026,SE,FT,Machine Learning Engineer,Pune,50,L,7.5,3.6,7,19.0,22619
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,6.5,2.7,8,31.25,37202
+2026,SE,FT,Machine Learning Engineer,Pune,0,L,7.5,3.6,8,13.5,16071
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,8.5,3.6,8,45.0,53571
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,6.5,3.3,8,19.0,22619
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,6.0,3.4,8,17.5,20833
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,8.0,3.6,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Pune,0,L,4.5,4.1,8,5.5,6548
+2026,EX,FT,Machine Learning Engineer,Pune,0,S,9.0,3.4,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,7.5,3.6,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Pune,50,S,5.5,3.8,8,9.5,11310
+2026,EN,FT,Machine Learning Engineer,Pune,50,S,0.0,3.8,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,8.0,3.6,8,18.75,22321
+2026,EN,FT,Machine Learning Engineer,Pune,0,S,1.5,3.9,7,2.62,3119
+2026,EX,FT,Machine Learning Engineer,Pune,0,S,15.0,3.5,8,14.0,16667
+2026,EN,FT,Machine Learning Engineer,Pune,50,S,0.0,4.0,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Pune,0,L,8.5,3.6,8,11.0,13095
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,6.5,4.0,8,27.5,32738
+2026,EN,FT,Machine Learning Engineer,Pune,0,L,0.0,3.3,4,15.0,17857
+2026,EX,FT,Machine Learning Engineer,Pune,0,S,9.5,3.6,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,8.5,3.6,8,14.5,17262
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,7.5,3.6,8,12.5,14881
+2026,EN,FT,Machine Learning Engineer,Pune,0,S,2.0,3.6,8,2.0,2381
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,6.5,3.4,6,11.0,13095
+2026,MI,FT,Machine Learning Engineer,Pune,50,S,5.5,2.7,8,25.0,29762
+2026,EN,FT,Machine Learning Engineer,Pune,0,L,2.0,4.1,8,4.0,4762
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,6.0,3.6,8,14.5,17262
+2026,MI,FT,Machine Learning Engineer,Pune,50,S,3.5,3.6,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Pune,0,L,8.5,3.6,7,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,7.5,3.3,8,15.0,17857
+2026,EN,FT,Machine Learning Engineer,Pune,50,S,0.0,4.0,8,32.5,38690
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,16.0,3.6,8,52.5,62500
+2026,MI,FT,Machine Learning Engineer,Pune,0,S,4.0,4.6,8,9.0,10714
+2026,EN,FT,Machine Learning Engineer,Pune,0,S,0.0,3.1,8,3.25,3869
+2026,MI,FT,Machine Learning Engineer,Pune,0,L,5.5,3.4,8,16.0,19048
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,6.0,3.4,8,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Pune,0,L,8.0,3.6,4,18.0,21429
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,8.5,4.4,6,13.5,16071
+2026,EX,FT,Machine Learning Engineer,Pune,0,S,9.0,3.6,8,23.0,27381
+2026,MI,FT,Machine Learning Engineer,Remote,100,L,3.5,3.6,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,8.5,3.6,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,8.5,3.6,6,18.0,21429
+2026,EX,FT,Machine Learning Engineer,Pune,50,L,15.0,3.6,8,45.0,53571
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,8.5,4.4,8,18.25,21726
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,7.5,3.4,8,20.0,23810
+2026,EN,FT,Machine Learning Engineer,Pune,0,S,2.0,3.6,4,2.88,3429
+2026,MI,FT,Machine Learning Engineer,Pune,0,S,5.5,4.1,5,12.5,14881
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,6.5,3.6,8,14.0,16667
+2026,SE,FT,Machine Learning Engineer,Pune,0,S,6.5,2.8,8,12.0,14286
+2026,EN,FT,Machine Learning Engineer,Pune,50,S,0.0,2.8,8,33.75,40179
+2026,EX,FT,Machine Learning Engineer,Pune,0,L,9.0,3.4,8,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Pune,0,L,8.0,3.6,8,36.5,43452
+2026,MI,FT,Machine Learning Engineer,Pune,100,S,4.5,3.4,8,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,L,10.5,3.3,5,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.0,4.2,6,8.5,10119
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,S,10.5,3.6,8,31.25,37202
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,3.5,3.6,8,12.5,14881
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,10.5,4.5,8,7.0,8333
+2026,SE,FT,Machine Learning Engineer,Remote,100,S,6.5,3.7,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Remote,100,L,3.0,3.6,0,18.0,21429
+2026,EX,FT,Machine Learning Engineer,Hyderabad,50,S,16.0,3.6,8,52.5,62500
+2026,EX,FT,Machine Learning Engineer,Hyderabad,50,L,10.5,3.6,8,32.5,38690
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,3.6,8,4.5,5357
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,4.0,3.6,7,11.0,13095
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,7.5,3.4,8,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,7.5,3.6,8,15.0,17857
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.6,8,5.5,6548
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,7.5,3.6,0,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,6.5,4.2,0,11.0,13095
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,10.5,3.6,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,3.6,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Chennai,0,L,7.5,3.3,8,5.5,6548
+2026,EN,FT,Machine Learning Engineer,Chennai,0,S,0.0,3.8,8,8.0,9524
+2026,EX,FT,Machine Learning Engineer,Chennai,50,L,10.5,3.7,8,32.5,38690
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,8.5,4.1,6,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,6.5,3.4,6,11.0,13095
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,7.5,3.4,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Chennai,50,L,6.0,3.7,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Chennai,50,S,16.0,3.6,8,52.5,62500
+2026,MI,FT,Machine Learning Engineer,Chennai,50,S,4.0,3.1,5,23.75,28274
+2026,SE,FT,Machine Learning Engineer,Chennai,0,L,7.5,3.4,7,13.5,16071
+2026,MI,FT,Machine Learning Engineer,Chennai,0,L,5.5,3.4,8,16.0,19048
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,3.4,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,5.5,3.4,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,8.5,3.6,8,27.5,32738
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,6.0,3.9,8,9.0,10714
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,4.1,6,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,3.7,8,5.0,5952
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,4.0,7,13.0,15476
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,8.5,3.6,8,31.25,37202
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,6.0,4.0,8,13.25,15774
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,3.0,3.1,8,2.5,2976
+2026,SE,FT,Machine Learning Engineer,Chennai,50,S,8.5,3.5,7,32.5,38690
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,5.0,3.5,6,17.0,20238
+2026,EN,FT,Machine Learning Engineer,Chennai,50,L,0.0,3.7,7,20.0,23810
+2026,MI,FT,Data Scientist,Chennai,0,S,4.0,4.2,8,10.5,12500
+2026,MI,FT,Data Scientist,Chennai,0,S,3.5,4.2,8,10.5,12500
+2026,SE,FT,Machine Learning Engineer,Chennai,0,L,8.0,3.6,8,36.5,43452
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,10.0,3.7,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Chennai,50,L,11.5,3.6,8,30.0,35714
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,3.6,8,15.0,17857
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,4.0,2.9,8,2.75,3274
+2026,EN,FT,Machine Learning Engineer,Chennai,50,S,0.0,3.6,8,75.0,89286
+2026,SE,FT,Machine Learning Engineer,Chennai,0,L,8.5,3.4,8,27.5,32738
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,4.5,4.3,8,18.0,21429
+2026,MI,FT,Machine Learning Engineer,Chennai,50,S,4.0,3.6,8,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Chennai,50,L,15.0,3.6,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.0,3.6,8,35.0,41667
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,16.5,3.6,8,32.5,38690
+2026,SE,FT,Machine Learning Engineer,Chennai,0,S,7.5,3.6,8,21.25,25298
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,9.0,3.6,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,5.5,4.8,8,6.5,7738
+2026,MI,FT,Machine Learning Engineer,Chennai,50,S,3.0,3.6,8,10.0,11905
+2026,EN,FT,Machine Learning Engineer,Chennai,0,S,0.0,3.6,8,17.5,20833
+2026,SE,FT,Machine Learning Engineer,Chennai,0,L,7.5,3.7,8,20.5,24405
+2026,MI,FT,Machine Learning Engineer,Chennai,0,S,5.5,3.6,8,26.25,31250
+2026,EX,FT,Machine Learning Engineer,Chennai,50,S,10.5,3.2,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,10.5,3.6,8,37.5,44643
+2026,EX,FT,Machine Learning Engineer,Chennai,50,S,14.5,3.6,8,55.0,65476
+2026,EX,FT,Machine Learning Engineer,Chennai,50,L,9.5,3.4,8,27.5,32738
+2026,EX,FT,Machine Learning Engineer,Chennai,0,S,21.0,3.6,8,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,6.5,3.6,8,31.25,37202
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.0,3.0,8,3.12,3714
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.5,3.6,8,21.5,25595
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,0.0,3.6,8,1.5,1786
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,S,9.5,2.9,8,42.5,50595
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,9.5,2.9,8,45.0,53571
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,3.5,8,4.75,5655
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,50,L,0.0,3.6,8,35.0,41667
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.5,3.8,8,2.75,3274
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.8,8,5.5,6548
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,8.5,4.6,8,20.0,23810
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,L,10.5,3.4,8,10.75,12798
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,50,S,2.5,3.6,8,12.0,14286
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,4.5,3.6,8,6.25,7440
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,100,S,3.5,3.6,8,4.0,4762
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.0,3.3,8,5.4,6429
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,3.9,3,4.25,5060
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,3.0,1.4,8,4.5,5357
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,9.0,3.6,8,23.0,27381
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,8.0,3.6,8,32.5,38690
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,16.0,4.4,8,35.5,42262
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.0,2.5,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,5.0,3.6,8,10.0,11905
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,0.0,3.4,8,2.75,3274
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.5,3.1,8,9.0,10714
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.8,8,5.0,5952
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,4.2,8,4.0,4762
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,7.5,3.8,8,13.0,15476
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,50,S,0.0,4.4,8,3.88,4619
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,M,3.5,3.3,8,6.5,7738
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,3.8,8,4.0,4762
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.6,8,13.0,15476
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,12.0,4.0,8,34.0,40476
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.0,3.8,8,5.0,5952
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.6,8,3.62,4310
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,1.0,3.8,8,2.5,2976
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,L,7.5,3.6,8,19.0,22619
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.5,3.4,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,11.0,3.3,8,45.0,53571
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.0,3.8,4,1.75,2083
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,5.5,3.6,8,3.6,4286
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.5,3.6,8,11.5,13690
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,S,10.5,5.0,8,23.75,28274
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.5,3.6,8,4.5,5357
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,16.0,4.5,8,21.25,25298
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,S,9.5,3.6,8,50.0,59524
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,50,S,4.5,3.3,8,7.0,8333
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,4.0,4.1,8,1.5,1786
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,4.0,2.8,8,7.5,8929
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,L,5.5,3.6,8,11.0,13095
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.5,4.9,8,8.0,9524
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,50,S,5.5,3.7,8,17.0,20238
+2026,SE,FT,Machine Learning Engineer,Remote,100,S,6.5,3.6,4,28.75,34226
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,5.0,3.2,8,14.5,17262
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,6.0,3.7,6,11.0,13095
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,5.5,2.4,8,25.0,29762
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,L,8.5,3.6,8,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,5.5,3.8,7,9.5,11310
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,3.0,2.2,6,9.0,10714
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,S,11.5,3.4,8,37.5,44643
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,7.5,3.6,8,21.25,25298
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,3.0,3.6,8,28.75,34226
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,0,S,4.5,3.7,8,30.0,35714
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,10.5,3.6,8,36.25,43155
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,2.4,7,7.0,8333
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,10.5,3.6,8,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Hyderabad,50,S,7.0,3.6,8,28.75,34226
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,7.5,4.3,8,27.5,32738
+2026,MI,FT,Machine Learning Engineer,Delhi / NCR,50,S,5.5,3.7,8,14.0,16667
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,8.5,3.6,4,27.5,32738
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,9.5,4.0,8,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,L,9.0,4.1,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,17.5,3.9,8,26.25,31250
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,50,L,19.0,3.9,8,45.0,53571
+2026,EX,FT,Machine Learning Engineer,Hyderabad,50,L,15.0,3.9,8,45.0,53571
+2026,EX,FT,Machine Learning Engineer,Pune,50,S,10.5,3.6,8,50.0,59524
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,L,8.5,3.6,8,31.25,37202
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,4.0,8,13.0,15476
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,14.5,1.5,8,32.5,38690
+2026,EX,FT,Machine Learning Engineer,Delhi / NCR,0,S,10.5,3.0,8,22.5,26786
+2026,EN,FT,Machine Learning Engineer,Delhi / NCR,0,S,2.5,3.2,8,4.75,5655
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,7.5,3.6,8,30.0,35714
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,0,S,6.5,3.6,8,6.5,7738
+2026,SE,FT,Machine Learning Engineer,Pune,50,S,7.5,3.6,8,32.5,38690
+2026,EX,FT,Machine Learning Engineer,Kolkata,0,S,9.5,2.8,8,30.0,35714
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,5.0,3.6,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Kolkata,50,S,9.0,2.9,8,22.5,26786
+2026,EX,FT,Machine Learning Engineer,Kolkata,0,S,9.5,2.8,8,27.5,32738
+2026,MI,FT,Machine Learning Engineer,Kolkata,50,S,5.5,3.6,8,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Kolkata,50,S,7.5,3.4,7,15.0,17857
+2026,SE,FT,Machine Learning Engineer,Kolkata,0,L,6.0,3.3,8,5.5,6548
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.5,4.6,8,4.25,5060
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,0.0,3.6,8,22.5,26786
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.5,4.2,8,6.0,7143
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,4.5,4.2,8,5.0,5952
+2026,SE,FT,Machine Learning Engineer,Kolkata,50,S,7.5,3.6,8,17.0,20238
+2026,MI,FT,Machine Learning Engineer,Kolkata,50,S,3.5,4.2,8,4.0,4762
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.5,4.5,8,3.5,4167
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,4.5,3.6,7,3.25,3869
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,3.5,3.6,0,2.5,2976
+2026,SE,FT,Machine Learning Engineer,Kolkata,50,S,7.5,3.6,0,19.0,22619
+2026,SE,FT,Machine Learning Engineer,Kolkata,50,S,8.0,3.6,7,17.5,20833
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.0,3.3,8,4.0,4762
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.0,3.6,8,1.74,2071
+2026,SE,FT,Machine Learning Engineer,Kolkata,50,S,7.5,3.6,7,22.5,26786
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,5.5,3.4,8,4.0,4762
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,5.5,4.2,8,5.0,5952
+2026,EX,FT,Machine Learning Engineer,Kolkata,0,S,10.5,3.6,8,25.0,29762
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,4.5,4.2,8,13.5,16071
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,3.5,3.5,8,4.5,5357
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,3.0,3.1,8,5.25,6250
+2026,SE,FT,Machine Learning Engineer,Kolkata,0,S,6.5,4.3,8,13.0,15476
+2026,SE,FT,Machine Learning Engineer,Kolkata,0,S,6.5,3.6,6,21.25,25298
+2026,EN,FT,Machine Learning Engineer,Kolkata,0,S,2.5,3.7,8,5.5,6548
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,4.5,3.6,8,2.5,2976
+2026,MI,FT,Machine Learning Engineer,Kolkata,0,S,4.0,3.6,8,2.5,2976
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,50,S,1.0,3.8,8,2.75,3274
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.0,4.3,8,4.75,5655
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.5,2.6,1,10.0,11905
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.0,3.9,8,13.0,15476
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.0,4.3,8,4.5,5357
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.0,3.6,8,10.5,12500
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.0,3.2,8,6.75,8036
+2026,EX,FT,Machine Learning Engineer,Ahmedabad,0,S,10.0,3.2,8,7.5,8929
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.0,3.8,8,7.0,8333
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,0.0,3.6,8,2.7,3214
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,L,6.0,3.3,8,5.5,6548
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,1.5,3.5,8,4.5,5357
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,7.5,3.2,8,7.5,8929
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,6.5,3.2,8,5.0,5952
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,50,S,0.0,4.5,8,25.0,29762
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.5,3.6,8,5.5,6548
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.5,3.6,8,10.25,12202
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.5,4.1,6,6.0,7143
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,50,S,8.0,3.6,7,17.5,20833
+2026,EX,FT,Machine Learning Engineer,Ahmedabad,0,S,9.5,4.1,8,10.0,11905
+2026,EN,FT,Machine Learning Engineer,Ahmedabad,0,S,2.0,3.6,8,4.5,5357
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,6.0,3.8,6,11.0,13095
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,L,4.5,3.6,8,9.0,10714
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,50,S,7.5,3.6,7,22.5,26786
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,7.5,3.6,8,21.5,25595
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,4.5,3.5,8,6.5,7738
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.5,3.5,8,4.5,5357
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,6.5,4.2,8,4.0,4762
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.5,3.6,8,10.0,11905
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,3.5,3.6,8,6.5,7738
+2026,EN,FT,Machine Learning Engineer,Remote,100,S,0.0,3.6,8,10.0,11905
+2026,SE,FT,Machine Learning Engineer,Ahmedabad,0,S,6.0,3.6,8,13.0,15476
+2026,MI,FT,Machine Learning Engineer,Ahmedabad,0,S,4.0,3.6,8,2.5,2976
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,4.5,3.4,8,17.5,20833
+2026,MI,FT,Machine Learning Engineer,Remote,100,S,5.0,3.6,8,20.0,23810
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.5,3.5,8,20.0,23810
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.5,3.6,8,19.0,22619
+2026,SE,FT,Data Engineer,Bangalore,50,L,6.0,3.4,8,12.5,14881
+2026,EX,FT,Data Engineer,Remote,100,L,13.5,3.3,7,27.5,32738
+2026,EX,FT,Data Engineer,Hyderabad,50,L,9.5,3.4,5,17.0,20238
+2026,SE,FT,Data Engineer,Hyderabad,0,L,8.0,3.3,8,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.0,3.8,8,20.0,23810
+2026,SE,FT,Data Engineer,Bangalore,50,S,8.0,4.0,8,20.0,23810
+2026,SE,FT,Data Engineer,Bangalore,0,S,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Engineer,Bangalore,0,S,8.0,3.6,8,21.0,25000
+2026,MI,FT,Data Engineer,Bangalore,0,S,3.0,3.8,8,7.5,8929
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.0,3.6,6,27.5,32738
+2026,EX,FT,Data Engineer,Hyderabad,0,S,15.0,3.2,8,30.0,35714
+2026,SE,FT,Data Engineer,Hyderabad,50,S,6.0,3.6,8,30.0,35714
+2026,SE,FT,Data Engineer,Hyderabad,0,S,8.5,3.6,8,32.5,38690
+2026,MI,FT,Data Engineer,Bangalore,50,S,5.5,3.6,7,4.5,5357
+2026,SE,FT,Data Engineer,Bangalore,0,L,7.0,3.6,8,25.0,29762
+2026,MI,FT,Data Engineer,Bangalore,0,S,5.0,3.4,8,16.5,19643
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.0,3.6,8,20.0,23810
+2026,SE,FT,Data Engineer,Hyderabad,0,L,8.0,3.6,7,12.0,14286
+2026,SE,FT,Data Engineer,Hyderabad,50,S,7.5,3.3,8,21.25,25298
+2026,SE,FT,Data Engineer,Pune,0,L,7.5,4.0,8,12.5,14881
+2026,MI,FT,Data Engineer,Bangalore,0,S,5.0,3.6,8,14.0,16667
+2026,EX,FT,Data Engineer,Hyderabad,50,S,9.5,3.7,8,30.0,35714
+2026,MI,FT,Data Engineer,Bangalore,50,S,4.5,4.7,7,8.5,10119
+2026,EX,FT,Data Engineer,Bangalore,50,S,10.0,3.6,8,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,50,S,7.5,3.1,8,14.0,16667
+2026,EX,FT,Data Engineer,Bangalore,0,S,9.5,3.6,8,22.5,26786
+2026,EX,FT,Data Engineer,Bangalore,50,S,10.0,4.4,5,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,50,S,8.0,3.6,8,12.0,14286
+2026,SE,FT,Data Engineer,Hyderabad,0,S,7.5,3.3,8,21.25,25298
+2026,MI,FT,Data Engineer,Bangalore,0,S,4.0,2.0,8,6.5,7738
+2026,SE,FT,Data Engineer,Bangalore,50,S,8.0,3.8,8,10.0,11905
+2026,SE,FT,Data Engineer,Hyderabad,0,S,6.0,3.7,7,11.0,13095
+2026,EX,FT,Data Engineer,Remote,100,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,50,S,6.0,3.3,8,20.0,23810
+2026,EX,FT,Data Engineer,Bangalore,0,S,10.0,3.2,8,27.5,32738
+2026,SE,FT,Data Engineer,Bangalore,0,S,7.5,3.6,8,17.0,20238
+2026,SE,FT,Data Engineer,Bangalore,0,S,8.5,4.9,8,17.0,20238
+2026,EX,FT,Data Engineer,Hyderabad,0,S,9.0,3.3,7,25.0,29762
+2026,SE,FT,Data Engineer,Hyderabad,0,S,8.0,3.6,8,8.0,9524
+2026,SE,FT,Data Engineer,Remote,100,S,6.5,4.3,8,14.0,16667
+2026,MI,FT,Data Engineer,Bangalore,0,S,4.5,3.6,8,15.0,17857
+2026,MI,FT,Data Engineer,Bangalore,50,S,3.5,3.6,8,18.0,21429
+2026,EX,FT,Data Engineer,Hyderabad,50,S,15.0,3.2,8,26.25,31250
+2026,MI,FT,Data Engineer,Remote,100,S,3.5,3.6,8,9.5,11310
+2026,SE,FT,Data Engineer,Bangalore,0,S,6.5,3.3,8,20.0,23810
+2026,SE,FT,Data Engineer,Hyderabad,50,S,6.5,3.6,5,15.0,17857
+2026,SE,FT,Data Engineer,Bangalore,0,L,6.5,3.6,8,9.5,11310
+2026,MI,FT,Data Engineer,Bangalore,0,S,3.0,3.5,8,20.0,23810
+2026,SE,FT,Data Engineer,Hyderabad,0,S,8.5,3.2,7,13.5,16071
+2026,SE,FT,Data Engineer,Bangalore,0,S,6.5,3.6,8,9.75,11607
+2026,MI,FT,Data Engineer,Bangalore,0,S,4.0,3.6,8,14.0,16667
+2026,EX,FT,Data Engineer,Hyderabad,0,L,10.0,3.3,8,20.5,24405
+2026,EX,FT,Data Engineer,Hyderabad,50,S,9.0,3.6,8,25.0,29762
+2026,EX,FT,Data Engineer,Bangalore,0,S,10.5,3.5,8,20.0,23810
+2026,EX,FT,Data Engineer,Hyderabad,0,S,11.5,3.6,8,32.5,38690
+2026,SE,FT,Data Engineer,Hyderabad,0,L,8.0,3.3,7,15.0,17857
+2026,SE,FT,Data Engineer,Bangalore,0,L,8.5,3.6,7,20.0,23810
+2026,EN,FT,Data Engineer,Hyderabad,50,S,0.0,3.2,8,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,0,S,6.5,3.3,8,15.0,17857
+2026,SE,FT,Data Engineer,Hyderabad,50,L,8.0,3.7,8,27.5,32738
+2026,SE,FT,Data Engineer,Bangalore,0,S,7.0,3.3,8,28.5,33929
+2026,EX,FT,Data Engineer,Remote,100,S,10.0,3.6,8,3.5,4167
+2026,SE,FT,Data Engineer,Bangalore,50,S,8.5,3.6,8,23.75,28274
+2026,SE,FT,Data Engineer,Hyderabad,50,S,7.5,3.6,8,21.0,25000
+2026,MI,FT,Data Engineer,Bangalore,0,S,3.0,3.7,8,22.5,26786
+2026,SE,FT,Data Engineer,Hyderabad,0,L,6.5,3.3,5,22.5,26786
+2026,SE,FT,Data Engineer,Bangalore,50,S,6.0,3.6,8,13.5,16071
+2026,MI,FT,Data Engineer,Mumbai,0,S,4.0,3.6,8,4.5,5357
+2026,SE,FT,Data Engineer,Mumbai,0,S,6.0,3.5,8,15.0,17857
+2026,EX,FT,Data Engineer,Mumbai,0,S,17.5,3.6,8,17.5,20833
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,3.6,8,12.5,14881
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,3.6,7,12.5,14881
+2026,SE,FT,Data Engineer,Mumbai,50,L,6.5,3.6,8,6.0,7143
+2026,SE,FT,Data Engineer,Mumbai,0,L,6.5,3.6,8,3.5,4167
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,4.2,7,12.0,14286
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,3.5,8,6.5,7738
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,3.6,8,31.25,37202
+2026,MI,FT,Data Engineer,Mumbai,0,S,5.5,3.6,8,7.5,8929
+2026,MI,FT,Data Engineer,Mumbai,0,S,3.5,3.6,8,2.0,2381
+2026,SE,FT,Data Engineer,Mumbai,0,S,7.5,3.6,5,14.0,16667
+2026,MI,FT,Data Engineer,Mumbai,0,L,4.5,3.3,8,5.5,6548
+2026,SE,FT,Data Engineer,Mumbai,50,S,8.5,3.6,8,25.0,29762
+2026,EX,FT,Data Engineer,Mumbai,0,L,10.5,3.6,8,22.5,26786
+2026,EX,FT,Data Engineer,Mumbai,0,S,17.5,3.6,8,70.0,83333
+2026,MI,FT,Data Engineer,Mumbai,0,S,4.5,3.6,8,4.5,5357
+2026,SE,FT,Data Engineer,Mumbai,100,S,7.5,3.6,8,13.0,15476
+2026,EX,FT,Data Engineer,Mumbai,50,S,10.0,3.6,8,20.0,23810
+2026,EX,FT,Data Engineer,Pune,0,S,9.5,3.6,8,45.0,53571
+2026,SE,FT,Data Engineer,Pune,0,S,7.5,3.0,7,19.75,23512
+2026,MI,FT,Data Engineer,Pune,0,S,5.0,3.5,6,11.0,13095
+2026,SE,FT,Data Engineer,Pune,50,S,8.5,3.6,8,15.0,17857
+2026,SE,FT,Data Engineer,Pune,50,S,7.0,3.4,8,23.75,28274
+2026,EX,FT,Data Engineer,Pune,0,S,9.5,3.6,8,22.5,26786
+2026,SE,FT,Data Engineer,Pune,50,S,6.5,3.6,7,10.0,11905
+2026,EX,FT,Data Engineer,Pune,50,L,10.5,3.6,8,32.5,38690
+2026,EX,FT,Data Engineer,Pune,0,S,11.5,3.6,8,32.5,38690
+2026,SE,FT,Data Engineer,Pune,0,S,8.0,3.6,8,15.5,18452
+2026,SE,FT,Data Engineer,Pune,0,S,8.0,3.5,8,15.0,17857
+2026,EX,FT,Data Engineer,Pune,0,S,10.5,3.6,6,28.75,34226
+2026,SE,FT,Data Engineer,Pune,50,S,8.5,3.6,8,22.5,26786
+2026,SE,FT,Data Engineer,Pune,0,L,7.5,3.3,3,22.5,26786
+2026,EX,FT,Data Engineer,Pune,0,S,9.5,3.6,8,27.5,32738
+2026,EX,FT,Data Engineer,Pune,50,S,10.5,3.6,8,31.25,37202
+2026,EX,FT,Data Engineer,Remote,100,S,9.5,3.4,8,25.0,29762
+2026,EX,FT,Data Engineer,Pune,50,S,9.0,3.4,6,20.0,23810
+2026,MI,FT,Data Engineer,Pune,50,S,5.0,3.6,7,18.75,22321
+2026,EX,FT,Data Engineer,Pune,50,L,9.5,3.6,5,22.5,26786
+2026,EX,FT,Data Engineer,Pune,50,S,10.5,3.9,8,23.5,27976
+2026,EX,FT,Data Engineer,Pune,0,S,10.5,3.6,8,27.5,32738
+2026,SE,FT,Data Engineer,Pune,50,S,7.0,3.7,8,13.5,16071
+2026,SE,FT,Data Engineer,Pune,0,S,7.5,3.6,8,31.25,37202
+2026,SE,FT,Data Engineer,Pune,50,S,7.5,3.6,8,14.0,16667
+2026,SE,FT,Data Engineer,Pune,50,S,6.5,3.6,8,20.0,23810
+2026,SE,FT,Data Engineer,Pune,0,S,8.5,3.6,7,33.75,40179
+2026,SE,FT,Data Engineer,Pune,0,S,8.5,3.6,7,15.5,18452
+2026,SE,FT,Data Engineer,Pune,0,S,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,6.0,3.6,8,17.5,20833
+2026,EX,FT,Data Engineer,Remote,100,S,10.0,3.1,7,22.75,27083
+2026,EX,FT,Data Engineer,Delhi / NCR,0,S,9.5,3.6,8,22.5,26786
+2026,EN,FT,Data Engineer,Delhi / NCR,0,S,2.5,3.4,8,19.0,22619
+2026,SE,FT,Data Engineer,Delhi / NCR,50,S,8.0,3.1,8,32.5,38690
+2026,SE,FT,Data Engineer,Remote,100,S,8.0,2.6,8,6.25,7440
+2026,EX,FT,Data Engineer,Delhi / NCR,0,L,10.0,3.6,8,10.0,11905
+2026,MI,FT,Data Engineer,Delhi / NCR,50,S,5.5,3.6,8,20.0,23810
+2026,EN,FT,Data Engineer,Delhi / NCR,0,S,0.0,3.6,6,14.5,17262
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,8.5,3.6,7,33.75,40179
+2026,EX,FT,Data Engineer,Remote,100,S,11.5,3.6,8,42.5,50595
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,5.5,3.9,8,6.5,7738
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,7.5,3.6,8,12.5,14881
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,7.5,3.6,7,12.5,14881
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,8.5,3.6,8,37.5,44643
+2026,SE,FT,Data Engineer,Chennai,0,L,7.5,4.0,8,12.5,14881
+2026,SE,FT,Data Engineer,Chennai,0,S,8.0,3.5,8,15.0,17857
+2026,SE,FT,Data Engineer,Chennai,50,S,7.5,3.6,8,12.0,14286
+2026,SE,FT,Data Engineer,Chennai,0,L,7.0,3.6,8,11.5,13690
+2026,EX,FT,Data Engineer,Chennai,0,S,10.5,3.6,8,27.5,32738
+2026,SE,FT,Data Engineer,Chennai,50,S,6.0,3.6,8,20.0,23810
+2026,MI,FT,Data Engineer,Chennai,0,S,5.0,3.9,8,8.0,9524
+2026,EN,FT,Data Engineer,Chennai,0,S,0.0,3.6,6,14.5,17262
+2026,SE,FT,Data Engineer,Chennai,0,S,8.5,3.6,7,33.75,40179
+2026,SE,FT,Data Engineer,Chennai,0,S,7.5,3.7,8,27.5,32738
+2026,SE,FT,Data Engineer,Chennai,0,S,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Engineer,Chennai,50,S,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Engineer,Chennai,50,S,7.0,3.6,8,20.5,24405
+2026,SE,FT,Data Engineer,Chennai,50,S,8.0,3.6,8,19.0,22619
+2026,SE,FT,Data Engineer,Chennai,0,L,8.5,3.3,8,6.5,7738
+2026,EX,FT,Data Engineer,Chennai,50,S,9.5,3.6,8,17.5,20833
+2026,SE,FT,Data Engineer,Chennai,0,S,6.5,3.6,8,20.5,24405
+2026,SE,FT,Data Engineer,Chennai,50,L,7.5,3.4,6,8.0,9524
+2026,SE,FT,Data Engineer,Chennai,0,S,8.5,3.6,4,8.5,10119
+2026,EX,FT,Data Engineer,Chennai,0,S,9.0,3.6,8,25.5,30357
+2026,EN,FT,Data Engineer,Delhi / NCR,0,S,0.0,3.6,8,37.5,44643
+2026,EX,FT,Data Engineer,Delhi / NCR,50,S,14.0,3.6,8,25.0,29762
+2026,MI,FT,Data Engineer,Delhi / NCR,0,M,5.5,3.3,8,6.5,7738
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,3.5,3.6,8,3.5,4167
+2026,SE,FT,Data Engineer,Delhi / NCR,50,S,7.5,3.6,8,21.25,25298
+2026,EX,FT,Data Engineer,Delhi / NCR,0,S,10.0,3.6,5,20.0,23810
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,6.5,3.6,8,12.5,14881
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,5.0,3.2,8,3.6,4286
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,4.0,3.6,8,8.5,10119
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,7.5,3.6,4,15.0,17857
+2026,EX,FT,Data Engineer,Delhi / NCR,0,S,14.0,3.6,8,25.0,29762
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,8.5,3.6,8,23.75,28274
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,8.5,3.0,8,9.5,11310
+2026,EX,FT,Data Engineer,Remote,100,S,10.0,3.6,7,50.0,59524
+2026,MI,FT,Data Engineer,Mohali,0,S,3.0,3.4,8,6.0,7143
+2026,EN,FT,Data Engineer,Delhi / NCR,0,S,2.0,3.6,8,6.12,7286
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,7.5,4.3,8,20.0,23810
+2026,SE,FT,Machine Learning Engineer,Delhi / NCR,50,S,7.5,3.6,8,18.75,22321
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,5.5,3.6,7,13.0,15476
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,3.5,3.7,8,5.75,6845
+2026,EX,FT,Data Engineer,Hyderabad,0,L,17.5,3.3,5,27.5,32738
+2026,SE,FT,Data Engineer,Bangalore,50,L,6.0,4.1,0,11.0,13095
+2026,EX,FT,Data Engineer,Hyderabad,0,S,13.5,3.1,8,35.0,41667
+2026,MI,FT,Data Engineer,Delhi / NCR,50,L,5.5,4.1,6,11.0,13095
+2026,SE,FT,Data Engineer,Hyderabad,50,S,7.5,3.6,8,21.25,25298
+2026,SE,FT,Data Engineer,Delhi / NCR,0,S,8.0,4.0,7,10.5,12500
+2026,MI,FT,Data Engineer,Delhi / NCR,0,S,4.0,3.1,8,5.88,7000
+2026,SE,FT,Data Engineer,Remote,100,S,7.5,3.6,8,25.0,29762
+2026,SE,FT,Data Engineer,Kolkata,50,L,7.5,3.6,8,15.0,17857
+2026,SE,FT,Data Engineer,Kolkata,50,L,7.5,3.3,8,15.0,17857
+2026,SE,FT,Data Engineer,Kolkata,0,L,7.5,3.3,8,9.5,11310
+2026,SE,FT,Data Engineer,Kolkata,0,L,6.5,3.3,6,22.5,26786
+2026,EX,FT,Data Engineer,Kolkata,50,S,10.5,3.6,5,22.5,26786
+2026,SE,FT,Data Engineer,Ahmedabad,50,S,7.5,3.6,8,12.0,14286
+2026,EX,FT,Data Engineer,Ahmedabad,0,S,17.5,3.6,8,70.0,83333
+2026,EN,FT,Data Engineer,Ahemdabad,0,S,2.0,3.6,8,6.12,7286
+2026,SE,FT,Data Engineer,Ahmedabad,0,S,7.5,3.6,4,7.5,8929
+2026,EX,FT,Data Engineer,Ahmedabad,0,S,15.0,3.6,8,25.0,29762
+2026,EX,FT,Data Engineer,Ahmedabad,50,S,10.5,3.6,5,22.5,26786
+2026,EN,FT,Data Engineer,Remote,100,S,0.0,3.3,8,17.5,20833
+2026,SE,FT,Business Analyst,Chennai,0,L,8.5,3.3,8,27.5,32738
+2026,SE,FT,Business Analyst,Hyderabad,0,S,8.5,3.6,8,10.5,12500
+2026,SE,FT,Business Analyst,Bangalore,50,S,7.0,3.6,8,8.5,10119
+2026,EX,FT,Business Analyst,Bangalore,50,S,9.5,3.6,5,19.25,22917
+2026,MI,FT,Business Analyst,Bangalore,0,S,4.0,3.6,8,2.25,2679
+2026,SE,FT,Business Analyst,Hyderabad,50,S,7.5,3.6,6,17.5,20833
+2026,SE,FT,Business Analyst,Remote,100,L,7.5,3.6,8,20.0,23810
+2026,MI,FT,Business Analyst,Bangalore,0,S,5.0,5.0,7,6.0,7143
+2026,EX,FT,Business Analyst,Bangalore,50,S,10.5,3.6,5,19.0,22619
+2026,EN,FT,Business Analyst,Remote,100,S,2.0,3.6,6,16.0,19048
+2026,SE,FT,Business Analyst,Bangalore,0,S,8.0,3.6,8,13.5,16071
+2026,EX,FT,Business Analyst,Remote,100,S,10.5,3.6,8,27.5,32738
+2026,SE,FT,Business Analyst,Pune,0,L,8.5,3.7,8,20.5,24405
+2026,EX,FT,Business Analyst,Hyderabad,50,S,10.5,3.6,8,18.0,21429
+2026,EX,FT,Business Analyst,Mohali,0,S,10.0,3.7,8,30.0,35714
+2026,SE,FT,Business Analyst,Bangalore,0,S,7.5,4.0,8,11.5,13690
+2026,EX,FT,Business Analyst,Bangalore,50,S,10.0,3.8,8,30.0,35714
+2026,EX,FT,Business Analyst,Hyderabad,50,S,10.0,3.6,8,35.0,41667
+2026,MI,FT,Business Analyst,Bangalore,0,S,5.0,3.6,8,14.5,17262
+2026,EX,FT,Business Analyst,Pune,50,S,10.0,3.6,8,33.75,40179
+2026,MI,FT,Business Analyst,Bangalore,0,S,4.0,3.6,8,7.5,8929
+2026,SE,FT,Business Analyst,Bangalore,0,S,6.5,3.6,8,25.0,29762
+2026,EX,FT,Business Analyst,Hyderabad,50,S,9.5,3.6,8,27.5,32738
+2026,SE,FT,Business Analyst,Hyderabad,50,L,7.5,3.3,6,16.0,19048
+2026,EN,FT,Business Analyst,Bangalore,0,S,0.0,3.2,6,2.75,3274
+2026,EN,FT,Business Analyst,Bangalore,0,S,2.0,4.0,8,9.0,10714
+2026,EX,FT,Business Analyst,Hyderabad,0,S,15.0,3.5,8,25.0,29762
+2026,EN,FT,Business Analyst,Bangalore,50,S,2.5,2.8,8,3.5,4167
+2026,EN,FT,Business Analyst,Bangalore,0,S,2.5,3.6,0,3.25,3869
+2026,MI,FT,Business Analyst,Bangalore,0,S,4.0,3.7,6,3.0,3571
+2026,MI,FT,Business Analyst,Bangalore,0,S,5.5,3.5,0,3.12,3714
+2026,SE,FT,Business Analyst,Bangalore,0,S,6.5,3.6,0,8.5,10119
+2026,SE,FT,Business Analyst,North Goa,0,S,8.5,2.8,0,26.25,31250
+2026,SE,FT,Business Analyst,Bangalore,50,S,6.5,3.8,8,20.0,23810
+2026,SE,FT,Business Analyst,Bangalore,0,L,7.5,3.3,7,15.0,17857
+2026,EX,FT,Business Analyst,Chennai,0,L,15.0,3.3,8,22.5,26786
+2026,EX,FT,Business Analyst,Hyderabad,50,S,10.5,3.6,8,10.0,11905
+2026,SE,FT,Business Analyst,Delhi / NCR,0,L,8.5,3.7,6,17.0,20238
+2026,EX,FT,Business Analyst,Hyderabad,50,S,9.5,3.5,8,15.0,17857
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.5,3.6,8,16.0,19048
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,3.9,8,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,50,S,7.5,2.8,8,24.0,28571
+2026,SE,FT,Business Analyst,Pune,50,S,8.0,3.6,8,27.5,32738
+2026,MI,FT,Business Analyst,Bangalore,0,S,5.5,3.6,8,13.5,16071
+2026,EX,FT,Business Analyst,Chennai,0,S,9.5,3.6,8,22.5,26786
+2026,EX,FT,Business Analyst,Pune,0,S,10.5,3.6,8,13.5,16071
+2026,EX,FT,Business Analyst,Pune,0,S,10.0,4.3,8,11.5,13690
+2026,SE,FT,Business Analyst,Udaipur,50,S,6.5,3.0,8,20.5,24405
+2026,EN,FT,Business Analyst,Bangalore,0,S,1.5,2.9,8,3.5,4167
+2026,EX,FT,Business Analyst,Delhi / NCR,50,S,10.5,3.6,8,25.5,30357
+2026,SE,FT,Business Analyst,Hyderabad,0,S,8.5,4.2,8,13.5,16071
+2026,SE,FT,Business Analyst,Hyderabad,50,S,6.5,3.6,8,9.5,11310
+2026,SE,FT,Business Analyst,Chennai,0,S,7.0,3.2,8,15.0,17857
+2026,EX,FT,Business Analyst,Bangalore,0,S,9.5,4.3,8,17.5,20833
+2026,EN,FT,Business Analyst,Bangalore,0,S,2.5,3.6,8,3.75,4464
+2026,SE,FT,Business Analyst,Hyderabad,0,S,8.5,4.2,8,11.25,13393
+2026,MI,FT,Business Analyst,Bangalore,0,S,4.5,3.3,8,8.5,10119
+2026,EX,FT,Business Analyst,Bangalore,50,S,10.0,3.8,8,19.25,22917
+2026,EN,FT,Business Analyst,Hyderabad,50,S,0.0,3.6,8,28.75,34226
+2026,MI,FT,Business Analyst,Mumbai,50,S,4.5,3.9,8,6.5,7738
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.5,3.6,8,7.0,8333
+2026,MI,FT,Business Analyst,Mumbai,0,L,3.0,3.2,8,8.75,10417
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.0,3.8,8,12.0,14286
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,3.3,8,3.0,3571
+2026,SE,FT,Business Analyst,Mumbai,0,S,8.5,3.9,8,10.5,12500
+2026,SE,FT,Business Analyst,Mumbai,50,S,6.0,3.9,5,8.0,9524
+2026,EX,FT,Business Analyst,Mumbai,0,S,9.0,2.6,8,11.5,13690
+2026,SE,FT,Business Analyst,Mumbai,0,S,6.5,3.3,8,5.0,5952
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,3.6,6,5.25,6250
+2026,EX,FT,Business Analyst,Mumbai,0,S,9.5,3.6,8,13.0,15476
+2026,SE,FT,Business Analyst,Mumbai,0,S,6.5,3.6,8,10.5,12500
+2026,EX,FT,Business Analyst,Mumbai,50,S,10.5,3.6,5,19.0,22619
+2026,SE,FT,Business Analyst,Mumbai,0,S,8.0,3.6,5,11.0,13095
+2026,EN,FT,Business Analyst,Mumbai,0,L,2.0,3.6,8,4.0,4762
+2026,SE,FT,Business Analyst,Remote,100,S,8.5,3.2,8,13.5,16071
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,3.6,8,22.5,26786
+2026,SE,FT,Business Analyst,Mumbai,0,S,6.5,3.7,8,8.75,10417
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.0,3.7,8,11.0,13095
+2026,SE,FT,Business Analyst,Mumbai,0,S,8.0,3.5,8,8.5,10119
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,3.7,8,20.0,23810
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.5,3.4,8,6.0,7143
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.5,2.0,7,3.5,4167
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,3.6,8,27.5,32738
+2026,MI,FT,Business Analyst,Mumbai,0,L,4.5,3.2,5,13.5,16071
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.0,4.4,0,4.0,4762
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.0,3.3,8,5.88,7000
+2026,EX,FT,Business Analyst,Mumbai,0,L,15.0,3.3,0,22.5,26786
+2026,SE,FT,Business Analyst,Mumbai,50,S,6.0,3.9,8,6.5,7738
+2026,MI,FT,Business Analyst,Mumbai,0,S,5.5,3.6,8,16.0,19048
+2026,SE,FT,Business Analyst,Mumbai,0,L,6.0,3.5,8,16.5,19643
+2026,SE,FT,Business Analyst,Mumbai,50,S,8.0,3.6,8,27.5,32738
+2026,EX,FT,Business Analyst,Mumbai,0,S,9.5,3.6,8,22.5,26786
+2026,EX,FT,Business Analyst,Mumbai,0,L,10.5,3.5,8,30.0,35714
+2026,SE,FT,Business Analyst,Mumbai,50,S,7.5,3.5,6,10.0,11905
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,4.0,8,20.0,23810
+2026,MI,FT,Business Analyst,Remote,100,S,3.0,3.2,8,5.75,6845
+2026,EX,FT,Business Analyst,Mumbai,0,S,10.0,4.3,8,11.5,13690
+2026,SE,FT,Business Analyst,Mumbai,50,S,6.5,3.0,8,20.5,24405
+2026,MI,FT,Business Analyst,Mumbai,50,L,5.0,4.5,8,5.5,6548
+2026,EN,FT,Business Analyst,Mumbai,0,S,2.0,4.2,8,5.5,6548
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.0,3.3,8,11.0,13095
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,3.6,5,7.5,8929
+2026,SE,FT,Business Analyst,Mumbai,0,L,6.0,3.6,8,8.5,10119
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,3.3,8,7.5,8929
+2026,EN,FT,Business Analyst,Mumbai,0,S,1.5,4.0,8,2.0,2381
+2026,EX,FT,Business Analyst,Mumbai,0,S,10.0,4.3,8,15.0,17857
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,3.3,8,7.0,8333
+2026,SE,FT,Business Analyst,Mumbai,0,S,8.5,3.6,8,22.5,26786
+2026,EN,FT,Business Analyst,Mumbai,0,L,1.5,3.6,8,8.0,9524
+2026,MI,FT,Business Analyst,Mumbai,0,L,4.0,3.5,8,14.0,16667
+2026,MI,FT,Business Analyst,Mumbai,0,L,5.0,3.8,6,8.0,9524
+2026,SE,FT,Business Analyst,Mumbai,0,S,6.0,4.0,6,11.5,13690
+2026,EX,FT,Data Analyst,Mumbai,50,S,10.5,3.6,8,9.0,10714
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.5,3.7,8,11.0,13095
+2026,SE,FT,Business Analyst,Mumbai,0,S,6.0,3.6,8,12.5,14881
+2026,EN,FT,Business Analyst,Mumbai,0,S,2.5,3.4,8,8.5,10119
+2026,EX,FT,Business Analyst,Mumbai,0,S,15.0,3.6,8,25.0,29762
+2026,EN,FT,Business Analyst,Remote,100,S,2.5,3.6,8,9.0,10714
+2026,EX,FT,Data Analyst,Mumbai,0,S,14.5,3.8,8,45.0,53571
+2026,SE,FT,Business Analyst,Mumbai,0,L,6.0,3.8,8,10.0,11905
+2026,EX,FT,Business Analyst,Mumbai,0,S,9.0,3.6,8,12.0,14286
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.5,3.6,8,9.0,10714
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.0,3.6,8,9.5,11310
+2026,MI,FT,Business Analyst,Mumbai,0,S,4.5,2.5,7,10.0,11905
+2026,MI,FT,Business Analyst,Mumbai,0,S,3.0,3.7,5,13.0,15476
+2026,MI,FT,Business Analyst,Mumbai,50,S,5.0,3.6,8,15.0,17857
+2026,EN,FT,Business Analyst,Mumbai,0,S,1.5,3.6,8,15.5,18452
+2026,SE,FT,Business Analyst,Mumbai,0,S,7.0,3.6,8,28.75,34226
+2026,SE,FT,Business Analyst,Mumbai,0,L,7.5,3.6,8,16.0,19048
+2026,MI,FT,Business Analyst,Hyderabad,50,L,5.5,3.3,6,5.5,6548
+2026,SE,FT,Business Analyst,Hyderabad,50,S,6.5,4.0,7,15.0,17857
+2026,EN,FT,Business Analyst,Pune,0,S,2.5,3.6,8,1.75,2083
+2026,SE,FT,Business Analyst,Pune,0,S,8.5,3.6,8,10.5,12500
+2026,MI,FT,Business Analyst,Pune,0,S,3.5,3.6,7,3.75,4464
+2026,MI,FT,Business Analyst,Pune,0,S,4.0,3.6,5,7.5,8929
+2026,EX,FT,Business Analyst,Pune,0,S,10.0,3.6,8,20.0,23810
+2026,EX,FT,Business Analyst,Pune,0,L,15.5,3.5,7,22.5,26786
+2026,SE,FT,Business Analyst,Pune,0,S,8.0,3.6,8,11.25,13393
+2026,MI,FT,Business Analyst,Pune,0,S,3.0,3.6,8,9.0,10714
+2026,EX,FT,Business Analyst,Pune,0,S,9.5,3.6,8,13.0,15476
+2026,MI,FT,Business Analyst,Pune,0,S,3.0,3.6,7,8.0,9524
+2026,EX,FT,Business Analyst,Pune,50,S,10.0,3.6,8,30.0,35714
+2026,EX,FT,Business Analyst,Pune,0,L,9.5,3.6,3,15.0,17857
+2026,SE,FT,Business Analyst,Pune,50,S,6.0,3.4,8,22.5,26786
+2026,MI,FT,Business Analyst,Pune,0,S,3.5,3.2,8,5.0,5952
+2026,EX,FT,Business Analyst,Pune,50,S,9.5,3.6,4,12.5,14881
+2026,MI,FT,Business Analyst,Pune,0,S,5.0,3.6,8,14.5,17262
+2026,MI,FT,Business Analyst,Pune,0,S,5.5,3.6,8,8.5,10119
+2026,MI,FT,Business Analyst,Pune,0,S,5.5,3.6,8,7.2,8571
+2026,EX,FT,Business Analyst,Pune,50,S,9.5,3.6,8,27.5,32738
+2026,EX,FT,Business Analyst,Pune,50,S,10.5,3.6,8,10.0,11905
+2026,EX,FT,Business Analyst,Pune,50,S,9.5,3.5,8,15.0,17857
+2026,SE,FT,Business Analyst,Pune,50,S,6.0,3.6,8,16.0,19048
+2026,MI,FT,Business Analyst,Pune,0,S,4.5,4.1,8,13.5,16071
+2026,SE,FT,Business Analyst,Pune,50,S,7.0,3.6,8,7.0,8333
+2026,SE,FT,Business Analyst,Pune,0,S,7.5,3.6,8,17.5,20833
+2026,EX,FT,Business Analyst,Pune,50,S,15.0,3.2,8,22.5,26786
+2026,SE,FT,Business Analyst,Pune,50,S,6.5,3.6,8,9.5,11310
+2026,MI,FT,Business Analyst,Pune,0,S,4.5,3.6,8,4.5,5357
+2026,EN,FT,Business Analyst,Pune,0,S,0.0,3.9,8,11.5,13690
+2026,MI,FT,Business Analyst,Pune,0,S,4.5,4.4,8,12.5,14881
+2026,EX,FT,Business Analyst,Pune,50,S,10.5,3.6,5,32.5,38690
+2026,EN,FT,Business Analyst,Pune,0,S,0.0,3.6,8,37.5,44643
+2026,EN,FT,Business Analyst,Pune,0,S,1.5,4.2,8,2.0,2381
+2026,EX,FT,Business Analyst,Pune,0,S,15.0,3.6,8,32.5,38690
+2026,MI,FT,Business Analyst,Remote,100,S,3.5,3.6,8,2.75,3274
+2026,SE,FT,Business Analyst,Pune,0,S,7.5,3.6,8,12.5,14881
+2026,EX,FT,Business Analyst,Pune,0,S,10.0,4.3,8,15.0,17857
+2026,EX,FT,Business Analyst,Pune,0,S,9.5,4.3,8,15.0,17857
+2026,SE,FT,Business Analyst,Pune,50,S,6.5,3.6,8,27.5,32738
+2026,EN,FT,Data Analyst,Pune,50,S,2.5,3.6,8,20.0,23810
+2026,EX,FT,Business Analyst,Pune,50,S,10.5,3.6,8,27.5,32738
+2026,EX,FT,Business Analyst,Pune,0,S,15.0,3.4,8,22.5,26786
+2026,EX,FT,Business Analyst,Pune,0,S,10.5,3.4,8,22.5,26786
+2026,EX,FT,Business Analyst,Pune,0,S,9.5,3.4,8,22.5,26786
+2026,SE,FT,Business Analyst,Pune,0,S,6.0,3.6,8,12.5,14881
+2026,EN,FT,Business Analyst,Pune,50,S,1.5,3.6,8,5.75,6845
+2026,EN,FT,Business Analyst,Pune,0,S,2.5,3.6,8,8.5,10119
+2026,EN,FT,Business Analyst,Pune,50,S,2.5,3.6,8,3.5,4167
+2026,EX,FT,Business Analyst,Pune,0,S,15.0,3.3,8,27.5,32738
+2026,SE,FT,Business Analyst,Pune,0,S,7.0,3.4,8,10.0,11905
+2026,SE,FT,Business Analyst,Pune,0,S,7.5,3.6,8,9.0,10714
+2026,EN,FT,Business Analyst,Pune,0,S,2.0,1.7,8,4.98,5929
+2026,MI,FT,Data Analyst,Pune,0,S,5.5,3.6,8,17.0,20238
+2026,SE,FT,Business Analyst,Pune,50,S,8.5,3.4,8,25.5,30357
+2026,SE,FT,Business Analyst,Pune,0,L,6.0,3.3,8,22.5,26786
+2026,MI,FT,Business Analyst,Pune,0,S,5.0,3.9,8,15.0,17857
+2026,EX,FT,Business Analyst,Pune,50,S,9.5,3.4,8,21.25,25298
+2026,MI,FT,Business Analyst,Pune,0,L,5.5,3.3,8,6.5,7738
+2026,SE,FT,Business Analyst,Pune,0,L,7.5,3.6,8,21.5,25595
+2026,MI,FT,Business Analyst,Pune,50,S,5.5,3.4,4,15.0,17857
+2026,SE,FT,Business Analyst,Pune,0,L,6.0,3.6,8,10.0,11905
+2026,EX,FT,Business Analyst,Pune,0,L,9.5,2.4,8,27.5,32738
+2026,MI,FT,Business Analyst,Pune,0,S,4.5,3.4,5,13.0,15476
+2026,EX,FT,Business Analyst,Pune,0,S,11.5,3.3,8,17.5,20833
+2026,EX,FT,Business Analyst,Pune,50,L,9.5,3.6,6,20.0,23810
+2026,EX,FT,Business Analyst,Pune,0,S,10.0,3.5,8,40.0,47619
+2026,SE,FT,Business Analyst,Pune,50,L,8.5,3.6,7,22.5,26786
+2026,SE,FT,Business Analyst,Pune,0,S,7.5,3.6,8,14.5,17262
+2026,SE,FT,Business Analyst,Remote,100,S,6.5,2.3,8,13.0,15476
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.5,3.6,8,5.5,6548
+2026,EN,FT,Business Analyst,Delhi / NCR,0,L,0.0,3.6,8,40.0,47619
+2026,EX,FT,Business Analyst,Delhi / NCR,50,S,10.5,3.6,5,19.0,22619
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.5,3.6,8,4.5,5357
+2026,EX,FT,Business Analyst,Delhi / NCR,50,S,10.0,3.6,8,33.75,40179
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,3.5,3.6,8,3.5,4167
+2026,SE,FT,Business Analyst,Delhi / NCR,0,L,6.5,3.6,8,5.5,6548
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,7.5,3.6,8,12.5,14881
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,3.6,7,15.0,17857
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,3.6,8,7.75,9226
+2026,EN,FT,Business Analyst,Delhi / NCR,0,L,0.0,4.2,8,2.0,2381
+2026,EX,FT,Business Analyst,Delhi / NCR,100,S,12.5,3.4,8,18.5,22024
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.5,3.4,8,12.5,14881
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.5,4.5,8,9.0,10714
+2026,EX,FT,Business Analyst,Remote,100,S,10.0,3.6,8,14.0,16667
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,8.5,4.2,8,13.5,16071
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,7.0,3.2,8,15.0,17857
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.0,3.6,8,22.5,26786
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,3.5,8,23.0,27381
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,8.5,4.2,8,11.25,13393
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,7.5,3.6,8,19.0,22619
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.0,3.7,8,7.75,9226
+2026,EX,FT,Business Analyst,Delhi / NCR,50,L,10.5,3.6,8,35.0,41667
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,6.5,3.6,8,27.5,32738
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,3.5,4.1,8,3.12,3714
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,3.5,3.6,8,5.0,5952
+2026,SE,FT,Data Analyst,Delhi / NCR,0,S,6.0,3.9,8,10.0,11905
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.0,3.6,8,12.5,14881
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,3.9,8,7.5,8929
+2026,SE,FT,Business Analyst,Remote,100,S,7.0,2.1,8,20.0,23810
+2026,EN,FT,Business Analyst,Delhi / NCR,50,S,1.5,3.6,8,13.5,16071
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.5,3.6,8,13.5,16071
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,2.5,3.3,8,5.5,6548
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,1.5,4.1,8,11.0,13095
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,4.1,8,10.5,12500
+2026,EX,FT,Business Analyst,Delhi / NCR,50,S,10.5,3.6,8,25.75,30655
+2026,SE,FT,Business Analyst,Chennai,0,S,8.5,3.6,8,19.25,22917
+2026,MI,FT,Business Analyst,Chennai,0,S,3.5,3.7,8,7.5,8929
+2026,EX,FT,Business Analyst,Chennai,0,L,10.5,3.7,8,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,50,S,7.5,3.6,6,17.5,20833
+2026,MI,FT,Business Analyst,Chennai,0,S,4.0,3.8,8,10.0,11905
+2026,EX,FT,Business Analyst,Chennai,0,L,10.5,3.7,7,20.5,24405
+2026,MI,FT,Business Analyst,Chennai,0,S,5.5,4.1,8,10.0,11905
+2026,EX,FT,Business Analyst,Chennai,50,S,10.5,3.6,5,19.0,22619
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,3.0,8,5.75,6845
+2026,EN,FT,Business Analyst,Chennai,0,S,0.0,3.6,8,4.25,5060
+2026,SE,FT,Business Analyst,Chennai,0,L,8.5,3.7,8,20.5,24405
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,3.6,8,9.0,10714
+2026,EX,FT,Business Analyst,Chennai,0,L,9.5,3.6,3,15.0,17857
+2026,EX,FT,Business Analyst,Chennai,50,S,10.0,3.8,8,30.0,35714
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,4.7,8,10.0,11905
+2026,SE,FT,Business Analyst,Chennai,50,L,7.5,3.3,6,16.0,19048
+2026,EX,FT,Business Analyst,Chennai,0,S,15.0,3.5,0,25.0,29762
+2026,SE,FT,Business Analyst,Chennai,0,S,6.5,3.6,0,35.0,41667
+2026,MI,FT,Business Analyst,Chennai,50,S,4.0,4.2,8,8.5,10119
+2026,SE,FT,Business Analyst,Chennai,0,L,8.5,3.7,6,17.0,20238
+2026,EX,FT,Business Analyst,Chennai,0,L,9.0,3.5,8,32.5,38690
+2026,SE,FT,Business Analyst,Chennai,0,S,8.0,4.2,8,11.5,13690
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,4.0,8,20.0,23810
+2026,EX,FT,Business Analyst,Chennai,50,S,10.5,3.6,8,25.5,30357
+2026,EX,FT,Business Analyst,Chennai,50,S,15.0,3.2,8,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.2,7,22.5,26786
+2026,EX,FT,Business Analyst,Chennai,50,S,14.5,3.6,8,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,0,S,8.5,3.7,8,22.5,26786
+2026,EX,FT,Business Analyst,Chennai,50,S,10.0,3.8,8,19.25,22917
+2026,EN,FT,Business Analyst,Chennai,50,S,0.0,3.6,8,28.75,34226
+2026,EN,FT,Business Analyst,Remote,100,S,2.0,3.7,7,5.0,5952
+2026,MI,FT,Business Analyst,Chennai,50,S,4.0,4.2,8,9.0,10714
+2026,MI,FT,Business Analyst,Chennai,0,S,3.5,3.6,8,3.38,4024
+2026,SE,FT,Business Analyst,Chennai,0,S,6.0,3.6,8,12.5,14881
+2026,EN,FT,Business Analyst,Chennai,0,S,1.0,3.6,8,5.25,6250
+2026,EX,FT,Business Analyst,Remote,100,L,10.5,3.3,5,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.6,8,21.5,25595
+2026,EX,FT,Business Analyst,Chennai,50,S,10.5,3.6,8,25.75,30655
+2026,SE,FT,Business Analyst,Chennai,0,S,6.0,3.6,8,13.0,15476
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.6,8,22.5,26786
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,3.9,8,4.62,5500
+2026,SE,FT,Business Analyst,Chennai,0,L,7.5,3.3,8,6.75,8036
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,3.8,8,10.0,11905
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.6,8,17.5,20833
+2026,SE,FT,Business Analyst,Chennai,0,L,6.0,3.3,8,22.5,26786
+2026,EN,FT,Business Analyst,Chennai,0,S,2.0,3.6,8,3.0,3571
+2026,SE,FT,Business Analyst,Chennai,0,L,6.0,3.6,8,10.0,11905
+2026,MI,FT,Business Analyst,Chennai,0,S,4.5,3.4,5,13.0,15476
+2026,SE,FT,Business Analyst,Chennai,50,S,6.5,4.0,8,18.25,21726
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.7,0,13.0,15476
+2026,EX,FT,Business Analyst,Chennai,0,L,16.0,3.3,0,30.0,35714
+2026,SE,FT,Business Analyst,Chennai,0,L,8.0,3.3,8,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,0,S,7.5,3.6,8,14.5,17262
+2026,EX,FT,Business Analyst,Chennai,50,L,9.5,3.6,7,22.5,26786
+2026,SE,FT,Business Analyst,Chennai,0,L,8.5,3.4,8,19.0,22619
+2026,SE,FT,Business Analyst,Chennai,50,L,7.5,3.5,7,10.5,12500
+2026,EX,FT,Business Analyst,Chennai,50,S,9.5,3.6,8,27.5,32738
+2026,SE,FT,Business Analyst,Chennai,0,L,7.0,3.3,8,24.5,29167
+2026,SE,FT,Business Analyst,Chennai,50,L,8.5,3.6,8,22.5,26786
+2026,EN,FT,Business Analyst,Chennai,0,S,0.0,3.6,8,35.0,41667
+2026,EX,FT,Business Analyst,Chennai,0,S,10.0,3.6,8,13.5,16071
+2026,SE,FT,Business Analyst,Chennai,0,S,7.0,3.7,6,11.0,13095
+2026,SE,FT,Business Analyst,Chennai,50,L,8.5,3.6,8,6.5,7738
+2026,SE,FT,Business Analyst,Chennai,0,L,7.0,3.3,8,27.5,32738
+2026,EX,FT,Business Analyst,Remote,100,L,9.5,3.6,8,20.0,23810
+2026,SE,FT,Business Analyst,Chennai,0,S,8.5,4.2,8,15.0,17857
+2026,SE,FT,Business Analyst,Chennai,50,S,8.5,3.7,8,13.0,15476
+2026,SE,FT,Business Analyst,Chennai,50,S,6.0,3.4,7,12.0,14286
+2026,SE,FT,Business Analyst,Chennai,50,S,8.5,3.6,8,24.5,29167
+2026,SE,FT,Business Analyst,Chennai,0,L,7.0,3.3,8,32.5,38690
+2026,SE,FT,Business Analyst,Chennai,0,L,6.0,3.3,8,5.5,6548
+2026,EN,FT,Business Analyst,Chennai,50,S,2.0,3.6,8,4.25,5060
+2026,SE,FT,Business Analyst,Remote,100,S,6.5,3.9,8,12.25,14583
+2026,SE,FT,Business Analyst,Chennai,50,S,7.5,3.7,8,22.5,26786
+2026,MI,FT,Business Analyst,Delhi / NCR,50,S,4.5,3.6,8,10.5,12500
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,0.0,3.6,8,60.0,71429
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,0.0,3.6,8,21.5,25595
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.5,3.5,8,15.5,18452
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,2.0,3.6,8,3.12,3714
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,8.5,3.4,8,25.5,30357
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,8.5,3.4,8,11.25,13393
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,2.0,3.6,8,3.0,3571
+2026,MI,FT,Business Analyst,Delhi / NCR,0,M,4.0,4.1,8,12.5,14881
+2026,MI,FT,Business Analyst,Delhi / NCR,50,S,5.5,3.4,4,15.0,17857
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,8.0,3.8,8,20.0,23810
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,7.5,3.6,8,14.5,17262
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,0.0,3.6,8,3.0,3571
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.5,3.6,8,11.0,13095
+2026,SE,FT,Business Analyst,Delhi / NCR,0,L,7.5,2.9,8,9.5,11310
+2026,MI,FT,Data Analyst,Delhi / NCR,0,L,4.5,3.3,8,8.5,10119
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,3.0,3.6,8,6.5,7738
+2026,SE,FT,Business Analyst,Delhi / NCR,50,L,6.5,3.3,4,17.0,20238
+2026,SE,FT,Business Analyst,Delhi / NCR,50,L,6.5,3.3,5,17.0,20238
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.5,3.9,8,5.75,6845
+2026,EX,FT,Business Analyst,Remote,100,S,14.0,3.8,8,30.0,35714
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.5,3.6,8,10.0,11905
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.5,3.6,8,25.0,29762
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,7.5,3.2,8,10.0,11905
+2026,SE,FT,Business Analyst,Remote,100,S,8.0,4.2,5,11.25,13393
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.5,3.6,8,12.5,14881
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.0,3.5,8,6.5,7738
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,7.5,4.6,8,13.5,16071
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,2.5,3.6,8,3.88,4619
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.0,3.6,6,10.0,11905
+2026,MI,FT,Data Analyst,Delhi / NCR,0,S,5.5,3.6,3,12.0,14286
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,3.0,3.0,8,17.5,20833
+2026,EX,FT,Business Analyst,Delhi / NCR,50,L,10.5,3.6,8,19.0,22619
+2026,MI,FT,Business Analyst,Hyderabad,50,S,5.5,3.6,8,16.0,19048
+2026,EX,FT,Business Analyst,Delhi / NCR,0,L,11.5,4.1,8,16.0,19048
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,0.0,3.9,8,3.5,4167
+2026,MI,FT,Business Analyst,Delhi / NCR,0,L,3.0,3.6,8,3.0,3571
+2026,MI,FT,Business Analyst,Delhi / NCR,50,S,5.0,3.0,8,9.0,10714
+2026,MI,FT,Business Analyst,Remote,100,S,5.5,3.6,8,20.0,23810
+2026,SE,FT,Business Analyst,Hyderabad,0,S,7.5,3.2,5,20.0,23810
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,7.5,3.6,5,9.0,10714
+2026,SE,FT,Business Analyst,Delhi / NCR,0,L,7.5,3.6,8,14.0,16667
+2026,MI,FT,Business Analyst,Delhi / NCR,50,S,4.5,3.6,8,20.0,23810
+2026,EX,FT,Business Analyst,Remote,100,L,11.5,3.6,8,14.0,16667
+2026,SE,FT,Business Analyst,Delhi / NCR,0,L,7.5,3.6,8,21.25,25298
+2026,SE,FT,Business Analyst,Delhi / NCR,50,S,8.5,3.6,8,31.25,37202
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.5,3.8,8,14.0,16667
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,5.0,3.6,8,19.75,23512
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.5,3.6,8,10.5,12500
+2026,EN,FT,Business Analyst,Delhi / NCR,0,S,0.0,3.1,8,15.0,17857
+2026,EX,FT,Business Analyst,Delhi / NCR,0,S,10.0,4.1,8,18.75,22321
+2026,MI,FT,Business Analyst,Delhi / NCR,0,S,4.0,3.6,8,22.5,26786
+2026,SE,FT,Business Analyst,Delhi / NCR,0,S,6.0,3.6,8,17.5,20833
+2026,EN,FT,Business Analyst,Remote,100,S,2.5,3.6,8,7.5,8929
+2026,MI,FT,Business Analyst,Kolkata,0,S,3.0,4.0,8,13.5,16071
+2026,EX,FT,Business Analyst,Kolkata,0,S,17.0,3.8,7,24.0,28571
+2026,SE,FT,Business Analyst,Kolkata,50,L,7.5,3.7,7,30.0,35714
+2026,SE,FT,Business Analyst,Kolkata,0,S,6.0,3.6,8,9.0,10714
+2026,MI,FT,Business Analyst,Kolkata,0,S,4.0,3.6,8,3.5,4167
+2026,SE,FT,Business Analyst,Kolkata,0,S,6.0,4.3,8,6.5,7738
+2026,MI,FT,Business Analyst,Kolkata,0,S,3.5,3.6,8,4.5,5357
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,5.5,3.2,8,6.75,8036
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,7.5,3.0,8,7.25,8631
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,7.5,3.6,8,17.5,20833
+2026,EN,FT,Business Analyst,Ahmedabad,0,S,2.0,3.6,8,2.88,3429
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,7.5,3.6,8,21.5,25595
+2026,EX,FT,Business Analyst,Ahmedabad,0,S,9.5,4.3,8,9.0,10714
+2026,EN,FT,Business Analyst,Ahmedabad,0,S,0.0,3.6,8,25.0,29762
+2026,EX,FT,Business Analyst,Ahmedabad,50,S,10.0,3.8,8,15.0,17857
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,7.5,4.2,8,8.5,10119
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,5.5,3.6,8,5.88,7000
+2026,EX,FT,Business Analyst,Remote,100,S,9.0,3.6,7,19.75,23512
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,8.5,4.4,8,9.0,10714
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,3.5,3.8,8,8.0,9524
+2026,SE,FT,Business Analyst,Ahmedabad,50,L,7.0,3.6,8,7.0,8333
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,3.5,3.6,8,9.0,10714
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,6.0,3.6,8,9.0,10714
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,4.0,3.6,8,3.5,4167
+2026,SE,FT,Business Analyst,Ahmedabad,0,S,8.5,3.6,8,15.0,17857
+2026,MI,FT,Business Analyst,Ahmedabad,0,S,3.5,3.6,8,4.5,5357
+2026,EX,FT,Business Analyst,Remote,100,S,12.5,3.4,8,18.5,22024
+2026,EX,FT,Python Developer,Bangalore,50,L,9.5,3.6,8,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,0,S,6.5,3.1,6,18.0,21429
+2026,EN,FT,Python Developer,Bangalore,0,L,2.5,3.6,8,3.5,4167
+2026,SE,FT,Python Developer,Hyderabad,0,S,8.5,4.2,5,14.5,17262
+2026,EX,FT,Python Developer,Bangalore,0,S,15.0,3.8,8,19.75,23512
+2026,SE,FT,Python Developer,Hyderabad,50,L,6.5,2.4,8,15.0,17857
+2026,EX,FT,Python Developer,Bangalore,50,S,9.5,3.6,6,27.5,32738
+2026,EX,FT,Python Developer,Hyderabad,50,S,9.5,4.2,8,9.0,10714
+2026,SE,FT,Python Developer,Pune,0,L,7.5,3.3,8,15.0,17857
+2026,EN,FT,Python Developer,Bangalore,0,S,1.5,3.6,6,2.38,2833
+2026,SE,FT,Python Developer,Bangalore,0,S,6.5,3.6,8,19.0,22619
+2026,SE,FT,Python Developer,Pune,50,S,7.5,3.6,8,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,0,L,8.0,3.6,8,8.0,9524
+2026,SE,FT,Python Developer,Mumbai,0,L,8.0,3.6,8,19.0,22619
+2026,SE,FT,Python Developer,Bangalore,0,L,8.0,3.3,8,22.5,26786
+2026,SE,FT,Python Developer,Pune,50,S,7.5,3.6,8,14.0,16667
+2026,SE,FT,Python Developer,Hyderabad,50,S,7.5,3.6,6,8.5,10119
+2026,EX,FT,Python Developer,Hyderabad,0,L,10.0,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Bangalore,0,S,8.5,3.6,7,20.5,24405
+2026,EX,FT,Python Developer,Pune,0,S,11.5,4.0,6,30.0,35714
+2026,MI,FT,Python Developer,Bangalore,0,S,5.5,3.9,8,10.0,11905
+2026,MI,FT,Python Developer,Remote,100,S,4.0,3.5,8,15.0,17857
+2026,SE,FT,Python Developer,Hyderabad,0,L,8.5,3.3,8,15.0,17857
+2026,SE,FT,Python Developer,Hyderabad,0,S,7.5,3.2,7,22.5,26786
+2026,SE,FT,Python Developer,Hyderabad,0,S,7.0,3.6,8,27.0,32143
+2026,SE,FT,Python Developer,Hyderabad,50,L,7.5,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Remote,100,S,6.5,3.6,7,10.5,12500
+2026,SE,FT,Python Developer,Bangalore,50,L,8.5,3.6,8,35.0,41667
+2026,SE,FT,Python Developer,Bangalore,0,S,7.5,3.6,8,21.25,25298
+2026,SE,FT,Python Developer,Bangalore,0,S,8.5,3.6,8,25.5,30357
+2026,EX,FT,Python Developer,Hyderabad,50,L,9.5,3.6,8,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,50,S,7.5,3.6,6,30.0,35714
+2026,SE,FT,Python Developer,Hyderabad,50,S,7.5,3.4,8,15.0,17857
+2026,SE,FT,Python Developer,Bangalore,0,L,7.5,3.3,5,1.5,1786
+2026,EX,FT,Python Developer,Chennai,50,L,10.5,3.3,6,24.5,29167
+2026,SE,FT,Python Developer,Delhi / NCR,0,S,6.5,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Delhi / NCR,0,S,8.0,3.2,8,6.5,7738
+2026,MI,FT,Python Developer,Bangalore,0,S,5.0,3.4,8,7.5,8929
+2026,SE,FT,Python Developer,Pune,0,L,7.0,3.6,8,19.0,22619
+2026,SE,FT,Python Developer,Hyderabad,0,L,7.5,3.6,8,19.0,22619
+2026,MI,FT,Python Developer,Hyderabad,0,L,5.0,3.3,8,4.5,5357
+2026,SE,FT,Python Developer,Hyderabad,50,S,8.5,3.0,7,22.5,26786
+2026,SE,FT,Python Developer,Hyderabad,50,L,8.5,3.6,8,20.25,24107
+2026,SE,FT,Python Developer,Bangalore,50,L,7.5,2.4,8,16.0,19048
+2026,SE,FT,Python Developer,Bangalore,0,S,7.5,3.6,8,21.75,25893
+2026,SE,FT,Python Developer,Mumbai,50,S,8.5,3.6,8,27.5,32738
+2026,SE,FT,Python Developer,Pune,50,S,8.5,3.6,8,17.5,20833
+2026,SE,FT,Python Developer,Hyderabad,0,L,7.5,3.3,8,6.0,7143
+2026,SE,FT,Python Developer,Bangalore,50,S,6.5,3.6,8,18.75,22321
+2026,SE,FT,Python Developer,Bangalore,0,L,7.5,3.3,5,22.5,26786
+2026,SE,FT,Python Developer,Hyderabad,0,S,7.5,3.9,6,27.5,32738
+2026,EX,FT,Python Developer,Delhi / NCR,0,S,9.5,3.1,8,15.0,17857
+2026,SE,FT,Python Developer,Hyderabad,50,S,8.5,3.4,8,20.0,23810
+2026,SE,FT,Python Developer,Hyderabad,0,S,8.0,3.4,7,23.0,27381
+2026,EX,FT,Python Developer,Hyderabad,50,L,9.5,3.4,5,20.0,23810
+2026,EX,FT,Python Developer,Hyderabad,0,S,10.5,3.4,8,40.0,47619
+2026,EX,FT,Python Developer,Chennai,0,L,9.5,3.4,8,20.0,23810
+2026,SE,FT,Python Developer,Chennai,0,L,7.5,3.3,7,15.0,17857
+2026,EX,FT,Python Developer,Bangalore,50,S,11.5,4.1,8,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,0,S,7.5,3.8,8,17.0,20238
+2026,SE,FT,Python Developer,Bangalore,0,S,6.0,4.1,7,17.5,20833
+2026,EX,FT,Python Developer,Indore,0,S,11.0,3.3,8,21.0,25000
+2026,SE,FT,Python Developer,Bangalore,0,S,7.0,3.6,8,18.0,21429
+2026,MI,FT,Python Developer,Bangalore,0,S,5.5,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Bangalore,0,S,6.0,3.0,8,16.0,19048
+2026,SE,FT,Python Developer,Bangalore,0,S,6.0,3.1,7,15.0,17857
+2026,EX,FT,Python Developer,Kochi,0,S,10.5,3.6,8,20.5,24405
+2026,SE,FT,Python Developer,Bangalore,50,S,8.0,3.6,5,18.75,22321
+2026,EX,FT,Python Developer,Hyderabad,0,L,10.5,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Kochi,0,S,6.0,2.5,8,13.5,16071
+2026,MI,FT,Python Developer,Bangalore,0,S,4.0,2.7,8,12.5,14881
+2026,EX,FT,Python Developer,Bangalore,0,S,10.5,3.2,8,26.25,31250
+2026,SE,FT,Python Developer,Bangalore,50,S,8.0,3.3,8,17.0,20238
+2026,EX,FT,Python Developer,Bangalore,50,S,9.5,3.6,8,21.25,25298
+2026,EX,FT,Python Developer,Bangalore,0,L,9.5,3.3,8,30.0,35714
+2026,SE,FT,Python Developer,Hyderabad,0,L,8.5,3.3,8,24.5,29167
+2026,SE,FT,Python Developer,Bangalore,0,L,7.5,3.3,8,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,0,L,7.5,3.3,8,27.5,32738
+2026,SE,FT,Python Developer,Bangalore,0,S,6.5,3.6,8,17.0,20238
+2026,SE,FT,Python Developer,Chennai,50,L,7.5,3.3,5,25.5,30357
+2026,EX,FT,Python Developer,Indore,0,S,11.0,3.3,8,17.5,20833
+2026,EX,FT,Python Developer,Bangalore,0,L,9.0,3.4,8,15.0,17857
+2026,SE,FT,Python Developer,Bangalore,0,S,7.0,3.6,8,10.0,11905
+2026,EX,FT,Python Developer,Hyderabad,0,S,9.5,3.6,8,27.5,32738
+2026,SE,FT,Python Developer,Bangalore,50,S,6.0,3.6,7,14.0,16667
+2026,EX,FT,Python Developer,Bangalore,0,S,11.0,3.9,0,25.0,29762
+2026,SE,FT,Python Developer,Bangalore,0,S,6.0,3.4,0,6.5,7738
+2026,SE,FT,Python Developer,Delhi / NCR,50,L,6.0,4.1,0,12.5,14881
+2026,SE,FT,Python Developer,Bangalore,0,S,6.5,4.0,8,5.4,6429
+2026,EX,FT,Python Developer,Bangalore,50,S,10.5,3.6,5,35.0,41667
+2026,EX,FT,Python Developer,Delhi / NCR,100,S,9.5,3.8,8,17.0,20238
+2026,SE,FT,Python Developer,Hyderabad,0,S,8.0,3.6,8,27.5,32738
+2026,SE,FT,Python Developer,Bangalore,50,S,6.5,3.6,8,23.75,28274
+2026,SE,FT,Python Developer,Bangalore,50,S,7.5,3.6,7,22.5,26786
+2026,SE,FT,Python Developer,Bangalore,0,S,6.5,4.9,5,15.0,17857
+2026,SE,FT,Python Developer,Hyderabad,0,S,7.5,4.2,8,10.25,12202
+2026,SE,FT,Python Developer,Bangalore,50,S,6.0,3.9,8,15.5,18452
+2026,EN,FT,Python Developer,Bangalore,0,S,2.5,3.6,8,9.0,10714
+2026,SE,FT,Python Developer,Bangalore,0,L,7.5,3.6,8,32.5,38690
+2026,MI,FT,Python Developer,Bangalore,0,S,4.5,3.6,8,4.38,5214
+2026,EX,FT,Python Developer,Bangalore,0,L,10.5,3.6,8,20.0,23810
+2026,EX,FT,Python Developer,Bangalore,50,S,9.5,3.6,8,17.0,20238
+2026,MI,FT,Python Developer,Mumbai,0,S,5.5,4.6,8,7.0,8333
+2026,MI,FT,Python Developer,Bangalore,50,S,4.0,3.6,8,9.0,10714
+2026,MI,FT,Python Developer,Bangalore,0,S,4.5,3.6,8,32.5,38690
+2026,SE,FT,Python Developer,Pune,0,L,8.5,3.3,8,20.0,23810
+2026,EN,FT,Python Developer,Bangalore,0,S,1.5,3.6,8,4.5,5357
+2026,EX,FT,Python Developer,Delhi / NCR,0,L,9.5,3.4,8,24.0,28571
+2026,EX,FT,Python Developer,Bangalore,50,S,10.0,4.1,8,26.5,31548
+2026,SE,FT,Python Developer,Mumbai,50,S,6.5,4.0,5,13.5,16071
+2026,EX,FT,Python Developer,Hyderabad,0,L,9.5,3.6,8,14.0,16667
+2026,SE,FT,Python Developer,Bangalore,0,S,7.0,3.6,8,11.0,13095
+2026,MI,FT,Python Developer,Bangalore,0,S,5.5,3.6,8,8.5,10119
+2026,EX,FT,Python Developer,Hyderabad,50,S,9.5,3.4,8,25.0,29762
+2026,EX,FT,Python Developer,Bangalore,50,S,11.5,4.4,8,35.0,41667
+2026,SE,FT,Python Developer,Hyderabad,50,S,6.5,3.3,8,18.0,21429
+2026,MI,FT,Python Developer,Bangalore,0,S,4.0,3.1,6,4.5,5357
+2026,EN,FT,Python Developer,Chennai,0,S,2.5,3.5,8,6.5,7738
+2026,SE,FT,Python Developer,Bangalore,50,S,8.0,4.1,8,25.0,29762
+2026,SE,FT,Python Developer,Bangalore,50,S,6.5,3.7,8,27.5,32738
+2026,EX,FT,Python Developer,Pune,0,S,10.0,4.0,8,21.5,25595
+2026,EX,FT,Python Developer,Chennai,50,L,10.5,3.9,8,15.0,17857
+2026,EX,FT,Python Developer,Mumbai,50,L,9.5,3.6,8,22.5,26786
+2026,MI,FT,Python Developer,Mumbai,0,S,4.0,3.3,7,4.5,5357
+2026,SE,FT,Python Developer,Mumbai,0,S,6.0,3.6,8,12.0,14286
+2026,SE,FT,Python Developer,Mumbai,0,S,6.5,3.4,8,7.25,8631
+2026,MI,FT,Python Developer,Mumbai,0,S,5.5,3.6,8,9.5,11310
+2026,EX,FT,Python Developer,Mumbai,0,S,10.5,3.4,7,10.0,11905
+2026,MI,FT,Python Developer,Mumbai,0,L,4.5,4.1,8,8.0,9524
+2026,EX,FT,Python Developer,Mumbai,0,S,10.0,3.6,8,25.0,29762
+2026,EN,FT,Python Developer,Mumbai,0,S,2.0,3.9,8,4.25,5060
+2026,MI,FT,Python Developer,Remote,100,S,3.0,2.2,8,5.5,6548
+2026,SE,FT,Python Developer,Mumbai,50,L,8.5,3.6,8,20.25,24107
+2026,SE,FT,Python Developer,Mumbai,0,S,6.5,3.6,8,14.0,16667
+2026,EX,FT,Python Developer,Mumbai,50,S,9.5,3.6,7,17.0,20238
+2026,EN,FT,Python Developer,Remote,100,S,2.0,2.4,8,4.25,5060
+2026,SE,FT,Python Developer,Mumbai,50,S,8.0,3.6,8,13.0,15476
+2026,SE,FT,Python Developer,Mumbai,50,S,8.5,3.6,8,17.5,20833
+2026,MI,FT,Python Developer,Mumbai,0,S,4.5,3.6,8,7.0,8333
+2026,MI,FT,Python Developer,Mumbai,50,L,5.0,3.6,8,8.0,9524
+2026,MI,FT,Python Developer,Mumbai,0,S,5.0,3.4,8,10.5,12500
+2026,MI,FT,Python Developer,Mumbai,0,S,5.0,3.4,8,8.25,9821
+2026,MI,FT,Python Developer,Remote,100,S,4.5,2.4,8,10.0,11905
+2026,SE,FT,Python Developer,Mumbai,0,S,6.5,3.6,8,11.0,13095
+2026,SE,FT,Python Developer,Mumbai,0,L,7.5,3.3,7,15.0,17857
+2026,MI,FT,Python Developer,Mumbai,0,S,4.5,2.5,8,5.88,7000
+2026,EN,FT,Python Developer,Mumbai,0,S,0.0,3.6,6,18.0,21429
+2026,SE,FT,Python Developer,Mumbai,50,S,8.0,3.6,5,18.75,22321
+2026,MI,FT,Python Developer,Mumbai,0,S,4.5,3.6,8,6.25,7440
+2026,MI,FT,Python Developer,Mumbai,50,S,5.5,3.6,8,6.5,7738
+2026,SE,FT,Python Developer,Remote,100,S,7.5,1.8,8,5.5,6548
+2026,SE,FT,Python Developer,Mumbai,50,S,7.5,3.6,7,22.5,26786
+2026,SE,FT,Python Developer,Mumbai,50,L,6.5,2.4,8,12.0,14286
+2026,SE,FT,Python Developer,Mumbai,0,L,6.5,3.6,8,5.5,6548
+2026,MI,FT,Python Developer,Mumbai,0,S,4.5,3.6,8,12.0,14286
+2026,SE,FT,Python Developer,Mumbai,0,S,7.5,3.6,8,18.75,22321
+2026,SE,FT,Python Developer,Mumbai,100,S,6.5,3.6,8,13.5,16071
+2026,MI,FT,Python Developer,Mumbai,0,S,4.0,3.6,8,10.0,11905
+2026,EN,FT,Python Developer,Mumbai,0,S,1.5,3.6,4,6.0,7143
+2026,SE,FT,Python Developer,Mumbai,50,L,7.5,3.6,6,12.5,14881
+2026,EN,FT,Python Developer,Mumbai,0,S,1.0,4.2,8,2.25,2679
+2026,EN,FT,Python Developer,Remote,100,S,2.0,3.2,8,9.0,10714
+2026,SE,FT,Python Developer,Mumbai,0,L,7.5,3.6,8,18.0,21429
+2026,MI,FT,Python Developer,Mumbai,0,L,4.0,3.6,8,10.5,12500
+2026,SE,FT,Python Developer,Mumbai,0,S,7.5,3.6,8,22.5,26786
+2026,EX,FT,Python Developer,Mumbai,0,S,9.5,3.6,8,20.0,23810
+2026,EX,FT,Python Developer,Mumbai,0,S,10.5,4.2,8,17.75,21131
+2026,SE,FT,Python Developer,Mumbai,0,S,8.0,3.3,8,15.0,17857
+2026,EX,FT,Python Developer,Mumbai,0,S,10.5,3.6,8,22.5,26786
+2026,SE,FT,Python Developer,Mumbai,0,S,8.5,4.2,8,15.0,17857
+2026,MI,FT,Python Developer,Mumbai,50,L,3.0,3.6,8,4.75,5655
+2026,MI,FT,Python Developer,Mumbai,0,S,5.5,3.4,8,5.0,5952
+2026,SE,FT,Python Developer,Mumbai,0,S,8.5,3.6,7,13.0,15476
+2026,EN,FT,Python Developer,Mumbai,0,S,1.0,3.6,8,4.75,5655
+2026,SE,FT,Python Developer,Mumbai,0,S,6.0,3.4,8,9.0,10714
+2026,SE,FT,Python Developer,Mumbai,0,S,8.5,2.9,8,15.0,17857
+2026,SE,FT,Python Developer,Mumbai,0,S,8.5,3.6,8,25.0,29762
+2026,SE,FT,Python Developer,Mumbai,0,L,7.5,3.6,8,19.0,22619
+2026,SE,FT,Python Developer,Mumbai,50,S,6.5,3.6,8,14.5,17262
+2026,EX,FT,Python Developer,Mumbai,0,S,10.5,4.7,8,20.0,23810
+2026,SE,FT,Python Developer,Mumbai,0,S,7.5,3.6,8,16.0,19048
+2026,EX,FT,Python Developer,Mumbai,0,S,10.5,3.6,8,25.0,29762
+2026,SE,FT,Python Developer,Mumbai,0,S,7.0,3.6,8,15.0,17857
+2026,SE,FT,Python Developer,Mumbai,0,S,6.0,3.6,8,36.25,43155
+2026,SE,FT,Python Developer,Mumbai,0,S,7.5,3.2,8,8.0,9524
+2026,SE,FT,Python Developer,Mumbai,50,S,6.0,4.1,8,17.5,20833
+2026,SE,FT,Python Developer,Mumbai,50,S,8.0,4.5,8,12.5,14881
+2026,SE,FT,Python Developer,Mumbai,50,L,6.5,3.6,8,10.25,12202
+2026,MI,FT,Python Developer,Mumbai,0,S,4.0,3.6,8,8.5,10119
+2026,MI,FT,Python Developer,Mumbai,0,S,5.5,3.4,6,10.0,11905
+2026,EX,FT,Python Developer,Hyderabad,0,S,9.5,3.6,6,13.0,15476

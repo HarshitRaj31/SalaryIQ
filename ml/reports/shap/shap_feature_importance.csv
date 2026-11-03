@@ -1,0 +1,39 @@
+feature,mean_abs_shap
+num__experience_avg_yrs,4.962801777325033
+num__remote_ratio,1.4441536800345174
+cat__role_standard_Data Scientist,0.9523583984523241
+num__company_rating,0.8591383569921439
+cat__role_standard_Data Analyst,0.8455951254922128
+cat__role_standard_Machine Learning Engineer,0.6635501903414205
+cat__company_size_S,0.5651051387282464
+cat__primary_city_clean_Kolkata,0.26081067236222283
+cat__primary_city_clean_Ahmedabad,0.24598503855514336
+cat__primary_city_clean_Pune,0.16752477926981774
+cat__role_standard_Business Analyst,0.1469793494774044
+num__skills_count,0.0986490515744267
+cat__company_size_L,0.0878108910061035
+cat__role_standard_Data Engineer,0.08520244120910704
+cat__primary_city_clean_Mumbai,0.06963490829911147
+cat__primary_city_clean_Hyderabad,0.06662202503766701
+cat__primary_city_clean_Delhi / NCR,0.06468404667177596
+cat__role_standard_Python Developer,0.053942482924178685
+cat__primary_city_clean_Bangalore,0.04956981424342518
+cat__experience_level_MI,0.04706835456404843
+cat__experience_level_EN,0.037363746526748585
+cat__experience_level_SE,0.031032918626891722
+cat__primary_city_clean_Chennai,0.01994759789669053
+cat__experience_level_EX,0.018114736018140485
+cat__primary_city_clean_Remote,0.0063680488465363205
+cat__primary_city_clean_Indore,0.0006728425690292538
+num__work_year,0.0
+cat__primary_city_clean_Bhopal,0.0
+cat__primary_city_clean_Ahemdabad,0.0
+cat__employment_type_FT,0.0
+cat__primary_city_clean_Bhubaneswar,0.0
+cat__primary_city_clean_Mohali,0.0
+cat__primary_city_clean_Hosur,0.0
+cat__primary_city_clean_Kochi,0.0
+cat__primary_city_clean_Nagamangala,0.0
+cat__primary_city_clean_North Goa,0.0
+cat__primary_city_clean_Udaipur,0.0
+cat__company_size_M,0.0

@@ -59,22 +59,25 @@ export function generatePdfReport(prediction, options = {}) {
     FL: "Freelance (FL)",
   };
 
-  const salaryUsd = Number(prediction.predicted_salary_usd) || 0;
+  const isIndia = prediction.country === "IN" || prediction.currency === "INR";
+  const salaryVal = Number(isIndia ? prediction.predicted_salary : (prediction.predicted_salary_usd || prediction.predicted_salary)) || 0;
   const formattedSalary =
     prediction.formatted_salary ||
-    `$${Math.round(salaryUsd).toLocaleString("en-US")}`;
-  const monthlySalary = `$${Math.round(salaryUsd / 12).toLocaleString("en-US")}`;
+    (isIndia ? `₹${salaryVal.toFixed(2)} LPA` : `$${Math.round(salaryVal).toLocaleString("en-US")}`);
+  const monthlySalary = isIndia
+    ? `₹${((salaryVal * 100000) / 12).toLocaleString("en-IN", { maximumFractionDigits: 0 })} / mo`
+    : `$${Math.round(salaryVal / 12).toLocaleString("en-US")}`;
 
   const lowerBound =
     prediction.salary_range?.formatted_min ||
-    `$${Math.round(Math.max(0, salaryUsd - 39000)).toLocaleString("en-US")}`;
+    (isIndia ? `₹${Math.max(0, salaryVal - 3.0).toFixed(2)} LPA` : `$${Math.round(Math.max(0, salaryVal - 39000)).toLocaleString("en-US")}`);
   const upperBound =
     prediction.salary_range?.formatted_max ||
-    `$${Math.round(salaryUsd + 39000).toLocaleString("en-US")}`;
+    (isIndia ? `₹${(salaryVal + 3.0).toFixed(2)} LPA` : `$${Math.round(salaryVal + 39000).toLocaleString("en-US")}`);
   const maeMargin =
     prediction.confidence_margin_mae
-      ? `$${Math.round(prediction.confidence_margin_mae).toLocaleString("en-US")}`
-      : "$39,039";
+      ? (isIndia ? `±₹${Number(prediction.confidence_margin_mae).toFixed(2)} LPA` : `$${Math.round(prediction.confidence_margin_mae).toLocaleString("en-US")}`)
+      : (isIndia ? "±₹3.02 LPA" : "$39,039");
 
   const expLabel =
     expMap[prediction.experience_level] || prediction.experience_level || "SE";

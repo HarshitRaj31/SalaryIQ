@@ -37,6 +37,7 @@ import {
   Columns3,
   BarChart3,
   Layers,
+  Globe,
 } from "lucide-react";
 import {
   generatePdfReport,
@@ -78,6 +79,18 @@ const formatMoney = (val) => {
     currency: "USD",
     maximumFractionDigits: 0,
   }).format(val);
+};
+
+const formatRecordSalary = (item) => {
+  if (!item) return "$0";
+  if (item.formatted_salary) return item.formatted_salary;
+  const isIndia = item.country === "IN" || item.currency === "INR";
+  if (isIndia) {
+    const val = item.predicted_salary ?? item.salary_in_lpa ?? 0;
+    return `₹${Number(val).toFixed(2)} LPA`;
+  }
+  const val = item.predicted_salary_usd ?? item.predicted_salary ?? 0;
+  return formatMoney(val);
 };
 
 // Custom tooltip for Recharts in comparison modal
@@ -147,6 +160,7 @@ export default function PredictionHistory({
   const [errorNotice, setErrorNotice] = useState(null);
 
   // Search, filter, and sorting states
+  const [countryFilter, setCountryFilter] = useState("ALL"); // "ALL" | "IN" | "US"
   const [searchQuery, setSearchQuery] = useState("");
   const [experienceFilter, setExperienceFilter] = useState("ALL");
   const [remoteFilter, setRemoteFilter] = useState("ALL");
@@ -188,15 +202,16 @@ export default function PredictionHistory({
 
     const fetchHistoryData = async () => {
       try {
+        const countryParam = countryFilter !== "ALL" ? `&country=${countryFilter}` : "";
         // Fetch paginated history from SQLite backend
-        let historyRes = await fetch(`${API_URL}/history?limit=100`, {
+        let historyRes = await fetch(`${API_URL}/history?limit=100${countryParam}`, {
           signal: controller.signal,
         });
 
         // Prefix fallback if needed
         if (!historyRes.ok) {
           historyRes = await fetch(
-            `${API_URL}/api/v1/prediction/history?limit=100`,
+            `${API_URL}/api/v1/prediction/history?limit=100${countryParam}`,
             { signal: controller.signal }
           );
         }
@@ -208,12 +223,12 @@ export default function PredictionHistory({
         const historyData = await historyRes.json();
 
         // Fetch analytical summary from SQLite
-        let summaryRes = await fetch(`${API_URL}/history/summary`, {
+        let summaryRes = await fetch(`${API_URL}/history/summary${countryFilter !== "ALL" ? `?country=${countryFilter}` : ""}`, {
           signal: controller.signal,
         });
         if (!summaryRes.ok) {
           summaryRes = await fetch(
-            `${API_URL}/api/v1/prediction/history/summary`,
+            `${API_URL}/api/v1/prediction/history/summary${countryFilter !== "ALL" ? `?country=${countryFilter}` : ""}`,
             { signal: controller.signal }
           );
         }
@@ -247,7 +262,7 @@ export default function PredictionHistory({
       isMounted = false;
       controller.abort();
     };
-  }, [refreshCounter]);
+  }, [refreshCounter, countryFilter]);
 
   // Refresh handler
   const handleRefresh = useCallback(() => {
@@ -398,39 +413,43 @@ export default function PredictionHistory({
 
     const headers = [
       "ID",
+      "Country",
       "Timestamp",
-      "Job Title",
+      "Job Title / Role",
       "Experience Level",
       "Employment Type",
-      "Employee Residence",
-      "Company Location",
+      "Location / City",
       "Company Size",
       "Remote Ratio (%)",
       "Work Year",
-      "Predicted Salary (USD)",
-      "Range Min (USD)",
-      "Range Max (USD)",
-      "Confidence Margin MAE (USD)",
-      "Model Version",
+      "Predicted Salary",
+      "Currency",
+      "Salary Unit",
+      "Model Used",
     ];
 
-    const rows = history.map((item) => [
-      item.id,
-      `"${item.timestamp}"`,
-      `"${item.job_title}"`,
-      `"${item.experience_level}"`,
-      `"${item.employment_type}"`,
-      `"${item.employee_residence}"`,
-      `"${item.company_location}"`,
-      `"${item.company_size}"`,
-      item.remote_ratio,
-      item.work_year,
-      item.predicted_salary_usd,
-      item.salary_range?.min || "",
-      item.salary_range?.max || "",
-      item.confidence_margin_mae || "",
-      `"${item.model_version}"`,
-    ]);
+    const rows = history.map((item) => {
+      const isIndia = item.country === "IN" || item.currency === "INR";
+      const predSal = isIndia
+        ? (item.predicted_salary ?? item.salary_in_lpa ?? "")
+        : (item.predicted_salary_usd ?? item.predicted_salary ?? "");
+      return [
+        item.id,
+        `"${item.country || (isIndia ? "IN" : "US")}"`,
+        `"${item.timestamp}"`,
+        `"${item.job_title || item.role_standard || ""}"`,
+        `"${item.experience_level || ""}"`,
+        `"${item.employment_type || ""}"`,
+        `"${item.primary_city_clean || item.company_location || ""}"`,
+        `"${item.company_size || ""}"`,
+        item.remote_ratio ?? "",
+        item.work_year ?? "",
+        predSal,
+        `"${item.currency || (isIndia ? "INR" : "USD")}"`,
+        `"${item.salary_unit || (isIndia ? "LPA" : "YEAR")}"`,
+        `"${item.model_used || item.model_version || ""}"`,
+      ];
+    });
 
     const csvContent = [headers.join(","), ...rows.map((r) => r.join(","))].join(
       "\n"
@@ -439,24 +458,32 @@ export default function PredictionHistory({
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.setAttribute("href", url);
-    link.setAttribute("download", "salaryiq_predictions_export.csv");
+    link.setAttribute("download", `salaryiq_predictions_${countryFilter.toLowerCase()}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     showNotification("CSV export downloaded successfully.");
-  }, [history, showNotification]);
+  }, [history, countryFilter, showNotification]);
 
   // Filtered and sorted records
   const filteredHistory = useMemo(() => {
     return history
       .filter((item) => {
+        // Country filter
+        if (countryFilter !== "ALL") {
+          const itemCountry = item.country || (item.currency === "INR" ? "IN" : "US");
+          if (itemCountry !== countryFilter) return false;
+        }
+
         // Search filter
         if (searchQuery.trim()) {
           const q = searchQuery.toLowerCase();
-          const matchTitle = item.job_title?.toLowerCase().includes(q);
-          const matchComp = item.company_location?.toLowerCase().includes(q);
+          const matchTitle = (item.job_title || item.role_standard || "")?.toLowerCase().includes(q);
+          const matchComp = (item.company_location || item.primary_city_clean || "")?.toLowerCase().includes(q);
           const matchRes = item.employee_residence?.toLowerCase().includes(q);
-          if (!matchTitle && !matchComp && !matchRes) return false;
+          const matchCountry = item.country?.toLowerCase().includes(q);
+          const matchModel = item.model_used?.toLowerCase().includes(q);
+          if (!matchTitle && !matchComp && !matchRes && !matchCountry && !matchModel) return false;
         }
 
         // Experience filter
@@ -478,19 +505,27 @@ export default function PredictionHistory({
         return true;
       })
       .sort((a, b) => {
+        const getSal = (rec) => {
+          if (rec.country === "IN" || rec.currency === "INR") {
+            return (Number(rec.predicted_salary) || 0) * 1200;
+          }
+          return Number(rec.predicted_salary_usd || rec.predicted_salary || 0);
+        };
         if (sortBy === "salary-desc") {
-          return b.predicted_salary_usd - a.predicted_salary_usd;
+          return getSal(b) - getSal(a);
         }
         if (sortBy === "salary-asc") {
-          return a.predicted_salary_usd - b.predicted_salary_usd;
+          return getSal(a) - getSal(b);
         }
         if (sortBy === "role") {
-          return (a.job_title || "").localeCompare(b.job_title || "");
+          const titleA = a.job_title || a.role_standard || "";
+          const titleB = b.job_title || b.role_standard || "";
+          return titleA.localeCompare(titleB);
         }
         // "latest" default
         return b.id - a.id;
       });
-  }, [history, searchQuery, experienceFilter, remoteFilter, sortBy]);
+  }, [history, countryFilter, searchQuery, experienceFilter, remoteFilter, sortBy]);
 
   // Selection handlers for side-by-side comparison (max 4)
   const toggleSelectRecord = useCallback(
@@ -759,6 +794,43 @@ export default function PredictionHistory({
           </div>
         )}
 
+        {/* Country Filter Selector Tabs */}
+        <div className="country-selector-wrap" style={{ marginBottom: 4 }}>
+          <div className="country-selector-tabs">
+            <button
+              type="button"
+              className={`country-toggle-btn ${countryFilter === "ALL" ? "active" : ""}`}
+              onClick={() => setCountryFilter("ALL")}
+            >
+              <Globe size={15} />
+              <span>All Countries</span>
+              <span className="country-counter">({history.length})</span>
+            </button>
+            <button
+              type="button"
+              className={`country-toggle-btn ${countryFilter === "IN" ? "active" : ""}`}
+              onClick={() => setCountryFilter("IN")}
+            >
+              <span className="country-flag-icon">🇮🇳</span>
+              <span>India (INR / LPA)</span>
+              <span className="country-counter">
+                ({history.filter((h) => h.country === "IN" || h.currency === "INR").length})
+              </span>
+            </button>
+            <button
+              type="button"
+              className={`country-toggle-btn ${countryFilter === "US" ? "active" : ""}`}
+              onClick={() => setCountryFilter("US")}
+            >
+              <span className="country-flag-icon">🇺🇸</span>
+              <span>United States (USD)</span>
+              <span className="country-counter">
+                ({history.filter((h) => (h.country || "US") === "US" && h.currency !== "INR").length})
+              </span>
+            </button>
+          </div>
+        </div>
+
         {/* Summary Statistics KPI Cards */}
         <div className="history-stats-grid">
           <div className="history-stat-card">
@@ -768,9 +840,11 @@ export default function PredictionHistory({
                 <History size={16} />
               </div>
             </div>
-            <h3>{summary ? summary.total_predictions : history.length}</h3>
+            <h3>{filteredHistory.length}</h3>
             <span className="stat-card-sub">
-              {isLive ? "Logged in SQLite" : "Local snapshot"}
+              {countryFilter === "ALL"
+                ? `${history.filter((h) => h.country === "IN" || h.currency === "INR").length} India · ${history.filter((h) => (h.country || "US") === "US" && h.currency !== "INR").length} US`
+                : isLive ? "Logged in SQLite" : "Local snapshot"}
             </span>
           </div>
 
@@ -782,16 +856,35 @@ export default function PredictionHistory({
               </div>
             </div>
             <h3>
-              {summary?.formatted_avg_salary
-                ? summary.formatted_avg_salary
-                : history.length > 0
+              {filteredHistory.length === 0
+                ? "—"
+                : countryFilter === "IN"
+                ? `₹${(
+                    filteredHistory.reduce((a, b) => a + Number(b.predicted_salary || 0), 0) /
+                    filteredHistory.length
+                  ).toFixed(2)} LPA`
+                : countryFilter === "US"
                 ? `$${Math.round(
-                    history.reduce((a, b) => a + b.predicted_salary_usd, 0) /
-                      history.length
+                    filteredHistory.reduce(
+                      (a, b) => a + Number(b.predicted_salary_usd || b.predicted_salary || 0),
+                      0
+                    ) / filteredHistory.length
                   ).toLocaleString()}`
-                : "$0"}
+                : summary?.formatted_avg_salary ||
+                  `$${Math.round(
+                    filteredHistory.reduce(
+                      (a, b) => a + Number(b.predicted_salary_usd || 0),
+                      0
+                    ) / (filteredHistory.filter((h) => (h.country || "US") === "US").length || 1)
+                  ).toLocaleString()}`}
             </h3>
-            <span className="stat-card-sub">Estimated compensation</span>
+            <span className="stat-card-sub">
+              {countryFilter === "IN"
+                ? "INR per annum"
+                : countryFilter === "US"
+                ? "USD / year"
+                : "Country-aware average"}
+            </span>
           </div>
 
           <div className="history-stat-card">
@@ -802,19 +895,19 @@ export default function PredictionHistory({
               </div>
             </div>
             <h3>
-              {summary && summary.total_predictions > 0
-                ? `$${Math.round(summary.min_predicted_salary / 1000)}k - $${Math.round(
-                    summary.max_predicted_salary / 1000
-                  )}k`
-                : history.length > 0
+              {filteredHistory.length === 0
+                ? "—"
+                : countryFilter === "IN"
+                ? `₹${Math.min(...filteredHistory.map((h) => Number(h.predicted_salary || 0))).toFixed(1)}L - ₹${Math.max(...filteredHistory.map((h) => Number(h.predicted_salary || 0))).toFixed(1)} LPA`
+                : countryFilter === "US"
                 ? `$${Math.round(
-                    Math.min(...history.map((h) => h.predicted_salary_usd)) / 1000
+                    Math.min(...filteredHistory.map((h) => Number(h.predicted_salary_usd || h.predicted_salary || 0))) / 1000
                   )}k - $${Math.round(
-                    Math.max(...history.map((h) => h.predicted_salary_usd)) / 1000
+                    Math.max(...filteredHistory.map((h) => Number(h.predicted_salary_usd || h.predicted_salary || 0))) / 1000
                   )}k`
-                : "$0 - $0"}
+                : `${filteredHistory.length} total records`}
             </h3>
-            <span className="stat-card-sub">Min to Max predictions</span>
+            <span className="stat-card-sub">Min to Max range</span>
           </div>
 
           <div className="history-stat-card">
@@ -832,12 +925,13 @@ export default function PredictionHistory({
                 textOverflow: "ellipsis",
               }}
             >
-              {summary?.most_frequent_role ||
-                history[0]?.job_title ||
+              {filteredHistory[0]?.job_title ||
+                filteredHistory[0]?.role_standard ||
+                summary?.most_frequent_role ||
                 "None yet"}
             </h3>
             <span className="stat-card-sub">
-              Top Level: {summary?.top_experience_level || "SE"}
+              Filter: {countryFilter === "ALL" ? "All" : countryFilter === "IN" ? "India 🇮🇳" : "US 🇺🇸"}
             </span>
           </div>
         </div>
@@ -1004,6 +1098,7 @@ export default function PredictionHistory({
         ) : (
           <div className="history-records-container">
             {filteredHistory.map((item) => {
+              const isIndia = item.country === "IN" || item.currency === "INR";
               const expClass = getExperienceClass(item.experience_level);
               const isDeleting = deletingId === item.id;
               const isSelected = selectedRecordIds.includes(item.id);
@@ -1036,7 +1131,12 @@ export default function PredictionHistory({
 
                   <div className="record-main-col">
                     <div className="record-top-row">
-                      <span className="record-role-title">{item.job_title}</span>
+                      <span className="record-role-title">
+                        {item.job_title || item.role_standard}
+                      </span>
+                      <span className={`country-badge mini ${isIndia ? "in" : "us"}`}>
+                        {isIndia ? "🇮🇳 IN" : "🇺🇸 US"}
+                      </span>
                       <span className={`badge-pill ${expClass}`}>
                         {experienceLabels[item.experience_level] || item.experience_level}
                       </span>
@@ -1050,22 +1150,56 @@ export default function PredictionHistory({
                           ? "Hybrid"
                           : "On-site"}
                       </span>
+                      <span className="model-chip mini">
+                        {item.model_used || (isIndia ? "Gradient Boosting" : "Random Forest")}
+                      </span>
                     </div>
 
                     <div className="record-meta-row">
-                      <span className="meta-item">
-                        <MapPin size={12} />
-                        Loc: {item.company_location || "US"} (Res:{" "}
-                        {item.employee_residence || "US"})
-                      </span>
-                      <span className="meta-item">
-                        <Building2 size={12} />
-                        Scale: {item.company_size || "M"}
-                      </span>
-                      <span className="meta-item">
-                        <Laptop size={12} />
-                        Year: {item.work_year || 2023}
-                      </span>
+                      {isIndia ? (
+                        <>
+                          <span className="meta-item">
+                            <MapPin size={12} />
+                            City: {item.primary_city_clean || "India"}
+                          </span>
+                          {item.experience_avg_yrs !== undefined && item.experience_avg_yrs !== null && (
+                            <span className="meta-item">
+                              <Sparkles size={12} />
+                              Avg Exp: {item.experience_avg_yrs} yrs
+                            </span>
+                          )}
+                          {item.company_rating && (
+                            <span className="meta-item">
+                              ⭐ {item.company_rating}
+                            </span>
+                          )}
+                          {item.skills_count && (
+                            <span className="meta-item">
+                              🛠️ {item.skills_count} skills
+                            </span>
+                          )}
+                          <span className="meta-item">
+                            <Building2 size={12} />
+                            Scale: {item.company_size || "M"}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="meta-item">
+                            <MapPin size={12} />
+                            Loc: {item.company_location || "US"} (Res:{" "}
+                            {item.employee_residence || "US"})
+                          </span>
+                          <span className="meta-item">
+                            <Building2 size={12} />
+                            Scale: {item.company_size || "M"}
+                          </span>
+                          <span className="meta-item">
+                            <Laptop size={12} />
+                            Year: {item.work_year || 2023}
+                          </span>
+                        </>
+                      )}
                       <span className="meta-item">
                         <Calendar size={12} />
                         {formatDate(item.timestamp)}
@@ -1075,12 +1209,13 @@ export default function PredictionHistory({
 
                   <div className="record-salary-col">
                     <span className="record-salary-amount">
-                      {item.formatted_salary ||
-                        `$${Math.round(item.predicted_salary_usd).toLocaleString()}`}
+                      {formatRecordSalary(item)}
                     </span>
                     <span className="record-salary-range">
                       {item.salary_range
-                        ? `${item.salary_range.formatted_min} - ${item.salary_range.formatted_max}`
+                        ? `${item.salary_range.formatted_min || item.salary_range.min} - ${item.salary_range.formatted_max || item.salary_range.max}`
+                        : isIndia
+                        ? "±₹3.02 LPA Range"
                         : "±$39,000 Range"}
                     </span>
                   </div>
@@ -1141,7 +1276,7 @@ export default function PredictionHistory({
               <div className="prediction-modal-header">
                 <div>
                   <span className="history-eyebrow">PREDICTION DETAILS</span>
-                  <h2>{selectedPrediction?.job_title || "Loading..."}</h2>
+                  <h2>{selectedPrediction?.job_title || selectedPrediction?.role_standard || "Loading..."}</h2>
                 </div>
 
                 <button
@@ -1185,93 +1320,143 @@ export default function PredictionHistory({
                   </div>
 
                   {detailTab === "overview" ? (
-                    <>
-                      <div className="prediction-detail-salary">
-                        <span>ESTIMATED ANNUAL SALARY</span>
-                        <strong>
-                          {selectedPrediction.formatted_salary ||
-                            formatMoney(selectedPrediction.predicted_salary_usd)}
-                        </strong>
-                        <p>USD / year</p>
-                      </div>
-
-                      <div className="prediction-detail-grid">
-                        <div>
-                          <span>Lower estimate</span>
-                          <strong>{formatMoney(selectedPrediction.salary_range?.min)}</strong>
-                        </div>
-
-                        <div>
-                          <span>Upper estimate</span>
-                          <strong>{formatMoney(selectedPrediction.salary_range?.max)}</strong>
-                        </div>
-
-                        <div>
-                          <span>MAE margin</span>
-                          <strong>{formatMoney(selectedPrediction.confidence_margin_mae)}</strong>
-                        </div>
-
-                        <div>
-                          <span>Experience</span>
-                          <strong>
-                            {experienceLabels[selectedPrediction.experience_level] ||
-                              selectedPrediction.experience_level}
-                          </strong>
-                        </div>
-
-                        <div>
-                          <span>Company location</span>
-                          <strong>{selectedPrediction.company_location}</strong>
-                        </div>
-
-                        <div>
-                          <span>Employee residence</span>
-                          <strong>{selectedPrediction.employee_residence}</strong>
-                        </div>
-
-                        <div>
-                          <span>Employment type</span>
-                          <strong>{selectedPrediction.employment_type}</strong>
-                        </div>
-
-                        <div>
-                          <span>Company size</span>
-                          <strong>{selectedPrediction.company_size}</strong>
-                        </div>
-
-                        <div>
-                          <span>Remote work</span>
-                          <strong>{selectedPrediction.remote_ratio}%</strong>
-                        </div>
-
-                        <div>
-                          <span>Work year</span>
-                          <strong>{selectedPrediction.work_year}</strong>
-                        </div>
-                      </div>
-
-                      <div className="prediction-model-version">
-                        <span>Model version</span>
-                        <strong>{selectedPrediction.model_version}</strong>
-                      </div>
-
-                      <div
-                        className="xai-callout-banner"
-                        onClick={() => setDetailTab("xai")}
-                        title="Click to view full SHAP breakdown"
-                      >
-                        <div className="xai-callout-left">
-                          <Sparkles size={18} className="xai-callout-icon" />
-                          <div>
-                            <strong>Why was this salary predicted?</strong>
-                            <p>
-                              Explore exact TreeSHAP feature attributions, waterfall steps, and key drivers.
-                            </p>
+                    (() => {
+                      const isIndia = selectedPrediction.country === "IN" || selectedPrediction.currency === "INR";
+                      return (
+                        <>
+                          <div className="prediction-detail-salary">
+                            <span>ESTIMATED ANNUAL SALARY</span>
+                            <strong>
+                              {formatRecordSalary(selectedPrediction)}
+                            </strong>
+                            <p>{isIndia ? "INR / LPA" : "USD / year"}</p>
+                            <div style={{ marginTop: 8, display: "flex", gap: 8, justifyContent: "center" }}>
+                              <span className={`country-badge mini ${isIndia ? "in" : "us"}`}>
+                                {isIndia ? "🇮🇳 India (IN)" : "🇺🇸 United States (US)"}
+                              </span>
+                              <span className="model-chip mini">
+                                {selectedPrediction.model_used || selectedPrediction.model_version || (isIndia ? "Gradient Boosting" : "Random Forest")}
+                              </span>
+                            </div>
                           </div>
-                        </div>
-                        <span className="xai-callout-link">Open SHAP &rarr;</span>
-                      </div>
-                    </>
+
+                          <div className="prediction-detail-grid">
+                            <div>
+                              <span>Lower estimate</span>
+                              <strong>
+                                {selectedPrediction.salary_range?.formatted_min ||
+                                  (isIndia
+                                    ? `₹${Math.max(0, (selectedPrediction.predicted_salary || 0) - 3.0).toFixed(2)} LPA`
+                                    : formatMoney(selectedPrediction.salary_range?.min))}
+                              </strong>
+                            </div>
+
+                            <div>
+                              <span>Upper estimate</span>
+                              <strong>
+                                {selectedPrediction.salary_range?.formatted_max ||
+                                  (isIndia
+                                    ? `₹${((selectedPrediction.predicted_salary || 0) + 3.0).toFixed(2)} LPA`
+                                    : formatMoney(selectedPrediction.salary_range?.max))}
+                              </strong>
+                            </div>
+
+                            <div>
+                              <span>MAE margin</span>
+                              <strong>
+                                {selectedPrediction.confidence_margin_mae
+                                  ? (isIndia
+                                      ? `±₹${Number(selectedPrediction.confidence_margin_mae).toFixed(2)} LPA`
+                                      : formatMoney(selectedPrediction.confidence_margin_mae))
+                                  : (isIndia ? "±₹3.02 LPA" : "$39,039")}
+                              </strong>
+                            </div>
+
+                            <div>
+                              <span>Experience</span>
+                              <strong>
+                                {experienceLabels[selectedPrediction.experience_level] ||
+                                  selectedPrediction.experience_level}
+                              </strong>
+                            </div>
+
+                            {isIndia ? (
+                              <>
+                                <div>
+                                  <span>Primary City</span>
+                                  <strong>{selectedPrediction.primary_city_clean || "India"}</strong>
+                                </div>
+                                <div>
+                                  <span>Experience (Yrs)</span>
+                                  <strong>{selectedPrediction.experience_avg_yrs ?? "N/A"} yrs</strong>
+                                </div>
+                                <div>
+                                  <span>Company Rating</span>
+                                  <strong>⭐ {selectedPrediction.company_rating ?? "N/A"}</strong>
+                                </div>
+                                <div>
+                                  <span>Skills Count</span>
+                                  <strong>{selectedPrediction.skills_count ?? "N/A"} skills</strong>
+                                </div>
+                              </>
+                            ) : (
+                              <>
+                                <div>
+                                  <span>Company location</span>
+                                  <strong>{selectedPrediction.company_location || "US"}</strong>
+                                </div>
+                                <div>
+                                  <span>Employee residence</span>
+                                  <strong>{selectedPrediction.employee_residence || "US"}</strong>
+                                </div>
+                              </>
+                            )}
+
+                            <div>
+                              <span>Employment type</span>
+                              <strong>{selectedPrediction.employment_type || "FT"}</strong>
+                            </div>
+
+                            <div>
+                              <span>Company size</span>
+                              <strong>{selectedPrediction.company_size || "M"}</strong>
+                            </div>
+
+                            <div>
+                              <span>Remote work</span>
+                              <strong>{selectedPrediction.remote_ratio}%</strong>
+                            </div>
+
+                            <div>
+                              <span>Work year</span>
+                              <strong>{selectedPrediction.work_year || 2024}</strong>
+                            </div>
+                          </div>
+
+                          <div className="prediction-model-version">
+                            <span>Model Engine</span>
+                            <strong>{selectedPrediction.model_used || selectedPrediction.model_version || "Scikit-Learn"}</strong>
+                          </div>
+
+                          <div
+                            className="xai-callout-banner"
+                            onClick={() => setDetailTab("xai")}
+                            title="Click to view full SHAP breakdown"
+                          >
+                            <div className="xai-callout-left">
+                              <Sparkles size={18} className="xai-callout-icon" />
+                              <div>
+                                <strong>Why was this salary predicted?</strong>
+                                <p>
+                                  Explore exact TreeSHAP feature attributions, waterfall steps, and key drivers.
+                                </p>
+                              </div>
+                            </div>
+                            <span className="xai-callout-link">Open SHAP &rarr;</span>
+                          </div>
+                        </>
+                      );
+                    })()
                   ) : (
                     <div className="modal-xai-container">
                       <ShapExplanationView shapData={selectedPrediction.shap_explanation} />

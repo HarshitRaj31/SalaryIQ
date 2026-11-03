@@ -1,0 +1,147 @@
+{
+    "target": "salary_in_lpa",
+    "target_unit": "LPA",
+    "categorical_features": [
+        "experience_level",
+        "employment_type",
+        "role_standard",
+        "primary_city_clean",
+        "company_size"
+    ],
+    "numerical_features": [
+        "work_year",
+        "remote_ratio",
+        "experience_avg_yrs",
+        "company_rating",
+        "skills_count"
+    ],
+    "all_input_features": [
+        "work_year",
+        "experience_level",
+        "employment_type",
+        "role_standard",
+        "primary_city_clean",
+        "remote_ratio",
+        "company_size",
+        "experience_avg_yrs",
+        "company_rating",
+        "skills_count"
+    ],
+    "categories": {
+        "experience_level": [
+            "EN",
+            "EX",
+            "MI",
+            "SE"
+        ],
+        "employment_type": [
+            "FT"
+        ],
+        "role_standard": [
+            "Business Analyst",
+            "Data Analyst",
+            "Data Engineer",
+            "Data Scientist",
+            "Machine Learning Engineer",
+            "Python Developer"
+        ],
+        "primary_city_clean": [
+            "Ahemdabad",
+            "Ahmedabad",
+            "Bangalore",
+            "Bhopal",
+            "Bhubaneswar",
+            "Chennai",
+            "Delhi / NCR",
+            "Hosur",
+            "Hyderabad",
+            "Indore",
+            "Kochi",
+            "Kolkata",
+            "Mohali",
+            "Mumbai",
+            "Nagamangala",
+            "North Goa",
+            "Pune",
+            "Remote",
+            "Udaipur"
+        ],
+        "company_size": [
+            "L",
+            "M",
+            "S"
+        ]
+    },
+    "numerical_ranges": {
+        "work_year": {
+            "min": 2026.0,
+            "max": 2026.0,
+            "median": 2026.0,
+            "mean": 2026.0,
+            "std": 0.0
+        },
+        "remote_ratio": {
+            "min": 0.0,
+            "max": 100.0,
+            "median": 0.0,
+            "mean": 19.479947113265755,
+            "std": 28.668161164390476
+        },
+        "experience_avg_yrs": {
+            "min": 0.0,
+            "max": 21.0,
+            "median": 6.5,
+            "mean": 6.597179374173645,
+            "std": 3.343293449307298
+        },
+        "company_rating": {
+            "min": 1.0,
+            "max": 5.0,
+            "median": 3.6,
+            "mean": 3.576245041868665,
+            "std": 0.371047428095468
+        },
+        "skills_count": {
+            "min": 0.0,
+            "max": 8.0,
+            "median": 8.0,
+            "mean": 7.594094314676068,
+            "std": 1.131784045275255
+        }
+    },
+    "target_stats": {
+        "min": 1.5,
+        "25%": 7.75,
+        "50%": 15.0,
+        "75%": 22.5,
+        "max": 87.5,
+        "mean": 16.15138386954606,
+        "std": 10.632895092531822
+    },
+    "leakage_columns_dropped": [
+        "salary_in_usd"
+    ],
+    "identifier_columns_dropped": [],
+    "best_model": "Gradient Boosting Regressor",
+    "best_model_metrics": {
+        "CV_RMSE": 7.802175778442139,
+        "CV_RMSE_STD": 0.24220120497770126,
+        "CV_MAE": 5.45153646513297,
+        "CV_MAE_STD": 0.15397654788456142,
+        "CV_R2": 0.47836950445451193,
+        "CV_R2_STD": 0.049229727534930635,
+        "MAE": 5.272753535409646,
+        "RMSE": 6.887271585087356,
+        "R2_Score": 0.48866368798169035,
+        "MAPE": 55.65493483118325,
+        "Hyperparameters": {
+            "regressor__subsample": 0.95,
+            "regressor__n_estimators": 150,
+            "regressor__min_samples_split": 6,
+            "regressor__min_samples_leaf": 2,
+            "regressor__max_depth": 3,
+            "regressor__learning_rate": 0.08
+        }
+    },
+    "created_at": "2026-11-03T19:22:34.161768"
+}

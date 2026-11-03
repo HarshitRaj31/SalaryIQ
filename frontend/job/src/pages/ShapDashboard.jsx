@@ -95,6 +95,81 @@ const BENCHMARK_PROFILES = [
   },
 ];
 
+const INDIA_BENCHMARK_PROFILES = [
+  {
+    id: "in_se_bengaluru",
+    label: "Senior Software Engineer (Bengaluru, Remote)",
+    country: "IN",
+    profile: {
+      country: "IN",
+      role_standard: "Software Engineer",
+      experience_level: "SE",
+      primary_city_clean: "Bengaluru",
+      experience_avg_yrs: 7.0,
+      company_rating: 4.2,
+      skills_count: 8,
+      company_size: "M",
+      remote_ratio: 100,
+      work_year: 2024,
+      employment_type: "FT",
+    },
+  },
+  {
+    id: "in_en_hyderabad",
+    label: "Entry Data Analyst (Hyderabad, Onsite)",
+    country: "IN",
+    profile: {
+      country: "IN",
+      role_standard: "Data Analyst",
+      experience_level: "EN",
+      primary_city_clean: "Hyderabad",
+      experience_avg_yrs: 1.5,
+      company_rating: 3.8,
+      skills_count: 4,
+      company_size: "L",
+      remote_ratio: 0,
+      work_year: 2024,
+      employment_type: "FT",
+    },
+  },
+  {
+    id: "in_mi_pune",
+    label: "Mid-Level ML Engineer (Pune, Hybrid)",
+    country: "IN",
+    profile: {
+      country: "IN",
+      role_standard: "Machine Learning Engineer",
+      experience_level: "MI",
+      primary_city_clean: "Pune",
+      experience_avg_yrs: 4.0,
+      company_rating: 4.0,
+      skills_count: 6,
+      company_size: "M",
+      remote_ratio: 50,
+      work_year: 2024,
+      employment_type: "FT",
+    },
+  },
+  {
+    id: "in_ex_mumbai",
+    label: "Engineering Director / Architect (Mumbai, Hybrid)",
+    country: "IN",
+    profile: {
+      country: "IN",
+      role_standard: "Software Engineer",
+      experience_level: "EX",
+      primary_city_clean: "Mumbai",
+      experience_avg_yrs: 14.0,
+      company_rating: 4.5,
+      skills_count: 12,
+      company_size: "L",
+      remote_ratio: 50,
+      work_year: 2024,
+      employment_type: "FT",
+    },
+  },
+];
+
 // Offline verified TreeSHAP baseline if backend is cold/offline
 const FALLBACK_SHAP_DATA = {
   model_name: "Random Forest Regressor (TreeSHAP)",
@@ -329,8 +404,94 @@ const FALLBACK_GLOBAL_IMPORTANCE = [
   { feature: "Company Location (IN)", importance: 0.021054, percentage: 2.11, category: "Geography" },
 ];
 
-const formatUSD = (val) => {
-  if (val === undefined || val === null || isNaN(val)) return "$0";
+const FALLBACK_INDIA_SHAP_DATA = {
+  country: "IN",
+  currency: "INR",
+  salary_unit: "LPA",
+  model_name: "Gradient Boosting Regressor (TreeSHAP)",
+  base_value: 12.45,
+  formatted_base_value: "₹12.45 LPA",
+  predicted_salary: 17.82,
+  formatted_predicted_salary: "₹17.82 LPA",
+  total_shap_delta: 5.37,
+  sum_shap_contributions: 5.37,
+  formatted_total_delta: "+₹5.37 LPA",
+  feature_contributions: [
+    {
+      feature: "experience_avg_yrs",
+      display_name: "Years of Experience (7.0 yrs)",
+      feature_value: "7.0 yrs",
+      shap_value: 3.84,
+      direction: "positive",
+      relative_importance_pct: 71.5,
+      category: "Experience",
+    },
+    {
+      feature: "remote_ratio",
+      display_name: "Remote Work (100%)",
+      feature_value: "100%",
+      shap_value: 0.65,
+      direction: "positive",
+      relative_importance_pct: 12.1,
+      category: "Workplace",
+    },
+    {
+      feature: "skills_count",
+      display_name: "Skills Count (8 skills)",
+      feature_value: "8 skills",
+      shap_value: 0.42,
+      direction: "positive",
+      relative_importance_pct: 7.8,
+      category: "Experience",
+    },
+    {
+      feature: "primary_city_clean",
+      display_name: "City (Bengaluru)",
+      feature_value: "Bengaluru",
+      shap_value: 0.31,
+      direction: "positive",
+      relative_importance_pct: 5.8,
+      category: "Geography",
+    },
+    {
+      feature: "company_rating",
+      display_name: "Company Rating (4.2)",
+      feature_value: "4.2",
+      shap_value: 0.15,
+      direction: "positive",
+      relative_importance_pct: 2.8,
+      category: "Company",
+    },
+  ],
+  top_positive_factors: [
+    { feature: "experience_avg_yrs", display_name: "Years of Experience (7.0 yrs)", shap_value: 3.84 },
+    { feature: "remote_ratio", display_name: "Remote Work (100%)", shap_value: 0.65 },
+    { feature: "skills_count", display_name: "Skills Count (8 skills)", shap_value: 0.42 },
+  ],
+  top_negative_factors: [],
+  waterfall_chart_data: [
+    { step_id: "base", feature: "Base Salary", category: "Baseline", step_bottom: 0, step_height: 12.45, value: 12.45, delta: 0, direction: "base", running_total: 12.45, type: "base" },
+    { step_id: "experience_avg_yrs", feature: "Experience (7 yrs)", category: "Experience", step_bottom: 12.45, step_height: 3.84, value: 3.84, delta: 3.84, direction: "positive", running_total: 16.29, type: "positive" },
+    { step_id: "remote_ratio", feature: "Remote (100%)", category: "Workplace", step_bottom: 16.29, step_height: 0.65, value: 0.65, delta: 0.65, direction: "positive", running_total: 16.94, type: "positive" },
+    { step_id: "skills_count", feature: "Skills (8 skills)", category: "Experience", step_bottom: 16.94, step_height: 0.42, value: 0.42, delta: 0.42, direction: "positive", running_total: 17.36, type: "positive" },
+    { step_id: "primary_city_clean", feature: "City (Bengaluru)", category: "Geography", step_bottom: 17.36, step_height: 0.31, value: 0.31, delta: 0.31, direction: "positive", running_total: 17.67, type: "positive" },
+    { step_id: "company_rating", feature: "Rating (4.2)", category: "Company", step_bottom: 17.67, step_height: 0.15, value: 0.15, delta: 0.15, direction: "positive", running_total: 17.82, type: "positive" },
+    { step_id: "total", feature: "Final Prediction", category: "Prediction", step_bottom: 0, step_height: 17.82, value: 17.82, delta: 0, direction: "total", running_total: 17.82, type: "total" },
+  ],
+  narrative_explanation: {
+    headline: "Experience depth and remote setting lift compensation +₹5.37 LPA above market baseline.",
+    top_positive: "Years of Experience (+₹3.84 LPA)",
+    top_negative: "None",
+    explanation_summary:
+      "TreeSHAP decomposition of the Gradient Boosting pipeline indicates that 7 years of specialized software experience (+₹3.84 LPA) and 100% remote flexibility (+₹0.65 LPA) are the leading positive drivers elevating this candidate from the baseline ₹12.45 LPA to ₹17.82 LPA.",
+  },
+};
+
+const formatUSD = (val, currency = "USD") => {
+  if (val === undefined || val === null || isNaN(val)) return currency === "INR" ? "₹0 LPA" : "$0";
+  if (currency === "INR") {
+    return `₹${Number(val).toFixed(2)} LPA`;
+  }
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -339,7 +500,7 @@ const formatUSD = (val) => {
 };
 
 // Custom Chart Tooltip
-function ShapChartTooltip({ active, payload, label }) {
+function ShapChartTooltip({ active, payload, label, currency = "USD" }) {
   if (!active || !payload || !payload.length) return null;
   const item = payload[0]?.payload;
 
@@ -351,13 +512,13 @@ function ShapChartTooltip({ active, payload, label }) {
         {item?.type === "base" && (
           <div className="shap-tooltip-row">
             <span>Market Baseline:</span>
-            <strong>{formatUSD(item.value)}</strong>
+            <strong>{item?.formatted_value || formatUSD(item.value, currency)}</strong>
           </div>
         )}
         {item?.type === "total" && (
           <div className="shap-tooltip-row">
             <span>Final Prediction:</span>
-            <strong>{formatUSD(item.value)}</strong>
+            <strong>{item?.formatted_value || formatUSD(item.value, currency)}</strong>
           </div>
         )}
         {(item?.type === "positive" || item?.type === "negative") && (
@@ -366,13 +527,13 @@ function ShapChartTooltip({ active, payload, label }) {
               <span>SHAP Contribution:</span>
               <strong className={item.delta >= 0 ? "positive" : "negative"}>
                 {item.delta >= 0 ? "+" : ""}
-                {formatUSD(item.delta)}
+                {item?.formatted || formatUSD(item.delta, currency)}
               </strong>
             </div>
             {item?.running_total && (
               <div className="shap-tooltip-row sub">
                 <span>Running Total:</span>
-                <span>{formatUSD(item.running_total)}</span>
+                <span>{item?.formatted_total || formatUSD(item.running_total, currency)}</span>
               </div>
             )}
           </>
@@ -395,6 +556,7 @@ function ShapChartTooltip({ active, payload, label }) {
 }
 
 export default function ShapDashboard({ onNavigateToPredictor }) {
+  const [countryMode, setCountryMode] = useState("US"); // "US" | "IN"
   const [selectedBenchmarkId, setSelectedBenchmarkId] = useState("ds_se_us");
   const [activeProfile, setActiveProfile] = useState(BENCHMARK_PROFILES[0].profile);
   const [historyList, setHistoryList] = useState([]);
@@ -405,10 +567,14 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
   const [error, setError] = useState("");
   const [chartMode, setChartMode] = useState("waterfall"); // "waterfall" | "contributions" | "table"
 
+  const isIndia = countryMode === "IN" || shapData?.country === "IN" || shapData?.currency === "INR";
+  const activeCurrency = isIndia ? "INR" : "USD";
+
   // 1. Fetch Explainability for the active profile
   const fetchExplanation = useCallback(async (profileToExplain) => {
     setLoading(true);
     setError("");
+    const isInd = profileToExplain?.country === "IN" || countryMode === "IN";
 
     try {
       const response = await fetch(`${API_URL}/explain`, {
@@ -432,11 +598,11 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
       console.warn("FastAPI SHAP explanation offline, using fallback:", err.message);
       setIsLive(false);
       setError("Backend server is currently offline or warming up. Showing verified TreeSHAP baseline.");
-      setShapData(FALLBACK_SHAP_DATA);
+      setShapData(isInd ? FALLBACK_INDIA_SHAP_DATA : FALLBACK_SHAP_DATA);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [countryMode]);
 
   // 2. Fetch Global Feature Importance, History & Initial SHAP on Mount
   useEffect(() => {
@@ -451,7 +617,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(initialProfile),
           }),
-          fetch(`${API_URL}/explain/global?top_n=10`),
+          fetch(`${API_URL}/explain/global?country=US&top_n=10`),
           fetch(`${API_URL}/history?limit=15`),
         ]);
 
@@ -501,10 +667,33 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
     };
   }, []);
 
+  // Switch country mode
+  const handleCountrySwitch = (country) => {
+    setCountryMode(country);
+    if (country === "IN") {
+      setSelectedBenchmarkId("in_se_bengaluru");
+      setActiveProfile(INDIA_BENCHMARK_PROFILES[0].profile);
+      fetchExplanation(INDIA_BENCHMARK_PROFILES[0].profile);
+      fetch(`${API_URL}/explain/global?country=IN&top_n=10`)
+        .then((r) => r.ok && r.json())
+        .then((d) => d && (d.top_global_features || d.global_importance) && setGlobalImportance(d.top_global_features || d.global_importance))
+        .catch(() => {});
+    } else {
+      setSelectedBenchmarkId("ds_se_us");
+      setActiveProfile(BENCHMARK_PROFILES[0].profile);
+      fetchExplanation(BENCHMARK_PROFILES[0].profile);
+      fetch(`${API_URL}/explain/global?country=US&top_n=10`)
+        .then((r) => r.ok && r.json())
+        .then((d) => d && (d.top_global_features || d.global_importance) && setGlobalImportance(d.top_global_features || d.global_importance))
+        .catch(() => {});
+    }
+  };
+
   // Handle Preset Change
   const handlePresetSelect = (id) => {
     setSelectedBenchmarkId(id);
-    const found = BENCHMARK_PROFILES.find((b) => b.id === id);
+    const pool = countryMode === "IN" ? INDIA_BENCHMARK_PROFILES : BENCHMARK_PROFILES;
+    const found = pool.find((b) => b.id === id);
     if (found) {
       setActiveProfile(found.profile);
       fetchExplanation(found.profile);
@@ -585,10 +774,10 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
   // Top positive driver name
   const topPositiveDriver = useMemo(() => {
     if (positiveFactors.length > 0) {
-      return `${positiveFactors[0].display_name} (+${formatUSD(positiveFactors[0].shap_value)})`;
+      return `${positiveFactors[0].display_name} (+${formatUSD(positiveFactors[0].shap_value, activeCurrency)})`;
     }
     return "Market Baseline Anchor";
-  }, [positiveFactors]);
+  }, [positiveFactors, activeCurrency]);
 
   return (
     <div className="shap-dash-wrapper">
@@ -658,6 +847,28 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
           </div>
         )}
 
+        {/* Country Selector Toggle */}
+        <div className="country-selector-wrap" style={{ marginBottom: 16 }}>
+          <div className="country-selector-tabs">
+            <button
+              type="button"
+              className={`country-toggle-btn ${countryMode === "US" ? "active" : ""}`}
+              onClick={() => handleCountrySwitch("US")}
+            >
+              <span className="country-flag-icon">🇺🇸</span>
+              <span>United States (Random Forest · USD)</span>
+            </button>
+            <button
+              type="button"
+              className={`country-toggle-btn ${countryMode === "IN" ? "active" : ""}`}
+              onClick={() => handleCountrySwitch("IN")}
+            >
+              <span className="country-flag-icon">🇮🇳</span>
+              <span>India (Gradient Boosting · INR LPA)</span>
+            </button>
+          </div>
+        </div>
+
         {/* Profile Selector & Benchmark Toolbar */}
         <div className="shap-profile-toolbar">
           <div className="shap-toolbar-group">
@@ -670,7 +881,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
               value={selectedBenchmarkId}
               onChange={(e) => handlePresetSelect(e.target.value)}
             >
-              {BENCHMARK_PROFILES.map((p) => (
+              {(countryMode === "IN" ? INDIA_BENCHMARK_PROFILES : BENCHMARK_PROFILES).map((p) => (
                 <option key={p.id} value={p.id}>
                   {p.label}
                 </option>
@@ -697,8 +908,8 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                 </option>
                 {historyList.map((item) => (
                   <option key={item.id} value={item.id}>
-                    #{item.id} - {item.job_title} ({item.experience_level}) -{" "}
-                    {item.formatted_salary || formatUSD(item.predicted_salary_usd)}
+                    #{item.id} - {item.job_title || item.role_standard} ({item.experience_level}) -{" "}
+                    {item.formatted_salary || (item.country === "IN" ? `₹${item.predicted_salary} LPA` : formatUSD(item.predicted_salary_usd))}
                   </option>
                 ))}
               </select>
@@ -706,9 +917,19 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
           )}
 
           <div className="shap-active-tags">
-            <span className="shap-tag-chip">{activeProfile.job_title}</span>
+            <span className={`country-badge mini ${isIndia ? "in" : "us"}`}>
+              {isIndia ? "🇮🇳 IN" : "🇺🇸 US"}
+            </span>
+            <span className="shap-tag-chip">
+              {activeProfile.job_title || activeProfile.role_standard}
+            </span>
             <span className="shap-tag-chip">Tier: {activeProfile.experience_level}</span>
-            <span className="shap-tag-chip">{activeProfile.company_location}</span>
+            <span className="shap-tag-chip">
+              {activeProfile.primary_city_clean || activeProfile.company_location || (isIndia ? "India" : "US")}
+            </span>
+            {activeProfile.experience_avg_yrs !== undefined && (
+              <span className="shap-tag-chip">{activeProfile.experience_avg_yrs} yrs exp</span>
+            )}
             <span className="shap-tag-chip">{activeProfile.remote_ratio}% Remote</span>
             <span className="shap-tag-chip">{activeProfile.work_year}</span>
           </div>
@@ -724,7 +945,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
               </div>
             </div>
             <div className="shap-kpi-value">
-              {shapData.formatted_base_value || formatUSD(shapData.base_value)}
+              {shapData.formatted_base_value || formatUSD(shapData.base_value, activeCurrency)}
             </div>
             <div className="shap-kpi-sub">
               <span>All-Profile Expected Mean</span>
@@ -753,7 +974,8 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
             >
               {shapData.formatted_total_delta ||
                 `${(shapData.total_shap_delta || 0) >= 0 ? "+" : ""}${formatUSD(
-                  shapData.total_shap_delta || 0
+                  shapData.total_shap_delta || 0,
+                  activeCurrency
                 )}`}
             </div>
             <div className="shap-kpi-sub">
@@ -770,10 +992,10 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
             </div>
             <div className="shap-kpi-value cyan">
               {shapData.formatted_predicted_salary ||
-                formatUSD(shapData.predicted_salary)}
+                formatUSD(shapData.predicted_salary, activeCurrency)}
             </div>
             <div className="shap-kpi-sub">
-              <span>USD / year (Model estimate)</span>
+              <span>{isIndia ? "INR / LPA" : "USD / year"} (Model estimate)</span>
             </div>
           </div>
 
@@ -882,11 +1104,15 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                   <YAxis
                     stroke="#64748b"
                     fontSize={11}
-                    tickFormatter={(val) => `$${Math.round(val / 1000)}k`}
+                    tickFormatter={(val) =>
+                      isIndia
+                        ? `₹${Number(val).toFixed(1)}L`
+                        : `$${Math.round(val / 1000)}k`
+                    }
                     domain={[0, "auto"]}
                     tickLine={false}
                   />
-                  <Tooltip content={<ShapChartTooltip />} />
+                  <Tooltip content={<ShapChartTooltip currency={activeCurrency} />} />
                   <ReferenceLine
                     y={shapData.base_value || 133667}
                     stroke="#8b5cf6"
@@ -926,7 +1152,11 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                     type="number"
                     stroke="#64748b"
                     fontSize={11}
-                    tickFormatter={(val) => `$${Math.round(val / 1000)}k`}
+                    tickFormatter={(val) =>
+                      isIndia
+                        ? `₹${Number(val).toFixed(1)}L`
+                        : `$${Math.round(val / 1000)}k`
+                    }
                   />
                   <YAxis
                     type="category"
@@ -936,7 +1166,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                     tickLine={false}
                     width={130}
                   />
-                  <Tooltip content={<ShapChartTooltip />} />
+                  <Tooltip content={<ShapChartTooltip currency={activeCurrency} />} />
                   <ReferenceLine x={0} stroke="#475569" />
                   <Bar dataKey="shap_value" radius={[0, 4, 4, 0]}>
                     {contributionRanking.map((entry, index) => (
@@ -985,7 +1215,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                           }}
                         >
                           {isPos ? "+" : ""}
-                          {formatUSD(c.shap_value)}
+                          {formatUSD(c.shap_value, activeCurrency)}
                         </td>
                         <td>
                           <span
@@ -1043,7 +1273,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                 <span>Positive Drivers (Value Enhancers)</span>
               </div>
               <span className="shap-factor-badge">
-                +{formatUSD(sumPos)} ({posForcePct}%)
+                +{formatUSD(sumPos, activeCurrency)} ({posForcePct}%)
               </span>
             </div>
 
@@ -1064,7 +1294,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                     </div>
                     <div className="shap-factor-card-right">
                       <span className="shap-factor-impact positive">
-                        +{formatUSD(item.shap_value)}
+                        +{formatUSD(item.shap_value, activeCurrency)}
                       </span>
                       <span className="shap-factor-pct">
                         {Math.round(item.relative_importance_pct || 0)}% influence
@@ -1084,7 +1314,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                 <span>Negative Adjustments (Value Discounts)</span>
               </div>
               <span className="shap-factor-badge">
-                -{formatUSD(sumNegAbs)} ({negForcePct}%)
+                -{formatUSD(sumNegAbs, activeCurrency)} ({negForcePct}%)
               </span>
             </div>
 
@@ -1105,7 +1335,7 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
                     </div>
                     <div className="shap-factor-card-right">
                       <span className="shap-factor-impact negative">
-                        {formatUSD(item.shap_value)}
+                        {formatUSD(item.shap_value, activeCurrency)}
                       </span>
                       <span className="shap-factor-pct">
                         {Math.round(item.relative_importance_pct || 0)}% influence
@@ -1130,10 +1360,10 @@ export default function ShapDashboard({ onNavigateToPredictor }) {
             }}
           >
             <span style={{ color: "#34d399" }}>
-              Upward Pull: +{formatUSD(sumPos)} ({posForcePct}%)
+              Upward Pull: +{formatUSD(sumPos, activeCurrency)} ({posForcePct}%)
             </span>
             <span style={{ color: "#f43f5e" }}>
-              Downward Drag: -{formatUSD(sumNegAbs)} ({negForcePct}%)
+              Downward Drag: -{formatUSD(sumNegAbs, activeCurrency)} ({negForcePct}%)
             </span>
           </div>
           <div className="shap-tug-track">

@@ -1,19 +1,20 @@
 """
 SQLite Database History Service for Job Salary Prediction.
-
-Provides persistent, ACID-compliant storage for prediction history:
-- Thread-safe SQLite database connectivity with WAL (Write-Ahead Logging) mode
-- Storing prediction requests, model predictions, and confidence margins
-- Paginated retrieval, search filtering by role and location
-- Granular record lookups, deletions, and history clearance
-- Aggregated statistical summaries for analytics dashboards
+Supports dual-country historical records for India and the United States:
+- Preserves all legacy US historical prediction records.
+- Adds non-destructive schema migrations for country, currency, salary unit, and model used.
+- Thread-safe SQLite database connectivity with WAL (Write-Ahead Logging) mode.
+- Paginated retrieval, search filtering by role, location, experience, and country.
 """
 
 import json
+import logging
 import os
 import sqlite3
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
+
+logger = logging.getLogger(__name__)
 
 try:
     from app.core import config
@@ -26,12 +27,12 @@ except Exception:
 
 class HistoryService:
     """
-    SQLite-backed service managing historical salary prediction records.
+    SQLite-backed service managing historical salary prediction records for US and India.
     """
 
     def __init__(self, db_path: Optional[str] = None):
         self.db_path = db_path or DEFAULT_DB_PATH
-        
+
         # Ensure database directory exists
         db_dir = os.path.dirname(os.path.abspath(self.db_path))
         if db_dir and not os.path.exists(db_dir):
@@ -46,17 +47,19 @@ class HistoryService:
         """
         conn = sqlite3.connect(self.db_path, timeout=30.0)
         conn.row_factory = sqlite3.Row
-        # WAL mode improves concurrent read/write performance
         conn.execute("PRAGMA journal_mode=WAL;")
         conn.execute("PRAGMA synchronous=NORMAL;")
         return conn
 
     def init_db(self) -> None:
         """
-        Initializes the SQLite schema with table and performance indexes if not existing.
+        Initializes the SQLite schema with table and indexes,
+        and applies non-destructive column migrations for dual-country support.
         """
         with self._get_connection() as conn:
             cursor = conn.cursor()
+
+            # Create base table if not existing
             cursor.execute(
                 """
                 CREATE TABLE IF NOT EXISTS predictions (
@@ -84,15 +87,48 @@ class HistoryService:
                 """
             )
 
-            # Performance indexes for search, filtering, and time-series ordering
+            # Check existing columns for non-destructive migration
+            cursor.execute("PRAGMA table_info(predictions);")
+            existing_cols = {row["name"] for row in cursor.fetchall()}
+
+            # Add dual-country tracking columns if not already present
+            if "country" not in existing_cols:
+                cursor.execute("ALTER TABLE predictions ADD COLUMN country TEXT DEFAULT 'US';")
+                logger.info("[HistoryService] Migrated schema: Added 'country' column.")
+
+            if "currency" not in existing_cols:
+                cursor.execute("ALTER TABLE predictions ADD COLUMN currency TEXT DEFAULT 'USD';")
+                logger.info("[HistoryService] Migrated schema: Added 'currency' column.")
+
+            if "salary_unit" not in existing_cols:
+                cursor.execute("ALTER TABLE predictions ADD COLUMN salary_unit TEXT DEFAULT 'YEAR';")
+                logger.info("[HistoryService] Migrated schema: Added 'salary_unit' column.")
+
+            if "predicted_salary" not in existing_cols:
+                cursor.execute("ALTER TABLE predictions ADD COLUMN predicted_salary REAL;")
+                logger.info("[HistoryService] Migrated schema: Added 'predicted_salary' column.")
+
+            if "model_used" not in existing_cols:
+                cursor.execute("ALTER TABLE predictions ADD COLUMN model_used TEXT;")
+                logger.info("[HistoryService] Migrated schema: Added 'model_used' column.")
+
+            # Performance indexes
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_predictions_timestamp ON predictions(timestamp DESC);")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_predictions_job_title ON predictions(job_title);")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_predictions_experience ON predictions(experience_level);")
+            cursor.execute("CREATE INDEX IF NOT EXISTS idx_predictions_country ON predictions(country);")
+
+            # Backfill legacy rows with default US values if null
             cursor.execute(
-                "CREATE INDEX IF NOT EXISTS idx_predictions_timestamp ON predictions(timestamp DESC);"
-            )
-            cursor.execute(
-                "CREATE INDEX IF NOT EXISTS idx_predictions_job_title ON predictions(job_title);"
-            )
-            cursor.execute(
-                "CREATE INDEX IF NOT EXISTS idx_predictions_experience ON predictions(experience_level);"
+                """
+                UPDATE predictions 
+                SET country = 'US', 
+                    currency = 'USD', 
+                    salary_unit = 'YEAR', 
+                    predicted_salary = predicted_salary_usd,
+                    model_used = model_version
+                WHERE country IS NULL;
+                """
             )
             conn.commit()
 
@@ -100,41 +136,76 @@ class HistoryService:
         self, request_data: Dict[str, Any], prediction_result: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
-        Saves a prediction record to the SQLite database without mutating original prediction logic.
-
-        Parameters:
-            request_data: User input dictionary (job_title, experience_level, etc.)
-            prediction_result: Output from prediction_service.predict()
-
-        Returns:
-            Dictionary containing the stored prediction with ID and UTC timestamp.
+        Saves a prediction record (US or India) to the SQLite database without mutating original logic.
         """
         timestamp = datetime.now(timezone.utc).isoformat()
 
-        # Sanitize and extract request input parameters
-        work_year = int(request_data.get("work_year", 2023))
-        experience_level = str(request_data.get("experience_level", "SE")).strip().upper()
-        employment_type = str(request_data.get("employment_type", "FT")).strip().upper()
-        job_title = str(request_data.get("job_title", "Data Scientist")).strip()
-        employee_residence = str(request_data.get("employee_residence", "US")).strip().upper()
-        remote_ratio = int(request_data.get("remote_ratio", 100))
-        company_location = str(request_data.get("company_location", "US")).strip().upper()
-        company_size = str(request_data.get("company_size", "M")).strip().upper()
+        # Extract country & currency metadata
+        country = str(
+            prediction_result.get("country") or request_data.get("country") or "US"
+        ).strip().upper()
+        if country in ["INDIA", "IND"]:
+            country = "IN"
+        elif country in ["USA", "UNITED STATES"]:
+            country = "US"
 
-        # Extract prediction outputs
-        predicted_salary_usd = float(prediction_result.get("predicted_salary_usd", 0.0))
-        formatted_salary = str(
-            prediction_result.get("formatted_salary", f"${round(predicted_salary_usd):,}")
+        currency = str(
+            prediction_result.get("currency") or ("INR" if country == "IN" else "USD")
+        )
+        salary_unit = str(
+            prediction_result.get("salary_unit") or ("LPA" if country == "IN" else "YEAR")
+        )
+        model_used = str(
+            prediction_result.get("model_used")
+            or ("Gradient Boosting Regressor" if country == "IN" else "Random Forest Regressor")
         )
 
-        salary_range = prediction_result.get("salary_range", {})
-        salary_range_min = float(salary_range.get("min", max(0.0, predicted_salary_usd - 39000.0)))
-        salary_range_max = float(salary_range.get("max", predicted_salary_usd + 39000.0))
-        formatted_min = str(salary_range.get("formatted_min", f"${round(salary_range_min):,}"))
-        formatted_max = str(salary_range.get("formatted_max", f"${round(salary_range_max):,}"))
+        predicted_salary = float(
+            prediction_result.get("predicted_salary")
+            if prediction_result.get("predicted_salary") is not None
+            else prediction_result.get("predicted_salary_usd", 0.0)
+        )
 
-        confidence_margin_mae = float(prediction_result.get("confidence_margin_mae", 39067.0))
-        model_version = str(prediction_result.get("model_version", "best_model.pkl"))
+        # Sanitize and extract request input parameters
+        work_year = int(request_data.get("work_year", 2026 if country == "IN" else 2023))
+        experience_level = str(request_data.get("experience_level", "SE")).strip().upper()
+        employment_type = str(request_data.get("employment_type", "FT")).strip().upper()
+
+        # Job role handling
+        job_title = str(
+            request_data.get("role_standard")
+            or request_data.get("job_title")
+            or "Data Scientist"
+        ).strip()
+
+        # Location handling
+        if country == "IN":
+            city = str(
+                request_data.get("primary_city_clean")
+                or request_data.get("company_location")
+                or "Bangalore"
+            ).strip()
+            company_location = city
+            employee_residence = city
+        else:
+            company_location = str(request_data.get("company_location", "US")).strip().upper()
+            employee_residence = str(request_data.get("employee_residence", company_location)).strip().upper()
+
+        remote_ratio = int(request_data.get("remote_ratio", 50 if country == "IN" else 100))
+        company_size = str(request_data.get("company_size", "M")).strip().upper()
+
+        # Prediction outputs
+        predicted_salary_usd = float(prediction_result.get("predicted_salary_usd", predicted_salary))
+        formatted_salary = str(prediction_result.get("formatted_salary", ""))
+
+        salary_range = prediction_result.get("salary_range", {})
+        salary_range_min = float(salary_range.get("min", 0.0))
+        salary_range_max = float(salary_range.get("max", 0.0))
+        formatted_min = str(salary_range.get("formatted_min", ""))
+        formatted_max = str(salary_range.get("formatted_max", ""))
+
+        confidence_margin_mae = float(prediction_result.get("confidence_margin_mae", 0.0))
+        model_version = str(prediction_result.get("model_version", "model.pkl"))
 
         input_features_json = json.dumps(request_data, ensure_ascii=False)
         prediction_result_json = json.dumps(prediction_result, ensure_ascii=False)
@@ -162,8 +233,13 @@ class HistoryService:
                     confidence_margin_mae,
                     model_version,
                     input_features_json,
-                    prediction_result_json
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+                    prediction_result_json,
+                    country,
+                    currency,
+                    salary_unit,
+                    predicted_salary,
+                    model_used
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
                 """,
                 (
                     timestamp,
@@ -185,6 +261,11 @@ class HistoryService:
                     model_version,
                     input_features_json,
                     prediction_result_json,
+                    country,
+                    currency,
+                    salary_unit,
+                    predicted_salary,
+                    model_used,
                 ),
             )
             new_id = cursor.lastrowid
@@ -198,15 +279,11 @@ class HistoryService:
         offset: int = 0,
         search: Optional[str] = None,
         experience_level: Optional[str] = None,
+        country: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         Retrieves paginated prediction history, ordered by most recent first.
-
-        Parameters:
-            limit: Maximum records to return (default: 50, max: 200)
-            offset: Pagination offset
-            search: Optional substring search against job title or location
-            experience_level: Optional filter by EN, MI, SE, EX
+        Supports filtering by country ('US' or 'IN'), role, experience, and search term.
         """
         limit = max(1, min(limit, 200))
         offset = max(0, offset)
@@ -214,12 +291,17 @@ class HistoryService:
         query = "SELECT * FROM predictions WHERE 1=1"
         params: List[Any] = []
 
-        if search:
+        if country and isinstance(country, str):
+            c = str(country).strip().upper()
+            query += " AND (country = ? OR (country IS NULL AND ? = 'US'))"
+            params.extend([c, c])
+
+        if search and isinstance(search, str):
             query += " AND (job_title LIKE ? OR company_location LIKE ? OR employee_residence LIKE ?)"
             search_param = f"%{search.strip()}%"
             params.extend([search_param, search_param, search_param])
 
-        if experience_level:
+        if experience_level and isinstance(experience_level, str):
             query += " AND experience_level = ?"
             params.append(experience_level.strip().upper())
 
@@ -233,20 +315,26 @@ class HistoryService:
             return [self._row_to_dict(row) for row in rows]
 
     def get_total_count(
-        self, search: Optional[str] = None, experience_level: Optional[str] = None
+        self,
+        search: Optional[str] = None,
+        experience_level: Optional[str] = None,
+        country: Optional[str] = None,
     ) -> int:
-        """
-        Returns the total number of records matching filter criteria.
-        """
+        """Returns total records matching filter criteria."""
         query = "SELECT COUNT(*) FROM predictions WHERE 1=1"
         params: List[Any] = []
 
-        if search:
+        if country and isinstance(country, str):
+            c = str(country).strip().upper()
+            query += " AND (country = ? OR (country IS NULL AND ? = 'US'))"
+            params.extend([c, c])
+
+        if search and isinstance(search, str):
             query += " AND (job_title LIKE ? OR company_location LIKE ? OR employee_residence LIKE ?)"
             search_param = f"%{search.strip()}%"
             params.extend([search_param, search_param, search_param])
 
-        if experience_level:
+        if experience_level and isinstance(experience_level, str):
             query += " AND experience_level = ?"
             params.append(experience_level.strip().upper())
 
@@ -256,9 +344,7 @@ class HistoryService:
             return int(cursor.fetchone()[0])
 
     def get_prediction_by_id(self, prediction_id: int) -> Optional[Dict[str, Any]]:
-        """
-        Retrieves a single prediction by primary key ID.
-        """
+        """Retrieves a single prediction by primary key ID."""
         with self._get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM predictions WHERE id = ?;", (prediction_id,))
@@ -268,10 +354,7 @@ class HistoryService:
             return None
 
     def delete_prediction(self, prediction_id: int) -> bool:
-        """
-        Deletes a specific prediction record by primary key ID.
-        Returns True if a record was removed, False otherwise.
-        """
+        """Deletes a specific prediction record by primary key ID."""
         with self._get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("DELETE FROM predictions WHERE id = ?;", (prediction_id,))
@@ -279,38 +362,38 @@ class HistoryService:
             return cursor.rowcount > 0
 
     def clear_history(self) -> int:
-        """
-        Deletes all historical records from the predictions table.
-        Returns the number of deleted records.
-        """
+        """Deletes all historical records from the predictions table."""
         with self._get_connection() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT COUNT(*) FROM predictions;")
             count = int(cursor.fetchone()[0])
             cursor.execute("DELETE FROM predictions;")
-            # Reset SQLite auto-increment
             cursor.execute("DELETE FROM sqlite_sequence WHERE name='predictions';")
             conn.commit()
             return count
 
-    def get_summary_stats(self) -> Dict[str, Any]:
-        """
-        Calculates aggregate statistics over all stored prediction history records.
-        """
+    def get_summary_stats(self, country: Optional[str] = None) -> Dict[str, Any]:
+        """Calculates aggregate statistics over stored prediction history records."""
         with self._get_connection() as conn:
             cursor = conn.cursor()
 
-            # Base aggregations
+            country_clause = ""
+            params: List[Any] = []
+            if country and isinstance(country, str):
+                country_clause = " WHERE (country = ? OR (country IS NULL AND ? = 'US'))"
+                params.extend([country.upper(), country.upper()])
+
             cursor.execute(
-                """
+                f"""
                 SELECT
                     COUNT(*) as total_count,
                     COALESCE(AVG(predicted_salary_usd), 0.0) as avg_salary,
                     COALESCE(MIN(predicted_salary_usd), 0.0) as min_salary,
                     COALESCE(MAX(predicted_salary_usd), 0.0) as max_salary,
                     MAX(timestamp) as last_prediction_at
-                FROM predictions;
-                """
+                FROM predictions{country_clause};
+                """,
+                params,
             )
             base_row = cursor.fetchone()
 
@@ -327,6 +410,7 @@ class HistoryService:
                     "top_locations": [],
                     "remote_distribution": {},
                     "last_prediction_at": None,
+                    "country_breakdown": {"US": 0, "IN": 0},
                 }
 
             avg_salary = round(float(base_row["avg_salary"]), 2)
@@ -336,57 +420,71 @@ class HistoryService:
 
             # Most frequent job title
             cursor.execute(
-                """
+                f"""
                 SELECT job_title, COUNT(*) as cnt
-                FROM predictions
+                FROM predictions{country_clause}
                 GROUP BY job_title
                 ORDER BY cnt DESC
                 LIMIT 1;
-                """
+                """,
+                params,
             )
             role_row = cursor.fetchone()
             most_frequent_role = role_row["job_title"] if role_row else None
 
             # Most frequent experience level
             cursor.execute(
-                """
+                f"""
                 SELECT experience_level, COUNT(*) as cnt
-                FROM predictions
+                FROM predictions{country_clause}
                 GROUP BY experience_level
                 ORDER BY cnt DESC
                 LIMIT 1;
-                """
+                """,
+                params,
             )
             exp_row = cursor.fetchone()
             top_experience_level = exp_row["experience_level"] if exp_row else None
 
-            # Top 5 company locations
+            # Top locations
             cursor.execute(
-                """
+                f"""
                 SELECT company_location, COUNT(*) as count
-                FROM predictions
+                FROM predictions{country_clause}
                 GROUP BY company_location
                 ORDER BY count DESC
                 LIMIT 5;
-                """
+                """,
+                params,
             )
             top_locations = [
                 {"location": row["company_location"], "count": int(row["count"])}
                 for row in cursor.fetchall()
             ]
 
-            # Remote ratio distribution
+            # Remote distribution
             cursor.execute(
-                """
+                f"""
                 SELECT remote_ratio, COUNT(*) as count
-                FROM predictions
+                FROM predictions{country_clause}
                 GROUP BY remote_ratio
                 ORDER BY remote_ratio ASC;
-                """
+                """,
+                params,
             )
             remote_distribution = {
                 f"{row['remote_ratio']}%": int(row["count"]) for row in cursor.fetchall()
             }
+
+            # Country breakdown
+            cursor.execute(
+                """
+                SELECT COALESCE(country, 'US') as ccode, COUNT(*) as count
+                FROM predictions
+                GROUP BY ccode;
+                """
+            )
+            country_breakdown = {row["ccode"]: int(row["count"]) for row in cursor.fetchall()}
 
             return {
                 "total_predictions": total_count,
@@ -399,22 +497,40 @@ class HistoryService:
                 "top_locations": top_locations,
                 "remote_distribution": remote_distribution,
                 "last_prediction_at": last_prediction_at,
+                "country_breakdown": country_breakdown,
             }
 
     def _row_to_dict(self, row: sqlite3.Row) -> Dict[str, Any]:
-        """
-        Transforms a database row into a structured prediction response object.
-        """
-        input_features = {
-            "work_year": int(row["work_year"]),
-            "experience_level": str(row["experience_level"]),
-            "employment_type": str(row["employment_type"]),
-            "job_title": str(row["job_title"]),
-            "employee_residence": str(row["employee_residence"]),
-            "remote_ratio": int(row["remote_ratio"]),
-            "company_location": str(row["company_location"]),
-            "company_size": str(row["company_size"]),
-        }
+        """Transforms a database row into a structured prediction response object."""
+        # Check if row has new migrated columns
+        row_keys = row.keys()
+
+        country = row["country"] if "country" in row_keys and row["country"] else "US"
+        currency = row["currency"] if "currency" in row_keys and row["currency"] else ("INR" if country == "IN" else "USD")
+        salary_unit = row["salary_unit"] if "salary_unit" in row_keys and row["salary_unit"] else ("LPA" if country == "IN" else "YEAR")
+        model_used = row["model_used"] if "model_used" in row_keys and row["model_used"] else row["model_version"]
+        predicted_salary = row["predicted_salary"] if "predicted_salary" in row_keys and row["predicted_salary"] is not None else float(row["predicted_salary_usd"])
+
+        # Decode input features if available
+        input_features = {}
+        if "input_features_json" in row_keys and row["input_features_json"]:
+            try:
+                input_features = json.loads(row["input_features_json"])
+            except Exception:
+                pass
+
+        if not input_features:
+            input_features = {
+                "country": country,
+                "work_year": int(row["work_year"]),
+                "experience_level": str(row["experience_level"]),
+                "employment_type": str(row["employment_type"]),
+                "job_title": str(row["job_title"]),
+                "employee_residence": str(row["employee_residence"]),
+                "remote_ratio": int(row["remote_ratio"]),
+                "company_location": str(row["company_location"]),
+                "company_size": str(row["company_size"]),
+            }
 
         salary_range = {
             "min": round(float(row["salary_range_min"]), 2),
@@ -426,6 +542,11 @@ class HistoryService:
         return {
             "id": int(row["id"]),
             "timestamp": str(row["timestamp"]),
+            "country": country,
+            "currency": currency,
+            "salary_unit": salary_unit,
+            "model_used": str(model_used),
+            "predicted_salary": round(float(predicted_salary), 2),
             "job_title": str(row["job_title"]),
             "experience_level": str(row["experience_level"]),
             "employment_type": str(row["employment_type"]),
@@ -448,4 +569,3 @@ class HistoryService:
 
 # Default global service instance
 history_service = HistoryService()
-

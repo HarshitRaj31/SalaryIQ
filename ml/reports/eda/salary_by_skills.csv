@@ -1,0 +1,9 @@
+skill,group,count,median_salary_lpa
+has_python,Skill present,773,18.0
+has_python,Skill not indicated,1496,12.5
+has_sql,Skill present,495,16.0
+has_sql,Skill not indicated,1774,14.5
+has_ml,Skill present,357,21.25
+has_ml,Skill not indicated,1912,14.0
+has_cloud,Skill present,527,20.0
+has_cloud,Skill not indicated,1742,13.0

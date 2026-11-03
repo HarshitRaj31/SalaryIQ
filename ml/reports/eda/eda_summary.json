@@ -1,0 +1,16 @@
+{
+    "dataset": "SalaryIQ Indian Tech Jobs",
+    "total_records": 2269,
+    "total_features": 33,
+    "salary_statistics": {
+        "count": 2269,
+        "mean_lpa": 16.15,
+        "median_lpa": 15.0,
+        "std_lpa": 10.63,
+        "minimum_lpa": 1.5,
+        "maximum_lpa": 87.5,
+        "p25_lpa": 7.75,
+        "p75_lpa": 22.5
+    },
+    "output_directory": "C:\\Users\\iamha\\OneDrive\\Desktop\\Job\\Job-Salary-Prediction\\ml\\reports\\eda"
+}
