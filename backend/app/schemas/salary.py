@@ -73,6 +73,10 @@ class SalaryPredictionRequest(BaseModel):
         default=None,
         description="Count of key technical skills possessed (e.g. 6)",
     )
+    include_shap: Optional[bool] = Field(
+        default=False,
+        description="Whether to compute real-time SHAP explanation (defaults to False for fast inference)",
+    )
 
     model_config = {
         "json_schema_extra": {

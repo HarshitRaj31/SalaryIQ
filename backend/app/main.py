@@ -1,15 +1,22 @@
 """
 Main FastAPI Application Entrypoint for Job Salary Prediction Backend.
 Supports dual-country models (India and United States).
+Production-optimized with Lifespan preloading, GZip compression, and response-time monitoring.
 """
 
 import os
 import sys
-import uvicorn
+import time
+import logging
+from contextlib import asynccontextmanager
 from typing import Optional
-from fastapi import FastAPI, Query
+import uvicorn
+from fastapi import FastAPI, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
+
+logger = logging.getLogger("salaryiq.main")
 
 # Ensure app package is discoverable when running main.py directly
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -18,9 +25,32 @@ if BACKEND_DIR not in sys.path:
     sys.path.insert(0, BACKEND_DIR)
 
 from app.core import config
+from app.services.prediction_service import prediction_service
+from app.services.shap_service import shap_service
 from app.routes.prediction import router as prediction_router
 
-# Initialize FastAPI application
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """
+    FastAPI Lifespan handler.
+    Eagerly loads and caches both US and India ML models and initializes SHAP explainers
+    during container boot on Render, eliminating cold-start latency on the first prediction.
+    """
+    logger.info("[Lifespan] Initializing SalaryIQ dual-country ML engines...")
+    try:
+        # Preload US & India pipelines into memory
+        prediction_service._initialize_models()
+        logger.info("[Lifespan] US & India model pipelines preloaded successfully.")
+    except Exception as e:
+        logger.error(f"[Lifespan] Error preloading models: {e}")
+
+    yield
+
+    logger.info("[Lifespan] Shutting down SalaryIQ backend...")
+
+
+# Initialize FastAPI application with production lifespan
 app = FastAPI(
     title=config.PROJECT_NAME,
     version=config.VERSION,
@@ -28,9 +58,30 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
+    lifespan=lifespan,
 )
 
-# Configure Cross-Origin Resource Sharing (CORS) for React Frontend
+# -----------------------------------------------------------------------------
+# PRODUCTION MIDDLEWARE
+# -----------------------------------------------------------------------------
+
+# 1. Response-Time Monitoring Middleware (X-Process-Time)
+@app.middleware("http")
+async def add_process_time_header(request: Request, call_next):
+    start_time = time.perf_counter()
+    response = await call_next(request)
+    process_time = time.perf_counter() - start_time
+    response.headers["X-Process-Time"] = f"{process_time:.4f}s"
+    if process_time > 1.0:
+        logger.warning(
+            f"[Slow Request] {request.method} {request.url.path} took {process_time:.3f}s"
+        )
+    return response
+
+# 2. GZip Response Compression Middleware (compresses responses > 1KB by up to 75%)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+# 3. Cross-Origin Resource Sharing (CORS) for React Frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[origin.rstrip("/") for origin in config.CORS_ORIGINS],
@@ -38,6 +89,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["X-Process-Time"],
 )
 
 # Register API routers
@@ -68,9 +120,15 @@ from app.schemas.salary import (
 
 
 @app.post("/predict", response_model=SalaryPredictionResponse, tags=["Salary Prediction"])
-def root_predict_alias(request: SalaryPredictionRequest):
+def root_predict_alias(
+    request: SalaryPredictionRequest,
+    include_shap: bool = Query(
+        default=False,
+        description="Whether to synchronously compute SHAP explanation (defaults to False for <5ms response).",
+    ),
+):
     """Direct alias to calculate predicted salary (US or India)."""
-    return predict_salary_endpoint(request)
+    return predict_salary_endpoint(request, include_shap=include_shap)
 
 
 @app.get("/metadata", response_model=DropdownOptionsResponse, tags=["Salary Prediction"])

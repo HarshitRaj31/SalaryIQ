@@ -32,9 +32,15 @@ router = APIRouter(prefix="/prediction", tags=["Salary Prediction"])
     response_model=SalaryPredictionResponse,
     status_code=status.HTTP_200_OK,
     summary="Predict Job Salary (India or US)",
-    description="Predicts estimated salary and confidence range based on selected country (US or IN).",
+    description="Predicts estimated salary and confidence range based on selected country (US or IN). Optimized for <5ms inference.",
 )
-def predict_salary_endpoint(request: SalaryPredictionRequest):
+def predict_salary_endpoint(
+    request: SalaryPredictionRequest,
+    include_shap: bool = Query(
+        default=False,
+        description="Whether to synchronously compute SHAP explanation (defaults to False for fast inference).",
+    ),
+):
     try:
         data_dict = request.model_dump(exclude_unset=True)
 
@@ -72,16 +78,20 @@ def predict_salary_endpoint(request: SalaryPredictionRequest):
                 detail=f"Invalid company_rating '{request.company_rating}'. Must be between 1.0 and 5.0.",
             )
 
-        # Perform country-routed prediction
+        # Perform country-routed prediction (<5ms pure ML inference)
         result = prediction_service.predict(data_dict)
 
-        # Attach real-time TreeSHAP explanation
-        try:
-            result["shap_explanation"] = shap_service.explain_prediction(
-                data_dict, country=result.get("country")
-            )
-        except Exception as ex:
-            logger.warning(f"[PredictionRouter] SHAP explanation warning: {ex}")
+        # Compute SHAP explanation only if requested or explicit flag is True
+        compute_shap = include_shap or getattr(request, "include_shap", False)
+        if compute_shap:
+            try:
+                result["shap_explanation"] = shap_service.explain_prediction(
+                    data_dict, country=result.get("country")
+                )
+            except Exception as ex:
+                logger.warning(f"[PredictionRouter] SHAP explanation warning: {ex}")
+                result["shap_explanation"] = None
+        else:
             result["shap_explanation"] = None
 
         # Automatically save successful predictions

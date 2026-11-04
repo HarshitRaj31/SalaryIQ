@@ -138,6 +138,7 @@ class ShapExplainabilityService:
             cls._instance._india_base_value = None
             cls._instance._india_feature_names = []
             cls._instance._india_global_cache = None
+            cls._instance._prediction_cache = {}
 
         return cls._instance
 
@@ -149,11 +150,14 @@ class ShapExplainabilityService:
         if self._us_initialized:
             return
 
-        us_path = config.US_MODEL_PATH
-        if not os.path.exists(us_path):
-            raise FileNotFoundError(f"US model file not found at: {us_path}")
-
-        self._us_pipeline = joblib.load(us_path)
+        from app.services.prediction_service import prediction_service
+        if getattr(prediction_service, '_us_pipeline', None) is not None:
+            self._us_pipeline = prediction_service._us_pipeline
+        else:
+            us_path = config.US_MODEL_PATH
+            if not os.path.exists(us_path):
+                raise FileNotFoundError(f"US model file not found at: {us_path}")
+            self._us_pipeline = joblib.load(us_path)
         self._us_preprocessor = self._us_pipeline.named_steps["preprocessor"]
         self._us_regressor = self._us_pipeline.named_steps["regressor"]
         self._us_feature_names = list(self._us_preprocessor.get_feature_names_out())
@@ -173,11 +177,14 @@ class ShapExplainabilityService:
         if self._india_initialized:
             return
 
-        india_path = config.INDIA_MODEL_PATH
-        if not os.path.exists(india_path):
-            raise FileNotFoundError(f"India model file not found at: {india_path}")
-
-        self._india_pipeline = joblib.load(india_path)
+        from app.services.prediction_service import prediction_service
+        if getattr(prediction_service, '_india_pipeline', None) is not None:
+            self._india_pipeline = prediction_service._india_pipeline
+        else:
+            india_path = config.INDIA_MODEL_PATH
+            if not os.path.exists(india_path):
+                raise FileNotFoundError(f"India model file not found at: {india_path}")
+            self._india_pipeline = joblib.load(india_path)
         self._india_preprocessor = self._india_pipeline.named_steps["preprocessor"]
         self._india_regressor = self._india_pipeline.named_steps["regressor"]
         self._india_feature_names = list(self._india_preprocessor.get_feature_names_out())
@@ -277,9 +284,22 @@ class ShapExplainabilityService:
             else:
                 c = "US"
 
+        # Fast cache lookup for identical prediction inputs (<0.1ms)
+        cache_key = f"{c}:{tuple(sorted((k, str(v)) for k, v in profile.items() if k not in ('include_shap', 'shap_explanation')))}"
+        if hasattr(self, '_prediction_cache') and cache_key in self._prediction_cache:
+            return dict(self._prediction_cache[cache_key])
+
         if c in ["IN", "IND", "INDIA"]:
-            return self._explain_india_prediction(profile)
-        return self._explain_us_prediction(profile)
+            res = self._explain_india_prediction(profile)
+        else:
+            res = self._explain_us_prediction(profile)
+
+        if not hasattr(self, '_prediction_cache'):
+            self._prediction_cache = {}
+        if len(self._prediction_cache) >= 256:
+            self._prediction_cache.clear()
+        self._prediction_cache[cache_key] = res
+        return res
 
     def _explain_us_prediction(self, profile: Dict[str, Any]) -> Dict[str, Any]:
         """Computes TreeSHAP for US prediction in USD."""
