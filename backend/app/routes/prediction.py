@@ -3,6 +3,7 @@ API router endpoints for Dual-Country Salary Prediction (India & United States).
 """
 
 import logging
+import time
 from typing import Any, Dict, Optional
 from fastapi import APIRouter, HTTPException, Query, status
 
@@ -78,21 +79,35 @@ def predict_salary_endpoint(
                 detail=f"Invalid company_rating '{request.company_rating}'. Must be between 1.0 and 5.0.",
             )
 
-        # Perform country-routed prediction (<5ms pure ML inference)
+        # Perform country-routed prediction (<5ms pure ML inference) with isolated timing
+        t_pred_start = time.perf_counter()
         result = prediction_service.predict(data_dict)
+        pred_time_ms = round((time.perf_counter() - t_pred_start) * 1000, 3)
+        result["prediction_time_ms"] = pred_time_ms
 
         # Compute SHAP explanation only if requested or explicit flag is True
         compute_shap = include_shap or getattr(request, "include_shap", False)
         if compute_shap:
             try:
+                t_shap_start = time.perf_counter()
                 result["shap_explanation"] = shap_service.explain_prediction(
                     data_dict, country=result.get("country")
+                )
+                shap_time_ms = round((time.perf_counter() - t_shap_start) * 1000, 3)
+                result["shap_calculation_time_ms"] = shap_time_ms
+                logger.info(
+                    f"[PredictionRouter] Prediction time: {pred_time_ms:.2f}ms | SHAP calculation time: {shap_time_ms:.2f}ms"
                 )
             except Exception as ex:
                 logger.warning(f"[PredictionRouter] SHAP explanation warning: {ex}")
                 result["shap_explanation"] = None
+                result["shap_calculation_time_ms"] = None
         else:
             result["shap_explanation"] = None
+            result["shap_calculation_time_ms"] = None
+            logger.info(
+                f"[PredictionRouter] Pure ML prediction completed in {pred_time_ms:.2f}ms (SHAP calculation omitted)."
+            )
 
         # Automatically save successful predictions
         history_service.save_prediction(
@@ -286,8 +301,13 @@ def clear_prediction_history():
 )
 def explain_prediction_endpoint(request: SalaryPredictionRequest):
     try:
+        t_start = time.perf_counter()
         data_dict = request.model_dump(exclude_unset=True)
-        return shap_service.explain_prediction(data_dict, country=request.country)
+        explanation = shap_service.explain_prediction(data_dict, country=request.country)
+        shap_time_ms = round((time.perf_counter() - t_start) * 1000, 3)
+        explanation["shap_calculation_time_ms"] = shap_time_ms
+        logger.info(f"[SHAP] Dedicated explanation calculated in {shap_time_ms:.2f}ms.")
+        return explanation
     except Exception as e:
         logger.error(f"[SHAP] Explanation error: {e}", exc_info=True)
         raise HTTPException(

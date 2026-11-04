@@ -124,6 +124,8 @@ class SalaryPredictionResponse(BaseModel):
     input_features: Dict[str, Any] = Field(description="Echo of validated input features used by the model")
     model_version: str = Field(description="Filename/identifier of the active model")
     shap_explanation: Optional[Dict[str, Any]] = Field(default=None, description="SHAP feature attribution breakdown")
+    prediction_time_ms: Optional[float] = Field(default=None, description="Model inference duration in milliseconds")
+    shap_calculation_time_ms: Optional[float] = Field(default=None, description="SHAP calculation duration in milliseconds")
 
 
 class BatchSalaryPredictionRequest(BaseModel):

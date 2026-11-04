@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import {
   Activity,
   ArrowDownRight,
@@ -25,13 +25,22 @@ import {
   Star,
   Award,
 } from "lucide-react";
-import Analytics from "./pages/Analytics";
-import FeatureImportance from "./pages/FeatureImportance";
-import PredictionHistory from "./pages/PredictionHistory";
-import ShapDashboard from "./pages/ShapDashboard";
-import ShapExplanationView from "./components/ShapExplanationView";
-import { generatePdfReport } from "./utils/pdfReportGenerator";
+import ErrorBoundary from "./components/ErrorBoundary";
+import {
+  AnalyticsSkeleton,
+  FeatureImportanceSkeleton,
+  PredictionHistorySkeleton,
+  ShapDashboardSkeleton,
+  ShapExplanationSkeleton,
+} from "./components/Skeletons";
 import "./App.css";
+
+// Advanced Lazy Loading: non-critical & chart-driven views are code-split
+const Analytics = lazy(() => import("./pages/Analytics"));
+const FeatureImportance = lazy(() => import("./pages/FeatureImportance"));
+const PredictionHistory = lazy(() => import("./pages/PredictionHistory"));
+const ShapDashboard = lazy(() => import("./pages/ShapDashboard"));
+const ShapExplanationView = lazy(() => import("./components/ShapExplanationView"));
 
 const API_URL = (
   import.meta.env.VITE_API_BASE_URL ||
@@ -95,6 +104,55 @@ function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [activeTab, setActiveTab] = useState("overview"); // "overview" | "predictor" | "analytics"
   const [showXaiExplanation, setShowXaiExplanation] = useState(false);
+  const [shapLoading, setShapLoading] = useState(false);
+  const [pdfLoading, setPdfLoading] = useState(false);
+
+  const handleDownloadPdf = async () => {
+    if (pdfLoading || !result) return;
+    try {
+      setPdfLoading(true);
+      const { generatePdfReport } = await import("./utils/pdfReportGenerator");
+      generatePdfReport({ ...result, ...activeForm });
+    } catch (err) {
+      console.error("Failed to load PDF report generator:", err);
+    } finally {
+      setPdfLoading(false);
+    }
+  };
+
+  const handleToggleShapExplanation = async () => {
+    if (showXaiExplanation) {
+      setShowXaiExplanation(false);
+      return;
+    }
+
+    setShowXaiExplanation(true);
+
+    if (!result?.shap_explanation && !shapLoading) {
+      try {
+        setShapLoading(true);
+        const response = await fetch(`${API_URL}/explain`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...activeForm,
+            country: selectedCountry,
+          }),
+        });
+
+        if (response.ok) {
+          const shapData = await response.json();
+          setResult((prev) => (prev ? { ...prev, shap_explanation: shapData } : prev));
+        }
+      } catch (err) {
+        console.warn("Could not fetch real-time SHAP explanation, fallback baseline active:", err);
+      } finally {
+        setShapLoading(false);
+      }
+    }
+  };
 
   const activeForm = selectedCountry === "IN" ? indiaForm : usForm;
 
@@ -333,25 +391,41 @@ function App() {
 
         <div className="page-container">
           {activeTab === "shap-dashboard" ? (
-            <ShapDashboard onNavigateToPredictor={() => setActiveTab("predictor")} />
+            <ErrorBoundary componentName="SHAP Explainability Dashboard">
+              <Suspense fallback={<ShapDashboardSkeleton />}>
+                <ShapDashboard onNavigateToPredictor={() => setActiveTab("predictor")} />
+              </Suspense>
+            </ErrorBoundary>
           ) : activeTab === "history" ? (
-            <PredictionHistory
-              onSelectProfile={(profile) => {
-                if (profile.country === "IN") {
-                  setSelectedCountry("IN");
-                  setIndiaForm((prev) => ({ ...prev, ...profile }));
-                } else {
-                  setSelectedCountry("US");
-                  setUsForm((prev) => ({ ...prev, ...profile }));
-                }
-                setActiveTab("predictor");
-              }}
-              onNavigateToPredictor={() => setActiveTab("predictor")}
-            />
+            <ErrorBoundary componentName="Prediction History">
+              <Suspense fallback={<PredictionHistorySkeleton />}>
+                <PredictionHistory
+                  onSelectProfile={(profile) => {
+                    if (profile.country === "IN") {
+                      setSelectedCountry("IN");
+                      setIndiaForm((prev) => ({ ...prev, ...profile }));
+                    } else {
+                      setSelectedCountry("US");
+                      setUsForm((prev) => ({ ...prev, ...profile }));
+                    }
+                    setActiveTab("predictor");
+                  }}
+                  onNavigateToPredictor={() => setActiveTab("predictor")}
+                />
+              </Suspense>
+            </ErrorBoundary>
           ) : activeTab === "feature-importance" ? (
-            <FeatureImportance standalone={true} />
+            <ErrorBoundary componentName="Feature Importance">
+              <Suspense fallback={<FeatureImportanceSkeleton />}>
+                <FeatureImportance standalone={true} />
+              </Suspense>
+            </ErrorBoundary>
           ) : activeTab === "analytics" ? (
-            <Analytics onNavigateToPredictor={() => setActiveTab("predictor")} />
+            <ErrorBoundary componentName="Analytics Dashboard">
+              <Suspense fallback={<AnalyticsSkeleton />}>
+                <Analytics onNavigateToPredictor={() => setActiveTab("predictor")} />
+              </Suspense>
+            </ErrorBoundary>
           ) : (
             <>
               {activeTab === "overview" && (
@@ -934,7 +1008,8 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() => setShowXaiExplanation((prev) => !prev)}
+                          onClick={handleToggleShapExplanation}
+                          disabled={shapLoading}
                           style={{
                             marginTop: 12,
                             width: "100%",
@@ -951,24 +1026,39 @@ function App() {
                             borderRadius: "8px",
                             fontSize: "12.5px",
                             fontWeight: "700",
-                            cursor: "pointer",
+                            cursor: shapLoading ? "wait" : "pointer",
                             transition: "all 0.2s ease",
+                            opacity: shapLoading ? 0.8 : 1,
                           }}
                         >
-                          <Cpu size={14} />
-                          <span>
-                            {showXaiExplanation
-                              ? "Hide SHAP XAI Breakdown"
-                              : "Explain Prediction (SHAP XAI) 💡"}
-                          </span>
+                          {shapLoading ? (
+                            <>
+                              <LoaderCircle size={14} className="spin" />
+                              <span>Computing SHAP Attribution...</span>
+                            </>
+                          ) : (
+                            <>
+                              <Cpu size={14} />
+                              <span>
+                                {showXaiExplanation
+                                  ? "Hide SHAP XAI Breakdown"
+                                  : "Explain Prediction (SHAP XAI) 💡"}
+                              </span>
+                            </>
+                          )}
                         </button>
 
                         {showXaiExplanation && (
                           <div style={{ marginTop: 14 }}>
-                            <ShapExplanationView
-                              shapData={result.shap_explanation}
-                              compact={true}
-                            />
+                            <ErrorBoundary componentName="SHAP XAI Breakdown">
+                              <Suspense fallback={<ShapExplanationSkeleton compact={true} />}>
+                                <ShapExplanationView
+                                  shapData={result.shap_explanation}
+                                  loading={shapLoading}
+                                  compact={true}
+                                />
+                              </Suspense>
+                            </ErrorBoundary>
                           </div>
                         )}
 
@@ -998,7 +1088,8 @@ function App() {
 
                         <button
                           type="button"
-                          onClick={() => generatePdfReport({ ...result, ...activeForm })}
+                          onClick={handleDownloadPdf}
+                          disabled={pdfLoading}
                           style={{
                             marginTop: 8,
                             width: "100%",
@@ -1013,11 +1104,21 @@ function App() {
                             borderRadius: "8px",
                             fontSize: "12.5px",
                             fontWeight: "650",
-                            cursor: "pointer",
+                            cursor: pdfLoading ? "wait" : "pointer",
+                            opacity: pdfLoading ? 0.75 : 1,
                           }}
                         >
-                          <FileText size={14} />
-                          Download PDF Report 📄
+                          {pdfLoading ? (
+                            <>
+                              <LoaderCircle size={14} className="spin" />
+                              <span>Generating PDF Report...</span>
+                            </>
+                          ) : (
+                            <>
+                              <FileText size={14} />
+                              <span>Download PDF Report 📄</span>
+                            </>
+                          )}
                         </button>
                       </div>
                     ) : (

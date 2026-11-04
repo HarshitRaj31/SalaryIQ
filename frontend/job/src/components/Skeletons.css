@@ -1,0 +1,82 @@
+@keyframes salaryiq-skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.sk-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 41, 59, 0.65) 0%,
+    rgba(51, 65, 85, 0.85) 50%,
+    rgba(30, 41, 59, 0.65) 100%
+  );
+  background-size: 200% 100%;
+  animation: salaryiq-skeleton-shimmer 1.6s infinite ease-in-out;
+  border-radius: 6px;
+}
+
+.sk-container {
+  padding: 24px;
+  background: #0f172a;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+  width: 100%;
+}
+
+.sk-header {
+  margin-bottom: 24px;
+}
+
+.sk-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sk-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.sk-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.sk-chart-panel {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 22px;
+  min-height: 320px;
+}
+
+.sk-table-container {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.sk-table-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sk-table-row:last-child {
+  border-bottom: none;
+}
+
